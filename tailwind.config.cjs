@@ -131,12 +131,21 @@ const config = {
 				river: '#464a5d',
 				oyster: '#5576f9'
 			},
-			typography: {
+			typography: (theme) => ({
 				DEFAULT: {
 					css: {
-						code: {
-							color: '#7c74da'
+						h1: {
+							color: 'var(--color-text-heading)',
+							'font-weight': 400
 						},
+						h2: {
+							color: 'var(--color-text-heading)',
+							'font-weight': 400
+						},
+						h3: { color: 'var(--color-text-heading)' },
+						h4: { color: 'var(--color-text-heading)' },
+						p: { color: 'var(--color-text-body)' },
+						code: { color: '#7c74da' },
 						pre: {
 							backgroundColor: '#1c2128',
 							borderWidth: '1px',
@@ -144,7 +153,7 @@ const config = {
 						}
 					}
 				}
-			}
+			})
 		}
 	},
 	plugins: [
