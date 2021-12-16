@@ -3,11 +3,11 @@
 	import SidebarExternals from './_SidebarExternals.svelte';
 </script>
 
-<div class="dark:border-tuna border-l">
+<div class="dark:border-skin-base-dark border-l">
 	<div>
 		<a
 			href="./index.html"
-			class="hover:bg-icy border-periblue dark:bg-tuna text-oyster dark:text-manatee dark:hover:text-sveltin-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light bg-white border-l-2"
+			class="bg-skin-light dark:bg-skin-dark text-skin-accent dark:text-skin-accent-dark hover:text-skin-accent-hover group dark:hover:text-skin-accent-dark-hover flex items-center p-2 pl-6 text-base font-light border-l-2 border-skin-muted"
 		>
 			Quickstart
 		</a>
@@ -16,7 +16,7 @@
 				<li>
 					<a
 						href="./starter.html"
-						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Get Started
 					</a>
@@ -24,7 +24,7 @@
 				<li>
 					<a
 						href="./design-kit.html"
-						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Design Kits
 					</a>
@@ -32,7 +32,7 @@
 				<li>
 					<a
 						href="./design-resources.html"
-						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Resources
 					</a>
@@ -40,7 +40,7 @@
 				<li>
 					<a
 						href="./tutorials.html"
-						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Tutorials
 					</a>
@@ -53,7 +53,7 @@
 				<li>
 					<a
 						href="./starter.html"
-						class="flex items-center p-2 pl-3 text-base font-light text-skin-link-base dark:text-skin-muted-dark dark:hover:text-periblue hover:text-skin-base-hover group hover:bg-white dark:hover:bg-tuna  border-l-2 border-transparent focus:border-periblue "
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Get started
 					</a>
@@ -61,7 +61,7 @@
 				<li>
 					<a
 						href="./frameworks.html"
-						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-white dark:hover:bg-tuna focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Frameworks
 					</a>
@@ -69,7 +69,7 @@
 				<li>
 					<a
 						href="./developer-resources.html"
-						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-white dark:hover:bg-tuna focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+						class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover group hover:bg-skin-light dark:hover:bg-skin-dark focus:border--skin-muted flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
 					>
 						Resources
 					</a>
@@ -79,7 +79,7 @@
 
 		<a
 			href="./recomendations.html"
-			class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hoverhover:bg-white dark:hover:bg-tuna  group flex items-center p-2 pl-6 text-base font-light"
+			class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover hover:bg-white dark:hover:bg-skin-dark group flex items-center p-2 pl-6 text-base font-light"
 		>
 			Recommendations
 		</a>

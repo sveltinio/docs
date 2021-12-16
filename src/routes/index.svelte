@@ -7,7 +7,9 @@
 	<title>Home | {website.name}</title>
 </svelte:head>
 <!-- PAGE TITLE-->
-<section class="mx-auto bg-white border-b dark:bg-tuna border-periblue max-w-7xl dark:border-gun">
+<section
+	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"
+>
 	<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-32 pt-44">
 		<h1
 			data-animate="title"
@@ -20,7 +22,7 @@
 </section>
 <!-- END OF PAGE TITLE-->
 <!-- PAGE CONTENT -->
-<section class="pt-6 pb-24 bg-white dark:bg-tuna">
+<section class="pt-6 pb-24 bg-skin-light dark:bg-skin-dark">
 	<div class="px-4 mx-auto sm:px-6 md:px-32">
 		<!-- Replace with your content -->
 		<section>
@@ -31,9 +33,9 @@
 							class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg md:mt-5 md:text-xl"
 						>
 							Dockerz is Wicked's open source design system for products and digital
-							experiences. With the Wicked Design Language as its foundation, the system
-							consists of working code, design tools and resources, human interface
-							guidelines, and a vibrant community of contributors.
+							experiences. With the Wicked Design Language as its foundation, the
+							system consists of working code, design tools and resources, human
+							interface guidelines, and a vibrant community of contributors.
 						</p>
 						<div>
 							<ul
@@ -88,19 +90,21 @@
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
 							>
-								Quis semper vulputate aliquam venenatis egestas sagittis quisque orci. Donec
-								commodo sit viverra aliquam porttitor ultrices gravida eu. Tincidunt leo,
-								elementum mattis elementum ut nisl, justo, amet, mattis. Nunc purus, diam
-								commodo tincidunt turpis. Amet, duis sed elit interdum dignissim.
+								Quis semper vulputate aliquam venenatis egestas sagittis quisque
+								orci. Donec commodo sit viverra aliquam porttitor ultrices gravida
+								eu. Tincidunt leo, elementum mattis elementum ut nisl, justo, amet,
+								mattis. Nunc purus, diam commodo tincidunt turpis. Amet, duis sed
+								elit interdum dignissim.
 							</p>
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
 							>
-								Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in.
-								Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris
-								enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris,
-								ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed
-								nullam sed diam turpis ipsum eu a sed convallis diam.
+								Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat
+								in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum
+								mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
+								tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi.
+								Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis
+								diam.
 							</p>
 						</div>
 					</div>
@@ -130,10 +134,11 @@
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
 							>
-								Quis semper vulputate aliquam venenatis egestas sagittis quisque orci. Donec
-								commodo sit viverra aliquam porttitor ultrices gravida eu. Tincidunt leo,
-								elementum mattis elementum ut nisl, justo, amet, mattis. Nunc purus, diam
-								commodo tincidunt turpis. Amet, duis sed elit interdum dignissim.
+								Quis semper vulputate aliquam venenatis egestas sagittis quisque
+								orci. Donec commodo sit viverra aliquam porttitor ultrices gravida
+								eu. Tincidunt leo, elementum mattis elementum ut nisl, justo, amet,
+								mattis. Nunc purus, diam commodo tincidunt turpis. Amet, duis sed
+								elit interdum dignissim.
 							</p>
 						</div>
 					</div>
@@ -151,8 +156,9 @@
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
 							>
-								Quis semper vulputate aliquam venenatis egestas sagittis quisque orci. Donec
-								commodo sit viverra aliquam porttitor ultrices gravida eu.
+								Quis semper vulputate aliquam venenatis egestas sagittis quisque
+								orci. Donec commodo sit viverra aliquam porttitor ultrices gravida
+								eu.
 							</p>
 							<div>
 								<ul

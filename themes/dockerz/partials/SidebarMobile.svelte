@@ -22,7 +22,7 @@
 	/>
 
 	<div
-		class="relative flex flex-col flex-1 w-full max-w-xs bg-white dark:bg-pearl"
+		class="relative flex flex-col flex-1 w-full max-w-xs bg-skin-light dark:bg-skin-muted-dark"
 		class:hidden={!navIsOpen}
 	>
 		<div class="absolute top-0 right-0 pt-2 -mr-12" class:hidden={!navIsOpen}>
@@ -60,7 +60,9 @@
 				<SidebarLinks />
 			</nav>
 		</div>
-		<div class="flex flex-shrink-0 p-4 pl-12 border-t  border-smoke dark:border-tuna">
+		<div
+			class="flex flex-shrink-0 p-4 pl-12 border-t  border-skin-base-dark dark:border-skin-base-dark"
+		>
 			<!------ CTA buttons goes here-->
 		</div>
 	</div>

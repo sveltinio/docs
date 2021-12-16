@@ -31,7 +31,7 @@
 	{/if}
 </svelte:head>
 <SEO data={website} />
-<div class="min-h-[640px] bg-white dark:bg-tuna">
+<div class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>
 		<SidebarDesktop />
 		<div class="relative z-0 flex flex-1 overflow-hidden">

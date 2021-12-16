@@ -6,6 +6,8 @@
 @layer base {
 	:root {
 		--pure-white: #ffffff;
+		--dark: #22272e /* tuna */;
+		--pure-dark: #2d333b /* gun */;
 
 		--color-text-base: #5c617a /* comet */;
 		--color-text-base-hover: #1e2028 /* pearl */;
@@ -22,15 +24,15 @@
 		--color-text-accent-dark: #9596a9 /* manatee */;
 		--color-text-accent-dark-hover: #8098fb /* periblue */;
 
-		--color-text-body: #7f8198 /* waterloo */;
-		--color-text-body-hover: #9596a9 /* santa */;
-		--color-text-body-dark: #5576f9 /* oyster */;
-		--color-text-body-dark-hover: #5576f9 /* oyster */;
-
 		--color-text-heading: #5c617a /* comet */;
 		--color-text-heading-hover: #5576f9 /* oyster */;
 		--color-text-heading-dark: #9596a9 /* manatee */;
 		--color-text-heading-dark-hover: #8098fb /* periblue */;
+
+		--color-text-body: #7f8198 /* waterloo */;
+		--color-text-body-hover: #9596a9 /* santa */;
+		--color-text-body-dark: #5576f9 /* oyster */;
+		--color-text-body-dark-hover: #5576f9 /* oyster */;
 
 		--color-text-link: #5576f9 /* oyster */;
 		--color-text-link-hover: #5c617a /* comet */;
@@ -39,132 +41,86 @@
 
 		--color-input-base: #4065f9 /* mana */;
 		--color-input-base-hover: #464a5d /* river */;
+		--color-input-muted: #a0a1b2 /* santa */;
 
-		/*********************/
+		--color-fill-base: #f9fafe /* ghost */;
+		--color-fill-base-hover: #c5c7d3 /* metal */;
+		--color-fill-base-dark: #1c2128 /* cinder */;
+		--color-fill-base-dark-hover: #2d333b /* gun */;
 
-		--color-link-base: #5576f9 /* oyster */;
-		--color-link-base-hover: #464a5d /* river */;
-		--color-link-dark: #8098fb /* periblue */;
-		--color-link-dark-hover: #c5c7d3 /* metal */;
-		--color-link-muted: #5576f9 /* oyster */;
-		--color-link-muted-dark: #a0a1b2 /* manatee */;
-		--color-link-border: #8098fb /* periblue */;
+		--color-fill-muted: #f9fafb /* alabaster */;
+		--color-fill-muted-dark: #1e2028 /* pearl */;
 
-		/*--color-input-base: #4065f9  mana */
-		/*--color-input-base-hover: #464a5d  river */
-		--color-input-fill-base: #ffffff /* white */;
-		--color-input-fill-base-hover: #d5ddfe /* icy */;
-		--color-input-fill-dark: #22272e /* tuna */;
-		--color-input-focus: #7f8198 /* comet */;
-		--color-input-focus-ring: #5576f9 /* oyster */;
-		--color-input-focus-border: #5576f9 /* oyster */;
-		--color-input-placeholder: #9596a9 /* santa */;
-		--color-input-placeholder-focus: #5576f9 /* oyster */;
-		--color-input-border: #f0f0f0 /* smoke */;
-		--color-input-border-dark: #464a5d /* river */;
+		--color-fill-accent: #ac5dd9 /* lilac */;
+		--color-fill-accent-hover: #c5c7d3 /* metal */;
+		--color-fill-accent-dark: #1c2128 /* cinder */;
+		--color-fill-accent-dark-hover: #22272e /* tuna */;
 
-		--color-fill-base: #ffffff /* white */;
-		--color-fill-dark: #22272e /* tuna */;
-
-		--color-border-base: #8098fb /* periblue */;
-		--color-border-muted: #f0f0f0 /* smoke */;
-		--color-border-dark: #2d333b /* gun */;
-
-		--color-button-base: #1e2028 /* pearl */;
-		--color-button-base-hover: #ffffff /* white */;
-		--color-button-dark: #ffffff /* white */;
-		--color-button-dark-hover: #22272e /* tuna */;
-		--color-button-focus-border: #8098fb /* periblue */;
-
-		--color-icon-base: #5576f9 /* oyster */;
-		--color-icon-dark: #a0a1b2 /* manatee */;
-
-		--color-icon-link-base: #ffffff /* white */;
-		--color-fill-icon-link-base: #5576f9 /* oyster */;
-		--color-fill-icon-link-hover: #374151 /* gray-700 */;
-
-		--color-fill-wrapper-internal-link-base: #ac5dd9 /* lilac */;
-		--color-fill-wrapper-internal-link-dark: #1c2128 /* cinder */;
-		--color-fill-wrapper-internal-link-dark-hover: #2d333b /* gun */;
-		--color-border-wrapper-internal-link-base: #5576f9 /* oyster */;
-		--color-border-wrapper-internal-link-dark: #1e2028 /* pearl */;
-
-		--color-fill-box-internal-link-base: #f9fafe /* ghost */;
-		--color-fill-box-internal-link-dark: #1c2128 /* cinder */;
-
-		--color-text-group-internal-link-hover-base: #1e2028 /* pearl */;
-		--color-text-group-internal-link-hover-dark: #8098fb /* periblue */;
+		--color-border-base: #f0f0f0 /* smoke */;
+		--color-border-base-dark: #22272e /* tuna */;
+		--color-border-muted: #8098fb /* periblue */;
+		--color-border-muted-dark: #2d333b /* gun */;
+		--color-border-accent: #5576f9 /* oyster */;
+		--color-border-accent-dark: #1e2028 /* pearl */;
 	}
 
 	.theme-sveltin {
 		--pure-white: #ffffff;
+		--dark: #22272e /* tuna */;
+		--pure-dark: #2d333b /* gun */;
 
-		--color-text-base: #7f8198 /* comet */;
-		--color-text-base-hover: #464a5d /* river */;
-		--color-text-base-dark: #a0a1b2 /* manatee */;
+		--color-text-base: #5c617a /* comet */;
+		--color-text-base-hover: #1e2028 /* pearl */;
+		--color-text-base-dark: #9596a9 /* manatee */;
 		--color-text-base-dark-hover: #8098fb /* periblue */;
 
-		--color-text-muted: #5c617a /* waterloo */;
-		--color-text-muted-hover: #9596a9 /* santa */;
-		--color-text-muted-dark: #9596a9 /* santa */;
-		--color-text-muted-hover: #9596a9 /* santa */;
+		--color-text-muted: #5c617a /* comet */;
+		--color-text-muted-hover: #5576f9 /* oyster */;
+		--color-text-muted-dark: #a0a1b2 /* santa */;
+		--color-text-muted-dark-hover: #8098fb /* periblue */;
 
-		--color-text-accent: #9db840 /* wasabi */;
+		--color-text-accent: #5576f9 /* oyster */;
 		--color-text-accent-hover: #464a5d /* river */;
-		--color-text-accent-dark: #a0a1b2 /* manatee */;
-		--color-text-accent-dark-hover: #464a5d /* river */;
+		--color-text-accent-dark: #9596a9 /* manatee */;
+		--color-text-accent-dark-hover: #8098fb /* periblue */;
 
-		--color-link-base: #335c67 /* darkslategray */;
-		--color-link-dark: #67858e /* slategray */;
-		--color-link-dark-hover: #c5c7d3 /* metal */;
-		--color-link-muted: #335c67 /* darkslategray */;
-		--color-link-muted-dark: #a0a1b2 /* manatee */;
-		--color-link-border: #67858e /* slategray */;
+		--color-text-heading: #5c617a /* comet */;
+		--color-text-heading-hover: #5576f9 /* oyster */;
+		--color-text-heading-dark: #9596a9 /* manatee */;
+		--color-text-heading-dark-hover: #8098fb /* periblue */;
+
+		--color-text-body: #7f8198 /* waterloo */;
+		--color-text-body-hover: #9596a9 /* santa */;
+		--color-text-body-dark: #5576f9 /* oyster */;
+		--color-text-body-dark-hover: #5576f9 /* oyster */;
+
+		--color-text-link: #5576f9 /* oyster */;
+		--color-text-link-hover: #5c617a /* comet */;
+		--color-text-link-dark: #8098fb /* periblue */;
+		--color-text-link-dark-hover: #c5c7d3 /* metal */;
 
 		--color-input-base: #4065f9 /* mana */;
-		--color-input-hover: #464a5d /* river */;
-		--color-input-fill-base: #ffffff /* white */;
-		--color-input-fill-base-hover: #d5ddfe /* icy */;
-		--color-input-fill-dark: #22272e /* tuna */;
-		--color-input-focus: #7f8198 /* comet */;
-		--color-input-focus-ring: #335c67 /* darkslategray */;
-		--color-input-focus-border: #335c67 /* darkslategray */;
-		--color-input-placeholder: #335c67 /* santa */;
-		--color-input-placeholder-focus: #335c67 /* darkslategray */;
-		--color-input-border: #f0f0f0 /* smoke */;
-		--color-input-border-dark: #464a5d /* river */;
+		--color-input-base-hover: #464a5d /* river */;
+		--color-input-muted: #a0a1b2 /* santa */;
 
-		--color-fill-base: #ffffff /* white */;
-		--color-fill-dark: #22272e /* tuna */;
-		--color-fill-accent: #9db840 /* wasabi */;
+		--color-fill-base: #f9fafe /* ghost */;
+		--color-fill-base-hover: #c5c7d3 /* metal */;
+		--color-fill-base-dark: #1c2128 /* cinder */;
+		--color-fill-base-dark-hover: #2d333b /* gun */;
 
-		--color-border-base: #67858e /* slategray */;
-		--color-border-muted: #f0f0f0 /* smoke */;
-		--color-border-dark: #2d333b /* gun */;
+		--color-fill-muted: #f9fafb /* alabaster */;
+		--color-fill-muted-dark: #1e2028 /* pearl */;
 
-		--color-button-base: #1e2028 /* pearl */;
-		--color-button-base-hover: #ffffff /* white */;
-		--color-button-dark: #ffffff /* white */;
-		--color-button-dark-hover: #22272e /* tuna */;
-		--color-button-focus-border: #67858e /* slategray */;
+		--color-fill-accent: #ac5dd9 /* lilac */;
+		--color-fill-accent-hover: #c5c7d3 /* metal */;
+		--color-fill-accent-dark: #1c2128 /* cinder */;
+		--color-fill-accent-dark-hover: #22272e /* tuna */;
 
-		--color-icon-base: #335c67 /* darkslategray */;
-		--color-icon-dark: #a0a1b2 /* manatee */;
-
-		--color-icon-link-base: #ffffff /* white */;
-		--color-fill-icon-link-base: #335c67 /* darkslategray */;
-		--color-fill-icon-link-hover: #374151 /* gray-700 */;
-
-		--color-fill-wrapper-internal-link-base: #9e2a2a /* mexicanred */;
-		--color-fill-wrapper-internal-link-dark: #1c2128 /* cinder */;
-		--color-fill-wrapper-internal-link-dark-hover: #2d333b /* gun */;
-		--color-border-wrapper-internal-link-base: #5576f9 /* oyster */;
-		--color-border-wrapper-internal-link-dark: #1e2028 /* pearl */;
-
-		--color-fill-box-internal-link-base: #f9fafe /* ghost */;
-		--color-fill-box-internal-link-dark: #1c2128 /* cinder */;
-
-		--color-text-group-internal-link-hover-base: #1e2028 /* pearl */;
-		--color-text-group-internal-link-hover-dark: #67858e /* slategray */;
+		--color-border-base: #f0f0f0 /* smoke */;
+		--color-border-base-dark: #22272e /* tuna */;
+		--color-border-muted: #8098fb /* periblue */;
+		--color-border-muted-dark: #2d333b /* gun */;
+		--color-border-accent: #5576f9 /* oyster */;
+		--color-border-accent-dark: #1e2028 /* pearl */;
 	}
 }

@@ -1,6 +1,8 @@
-<div class="bg-lilac border-oyster dark:border-pearl dark:bg-cinder dark:hover:bg-gun border-t-2">
+<div
+	class="bg-skin-base dark:bg-skin-base-dark dark:hover:bg-skin-base-dark-hover border-t-2 border-skin-accent dark:border-skin-accent-dark"
+>
 	<div class="max-w-7xl mx-auto">
-		<div class=" lg:grid-cols-2 lg:divide-x dark:divide-x-gun dark:divide-gun grid grid-cols-1">
+		<div class="dark:divide-skin-muted-dark grid grid-cols-1 lg:grid-cols-2 lg:divide-x">
 			<div>
 				<a href="/">
 					<div
@@ -22,7 +24,7 @@
 			<div>
 				<a href="/">
 					<div
-						class=" md:mt-0 bg-ghost dark:bg-cinder dark:hover:bg-tuna hover:bg-metal sm:px-6 lg:px-8 group px-4 pt-8 pb-16"
+						class=" md:mt-0 bg-skin-base dark:bg-skin-base-dark hover:bg-skin-base-hover dark:hover:bg-skin-dark sm:px-6 lg:px-8 group px-4 pt-8 pb-16"
 					>
 						<span class="text-sm font-normal text-skin-base dark:text-skin-base-dark">
 							Next

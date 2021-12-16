@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="sticky top-0 z-50 pt-1 pl-1 bg-gray-100  dark:bg-pearl lg:hidden sm:pl-3 sm:pt-3"
+	class="sticky top-0 z-50 pt-1 pl-1 bg-gray-100  dark:bg-skin-muted-dark lg:hidden sm:pl-3 sm:pt-3"
 	class:hidden={navIsOpen}
 >
 	<button

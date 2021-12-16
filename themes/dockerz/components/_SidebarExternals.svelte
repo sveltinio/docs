@@ -9,7 +9,7 @@
 	<ExternalLink
 		name="Github Repo"
 		url="https://github.com/sveltinio/sveltin"
-		class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hoverhover:bg-white dark:hover:bg-tuna  group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+		class="text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover hover:bg-skin-dark dark:hover:bg-skin-dark group flex items-center p-2 pl-6 text-base font-light"
 	>
 		Github Repo
 	</ExternalLink>

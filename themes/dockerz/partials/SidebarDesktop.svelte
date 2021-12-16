@@ -6,9 +6,9 @@
 </script>
 
 <div
-	class="z-50 hidden  bg-alabaster lg:flex md:w-72 md:flex-col md:fixed md:inset-y-0 dark:bg-cinder"
+	class="z-50 hidden bg-skin-muted lg:flex md:w-72 md:flex-col md:fixed md:inset-y-0 dark:bg-skin-base-dark"
 >
-	<div class="flex flex-col flex-1 min-h-0 border-r border-smoke dark:border-gun">
+	<div class="flex flex-col flex-1 min-h-0 border-r border-skin-base dark:border-skin-muted-dark">
 		<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto lg:pl-6">
 			<div
 				class="flex items-center px-4 shrink-0 text-skin-heading dark:text-skin-heading-dark-hover"

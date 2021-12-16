@@ -5,15 +5,17 @@
 	export let cliVersion: string;
 </script>
 
-<div class="border-t border-antiflash bg-ghost dark:border-gun dark:bg-cinder">
+<div
+	class="border-t border-antiflash bg-skin-base dark:border-skin-muted-dark dark:bg-skin-base-dark"
+>
 	<div class="mx-auto max-w-7xl">
 		<div class="grid grid-cols-2 mx-auto max-w-none">
 			<div
 				class="
           px-4
           py-8
-          bg-ghost
-          dark:bg-cinder dark:border-tuna
+          bg-skin-base
+          dark:bg-skin-base-dark dark:border-skin-base-dark
           sm:px-6
           lg:px-8
         "
@@ -132,8 +134,8 @@
           px-4
           py-8
           md:mt-0
-          bg-ghost
-          dark:bg-cinder dark:border-tuna
+          bg-skin-base
+          dark:bg-skin-base-dark dark:border-skin-base-dark
           sm:px-6
           lg:px-8
         "
@@ -178,15 +180,22 @@
 </div>
 
 <footer
-	class="border-t border-antiflash bg-ghost dark:bg-cinder dark:border-gun"
+	class="border-t border-antiflash bg-skin-base dark:bg-skin-base-dark dark:border-skin-muted-dark"
 	aria-labelledby="footer-heading"
 >
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
 	<div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
-		<div class="flex justify-center text-center lg:text-left lg:justify-between ">
-			<div class="space-y-8 text-comet dark:text-santa">
+		<div class="flex justify-center text-center lg:text-left lg:justify-between">
+			<div class="space-y-8 text-skin-muted dark:text-skin-muted-sard">
 				<div
-					class="inline-flex justify-between items-center w-full font-bold tracking-tighter "
+					class="
+            inline-flex
+            justify-between
+            items-center
+            w-full
+            font-bold
+            tracking-tighter
+          "
 				>
 					<ModernImage
 						pathToFile={website.logo}
@@ -197,7 +206,7 @@
 						width="24px"
 						height="32px"
 					/>
-					<p class="mt-2 mx-auto ml-12 text-sm lg:w-1/2 text-club ">
+					<p class="mt-2 mx-auto ml-12 text-sm lg:w-1/2 text-club">
 						Wicked templates for wicked dev's
 					</p>
 				</div>

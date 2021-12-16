@@ -17,23 +17,23 @@
 	<button
 		aria-expanded={expanded}
 		on:click={handleExpanded}
-		class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+		class="hover:bg-skin-light dark:hover:bg-skin-dark focus:border-skin-muted inline-flex items-center w-full pr-4 border-l-2 border-transparent"
 	>
 		<span
-			class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light"
+			class="text-skin-accent hover:text-skin-accent-hover dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover group inline-flex items-center p-2 pl-6 text-base font-light"
 		>
 			{headerText}
 		</span>
 
 		<NavArrowDownIcon
-			class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform {toggleArrowDown}"
+			class="text-skin-accent dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover inline w-5 h-5 ml-auto transition-transform duration-200 transform {toggleArrowDown}"
 		/>
 		<NavArrowUpIcon
-			class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform {toggleArrowUp}"
+			class="text-skin-accent dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover inline w-5 h-5 ml-auto transition-transform duration-200 transform {toggleArrowUp}"
 		/>
 	</button>
 
-	<div class="dark:border-tuna -px-px p-2 pl-6 border-l" class:hidden={!expanded}>
+	<div class="dark:border-skin-base-dark -px-px p-2 pl-6 border-l" class:hidden={!expanded}>
 		<slot />
 	</div>
 </div>
