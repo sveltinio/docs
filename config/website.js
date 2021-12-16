@@ -1,5 +1,5 @@
 const website = {
-	name: 'docs',
+	name: 'docs.sveltin.io',
 	baseURL: 'https://docs.sveltin.io',
 	language: 'en-GB',
 	title: 'docs',
