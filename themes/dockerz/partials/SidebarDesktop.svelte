@@ -13,7 +13,7 @@
 			<div
 				class="flex items-center px-4 shrink-0 text-skin-heading dark:text-skin-heading-dark-hover"
 			>
-				<a href="./index.html"
+				<a href="/"
 					><span class="inline-flex items-center font-bold tracking-tight">
 						<ModernImage
 							pathToFile={website.logo_small}
