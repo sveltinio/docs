@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { assets } from '$app/paths';
 	export let pathToFile: string;
 	export let altText: string;
 	export let webp = true;
@@ -13,15 +14,15 @@
 
 <picture>
 	{#if avif}
-		<source type="image/avif" srcset="avif/{getFilename(pathToFile)}.avif" />
+		<source type="image/avif" srcset="{assets}/avif/{getFilename(pathToFile)}.avif" />
 	{/if}
 
 	{#if webp}
-		<source type="image/webp" srcset="webp/{getFilename(pathToFile)}.webp" />
+		<source type="image/webp" srcset="{assets}/webp/{getFilename(pathToFile)}.webp" />
 	{/if}
 
 	<img
-		src={pathToFile}
+		src="{assets}/{getFilename(pathToFile)}"
 		loading="lazy"
 		decoding="async"
 		alt={altText}
