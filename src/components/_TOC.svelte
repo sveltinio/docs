@@ -24,7 +24,7 @@
 
 <nav id="toc_container">
 	<div on:click={toggle}>
-		<button aria-expanded={isOpen}> Table of Contents </button>
+		<button aria-expanded={isOpen} class="text-skin-accent"> Table of Contents </button>
 	</div>
 	{#if isOpen}
 		<ul id="toc_list">
@@ -38,8 +38,9 @@
 							<ul id={`toc_children_list_${heading.id}`}>
 								{#each heading.children as child}
 									<li id={`toc_child_item_${child.id}`}>
-										<a href={`/${resource}/${slug}#${child.id}`} on:click={handleAnchorClick}
-											>{child.title}</a
+										<a
+											href={`/${resource}/${slug}#${child.id}`}
+											on:click={handleAnchorClick}>{child.title}</a
 										>
 									</li>
 								{/each}
