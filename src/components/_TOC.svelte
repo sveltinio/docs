@@ -1,4 +1,5 @@
 <script>
+	import ListIcon from '@indaco/svelte-iconoir/icons/ListIcon.svelte';
 	export let resource;
 	export let slug;
 	export let headings;
@@ -24,15 +25,21 @@
 
 <nav id="toc_container">
 	<div on:click={toggle}>
-		<button aria-expanded={isOpen} class="text-skin-accent"> Table of Contents </button>
+		<button class="text-skin-accent" aria-label="table of contents" aria-expanded={isOpen}>
+			<ListIcon class="text-skin-body-dark" />
+		</button>
 	</div>
 	{#if isOpen}
 		<ul id="toc_list">
 			{#each headings as heading}
 				<li id={`toc_item_${heading.id}`}>
-					<a href={`/${resource}/${slug}#${heading.id}`} on:click={handleAnchorClick}
-						>{heading.title}</a
+					<a
+						href={`/${resource}/${slug}#${heading.id}`}
+						aria-label={heading.title}
+						on:click={handleAnchorClick}
 					>
+						{heading.title}
+					</a>
 					{#if withChildren}
 						{#if heading.children}
 							<ul id={`toc_children_list_${heading.id}`}>
