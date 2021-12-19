@@ -132,25 +132,40 @@ const config = {
 				oyster: '#5576f9'
 			},
 			typography: (theme) => ({
-				DEFAULT: {
+				wicked: {
 					css: {
-						h1: {
-							color: 'var(--color-text-heading)',
-							'font-weight': 400
-						},
-						h2: {
-							color: 'var(--color-text-heading)',
-							'font-weight': 400
-						},
-						h3: { color: 'var(--color-text-heading)' },
-						h4: { color: 'var(--color-text-heading)' },
-						p: { color: 'var(--color-text-body)' },
-						code: { color: '#7c74da' },
-						pre: {
-							backgroundColor: '#1c2128',
-							borderWidth: '1px',
-							borderColor: '#2d333b'
-						}
+						'--tw-prose-body': theme('textColor.skin.body'),
+						'--tw-prose-headings': theme('textColor.skin.heading'),
+						'--tw-prose-lead': theme('textColor.skin.accent'),
+						'--tw-prose-links': theme('textColor.skin.link'),
+						'--tw-prose-bold': theme('textColor.skin.heading'),
+						'--tw-prose-counters': theme('textColor.skin.body'),
+						'--tw-prose-bullets': theme('textColor.skin.body'),
+						'--tw-prose-hr': theme('textColor.skin.heading'),
+						'--tw-prose-quotes': theme('textColor.skin.heading'),
+						'--tw-prose-quote-borders': theme('textColor.skin.accent'),
+						'--tw-prose-captions': theme('textColor.skin.body'),
+						'--tw-prose-code': theme('textColor.skin.accent'),
+						'--tw-prose-pre-code': theme('textColor.skin.body-hover'),
+						'--tw-prose-pre-bg': theme('textColor.skin.heading'),
+						'--tw-prose-th-borders': theme('textColor.skin.accent'),
+						'--tw-prose-td-borders': theme('textColor.skin.accent'),
+						'--tw-prose-invert-body': theme('textColor.skin.body-dark'),
+						'--tw-prose-invert-headings': theme('textColor.skin.heading-dark'),
+						'--tw-prose-invert-lead': theme('textColor.skin.accent-dark'),
+						'--tw-prose-invert-links': theme('textColor.skin.link-dark'),
+						'--tw-prose-invert-bold': theme('textColor.skin.heading-dark'),
+						'--tw-prose-invert-counters': theme('textColor.skin.body-dark'),
+						'--tw-prose-invert-bullets': theme('textColor.skin.body-dark'),
+						'--tw-prose-invert-hr': theme('textColor.skin.heading-dark'),
+						'--tw-prose-invert-quotes': theme('textColor.skin.heading-dark'),
+						'--tw-prose-invert-quote-borders': theme('textColor.skin.accent-dark'),
+						'--tw-prose-invert-captions': theme('textColor.skin.body-dark'),
+						'--tw-prose-invert-code': theme('textColor.skin.accent-dark'),
+						'--tw-prose-invert-pre-code': theme('textColor.skin.body-dark-hover'),
+						'--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+						'--tw-prose-invert-th-borders': theme('textColor.skin.accent-dark'),
+						'--tw-prose-invert-td-borders': theme('textColor.skin.accent-dark')
 					}
 				}
 			})

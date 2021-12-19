@@ -116,6 +116,6 @@
 
 <style>
 	.markdown-content {
-		@apply prose;
+		@apply prose prose-wicked;
 	}
 </style>
