@@ -3,6 +3,8 @@
 	import { website } from '$config/website';
 
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
+
+	export let data;
 </script>
 
 <div
@@ -30,7 +32,7 @@
 				>
 			</div>
 			<nav class="flex-1 mt-12">
-				<SidebarLinks />
+				<SidebarLinks {data} />
 			</nav>
 		</div>
 	</div>

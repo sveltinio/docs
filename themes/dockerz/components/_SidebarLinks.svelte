@@ -1,16 +1,17 @@
 <script>
 	import { page } from '$app/stores';
-	import menu from '$config/menu.js';
+
 	import CollapsableList from './_CollapsableList.svelte';
 	import SidebarExternals from './_SidebarExternals.svelte';
 	import sortBy from 'lodash-es/sortBy.js';
 
-	let menuStructure = sortBy(menu, 'weigth');
+	export let data;
+	let menu = sortBy(data, 'weigth');
 </script>
 
 <div class="dark:border-skin-base-dark border-l">
 	<div>
-		{#each menuStructure as item}
+		{#each menu as item}
 			{#if !item.children}
 				<a
 					href={item.url}

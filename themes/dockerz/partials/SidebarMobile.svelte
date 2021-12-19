@@ -5,6 +5,7 @@
 	import MenuMobileBtn from '../components/_MenuMobileBtn.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 
+	export let data;
 	let navIsOpen = false;
 
 	function handleNavMenu(): void {
@@ -57,7 +58,7 @@
 				</a>
 			</div>
 			<nav class="px-2 mt-5 space-y-1">
-				<SidebarLinks />
+				<SidebarLinks {data} />
 			</nav>
 		</div>
 		<div
