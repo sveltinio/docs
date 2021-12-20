@@ -5,6 +5,7 @@
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 
 	export let data;
+	export let dark;
 </script>
 
 <div
@@ -12,9 +13,7 @@
 >
 	<div class="flex flex-col flex-1 min-h-0 border-r border-skin-base dark:border-skin-muted-dark">
 		<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto lg:pl-6">
-			<div
-				class="flex items-center px-4 shrink-0 text-skin-heading dark:text-skin-heading-dark-hover"
-			>
+			<div class="flex items-center px-4 shrink-0 text-skin-heading dark:text-skin-white">
 				<a href="/"
 					><span class="inline-flex items-center font-bold tracking-tight">
 						<ModernImage
@@ -27,12 +26,14 @@
 							height="auto"
 						/>
 
-						<span class="ml-4 text-skin-heading lg:text-2xl">Sveltin</span>
+						<span class="ml-4 text-skin-heading dark:text-skin-white lg:text-2xl"
+							>Sveltin</span
+						>
 					</span></a
 				>
 			</div>
 			<nav class="flex-1 mt-12">
-				<SidebarLinks {data} />
+				<SidebarLinks {data} bind:dark />
 			</nav>
 		</div>
 	</div>

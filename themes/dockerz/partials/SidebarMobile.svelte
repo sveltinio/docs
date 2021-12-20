@@ -5,70 +5,110 @@
 	import MenuMobileBtn from '../components/_MenuMobileBtn.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 
-	export let data;
-	let navIsOpen = false;
+	import { fly, fade } from 'svelte/transition';
+	import { cubicIn, cubicInOut, cubicOut } from 'svelte/easing';
+
+	export let data: any;
+	export let dark: any;
+	export let navIsOpen;
 
 	function handleNavMenu(): void {
 		navIsOpen = !navIsOpen;
 	}
+
+	function transition_opacity(
+		node,
+		{
+			delay = 0, // 0 ms before the transition begins
+			duration = 300 // Transition lasts for 300 ms
+		}
+	) {
+		// Get the node object's opacity
+		const o = +getComputedStyle(node).opacity;
+
+		// Return a transition object with these properties
+		return {
+			delay,
+			duration,
+
+			// Generate CSS animation; in this case animate the opacity
+			css: (t) => `opacity: ${t * o}`
+		};
+	}
 </script>
 
-<MenuMobileBtn {navIsOpen} {handleNavMenu} />
-
-<div class="fixed inset-0 z-40 flex lg:hidden" aria-modal="true">
-	<div
-		class="fixed inset-0 bg-gray-600 bg-opacity-75"
-		class:hidden={!navIsOpen}
-		aria-hidden="true"
-	/>
-
-	<div
-		class="relative flex flex-col flex-1 w-full max-w-xs bg-skin-light dark:bg-skin-muted-dark"
-		class:hidden={!navIsOpen}
-	>
-		<div class="absolute top-0 right-0 pt-2 -mr-12" class:hidden={!navIsOpen}>
-			<button
-				type="button"
-				class="flex items-center justify-center w-10 h-10 ml-1 rounded-full  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-				on:click={handleNavMenu}
-			>
-				<span class="sr-only">Close sidebar</span>
-				<CancelIcon class="w-6 h-6 text-skin-white" />
-			</button>
-		</div>
-
-		<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+{#if navIsOpen}
+	<div class="fixed inset-0 z-40 flex lg:hidden" aria-modal="true">
+		{#if navIsOpen}
 			<div
-				class="flex items-center flex-shrink-0 px-4 text-skin-heading dark:text-skin-heading-dark-hover"
+				class="fixed inset-0 bg-gray-600 bg-opacity-75"
+				class:hidden={!navIsOpen}
+				aria-hidden="true"
+				in:fade={{ duration: 300 }}
+				out:fade={{ duration: 300 }}
+			/>
+		{/if}
+
+		{#if navIsOpen}
+			<div
+				class="relative flex flex-col flex-1 w-full max-w-xs bg-skin-light dark:bg-skin-muted-dark"
+				class:hidden={!navIsOpen}
+				in:fly={{ x: -200, duration: 300, easing: cubicInOut }}
+				out:fly={{ x: -200, duration: 300, easing: cubicInOut }}
 			>
-				<a href="/"
-					><span class="inline-flex items-center font-bold tracking-tight">
-						<ModernImage
-							pathToFile={website.logo_small}
-							altText="{website.title} logo small"
-							webp
-							avif={false}
-							class="w-5 h-auto lazyload"
-							width="20px"
-							height="auto"
-						/>
+				{#if navIsOpen}
+					<div
+						class="absolute top-0 right-0 pt-2 -mr-12"
+						class:hidden={!navIsOpen}
+						in:transition_opacity
+						out:transition_opacity
+					>
+						<button
+							type="button"
+							class="flex items-center justify-center w-10 h-10 ml-1 rounded-full  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+							on:click={handleNavMenu}
+						>
+							<span class="sr-only">Close sidebar</span>
+							<CancelIcon class="w-6 h-6 text-skin-white" />
+						</button>
+					</div>
+				{/if}
 
-						<span class="ml-4 text-skin-heading lg:text-2xl">Sveltin</span>
-					</span>
-				</a>
+				<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+					<div
+						class="flex items-center flex-shrink-0 px-4 text-skin-heading dark:text-skin-heading-dark-hover"
+					>
+						<a href="/"
+							><span class="inline-flex items-center font-bold tracking-tight">
+								<ModernImage
+									pathToFile={website.logo_small}
+									altText="{website.title} logo small"
+									webp
+									avif={false}
+									class="w-5 h-auto lazyload"
+									width="20px"
+									height="auto"
+								/>
+
+								<span class="ml-4 text-skin-heading lg:text-2xl">Sveltin</span>
+							</span>
+						</a>
+					</div>
+					<nav class="px-2 mt-5 space-y-1">
+						<SidebarLinks {data} bind:dark />
+					</nav>
+				</div>
+				<div
+					class="flex flex-shrink-0 p-4 pl-12 border-t  border-skin-base-dark dark:border-skin-base-dark"
+				>
+					<!------ CTA buttons goes here-->
+				</div>
 			</div>
-			<nav class="px-2 mt-5 space-y-1">
-				<SidebarLinks {data} />
-			</nav>
-		</div>
-		<div
-			class="flex flex-shrink-0 p-4 pl-12 border-t  border-skin-base-dark dark:border-skin-base-dark"
-		>
-			<!------ CTA buttons goes here-->
-		</div>
-	</div>
+		{/if}
 
-	<div class="flex-shrink-0 w-14">
-		<!-- Force sidebar to shrink to fit close icon -->
+		<div class="flex-shrink-0 w-14">
+			<!-- Force sidebar to shrink to fit close icon -->
+		</div>
 	</div>
-</div>
+{/if}
+<MenuMobileBtn {navIsOpen} {handleNavMenu} />

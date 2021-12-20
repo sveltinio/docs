@@ -8,7 +8,7 @@
 </svelte:head>
 <!-- PAGE TITLE-->
 <section
-	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"
+	class="mx-auto bg-skin-light dark:bg-skin-dark border-b border-skin-muted max-w-7xl dark:border-skin-muted-dark"
 >
 	<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-32 pt-44">
 		<h1

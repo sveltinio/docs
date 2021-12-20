@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
 	import userSettings from '$config/user_settings.js';
 	import sveltinVersion from '$config/defaults.js';
@@ -11,10 +12,36 @@
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
 	import ScrollToTop from '$themes/dockerz/components/ScrollToTop.svelte';
-	import SearchBar from '$themes/dockerz/components/SearchBar.svelte';
-	import PrevNext from '$themes/dockerz/components/PrevNext.svelte';
+	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
+
+	let dark: boolean;
+	dark = false;
+
+	let navIsOpen = false;
+
+	function handleEscape({ key }) {
+		if (key === 'Escape') {
+			navIsOpen = false;
+		}
+	}
+
+	onMount(() => {
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			console.log('dark is true');
+			dark = true;
+		} else {
+			dark = false;
+			console.log('dark is false');
+		}
+	});
 </script>
+
+<svelte:window on:keyup={handleEscape} />
 
 <svelte:head>
 	<html lang={website.language} />
@@ -29,22 +56,41 @@
 	{#if googleAnalytics != ''}
 		<GoogleAnalytics UA_ID={googleAnalytics} />
 	{/if}
+
+	<script>
+		if (!('theme' in localStorage)) {
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.classList.add('dark');
+				document.cookie = 'theme=dark;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
+			} else {
+				document.documentElement.classList.remove('dark');
+				document.cookie = 'theme=light;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
+			}
+		} else {
+			let data = localStorage.getItem('theme');
+			if (data) {
+				data = JSON.parse(data);
+				document.documentElement.classList.add(data.mode);
+			}
+		}
+	</script>
 </svelte:head>
+
 <SEO data={website} />
-<div class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
+
+<div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>
-		<SidebarDesktop />
+		<SidebarDesktop data={menu} bind:dark />
 		<div class="relative z-0 flex flex-1 overflow-hidden">
 			<div class="relative z-0 flex-1 overflow-y-auto focus:outline-none lg:pl-72">
-				<SearchBar />
-				<SidebarMobile />
+				<Toolbar bind:dark />
+				<SidebarMobile data={menu} bind:dark bind:navIsOpen />
 				<main class="flex-1 mx-auto">
 					<slot />
-					<PrevNext />
 					<Footer cliVersion={sveltinVersion} />
 				</main>
 			</div>
 		</div>
 	</div>
-	<ScrollToTop />
+	<!-- <ScrollToTop /> -->
 </div>
