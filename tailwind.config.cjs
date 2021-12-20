@@ -5,11 +5,14 @@ const config = {
 		'./themes/**/*.{html,svelte,js,ts}',
 		'./themes/**/*.{html,svelte,js,ts}'
 	],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			textColor: {
 				skin: {
 					white: 'var(--pure-white)',
+					dark: 'var(--dark)',
+					'pure-dark': 'var(--pure-dark)',
 
 					base: 'var(--color-text-base)',
 					'base-hover': 'var(--color-text-base-hover)',
@@ -132,6 +135,22 @@ const config = {
 				oyster: '#5576f9'
 			},
 			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						h1: {
+							'font-weight': '400'
+						},
+						h2: {
+							'font-weight': '400'
+						},
+						h3: {
+							'font-weight': '400'
+						},
+						h4: {
+							'font-weight': '400'
+						}
+					}
+				},
 				wicked: {
 					css: {
 						'--tw-prose-body': theme('textColor.skin.body'),
@@ -145,9 +164,6 @@ const config = {
 						'--tw-prose-quotes': theme('textColor.skin.heading'),
 						'--tw-prose-quote-borders': theme('textColor.skin.accent'),
 						'--tw-prose-captions': theme('textColor.skin.body'),
-						'--tw-prose-code': theme('textColor.skin.accent'),
-						'--tw-prose-pre-code': theme('textColor.skin.body-hover'),
-						'--tw-prose-pre-bg': theme('textColor.skin.heading'),
 						'--tw-prose-th-borders': theme('textColor.skin.accent'),
 						'--tw-prose-td-borders': theme('textColor.skin.accent'),
 						'--tw-prose-invert-body': theme('textColor.skin.body-dark'),
@@ -161,9 +177,6 @@ const config = {
 						'--tw-prose-invert-quotes': theme('textColor.skin.heading-dark'),
 						'--tw-prose-invert-quote-borders': theme('textColor.skin.accent-dark'),
 						'--tw-prose-invert-captions': theme('textColor.skin.body-dark'),
-						'--tw-prose-invert-code': theme('textColor.skin.accent-dark'),
-						'--tw-prose-invert-pre-code': theme('textColor.skin.body-dark-hover'),
-						'--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
 						'--tw-prose-invert-th-borders': theme('textColor.skin.accent-dark'),
 						'--tw-prose-invert-td-borders': theme('textColor.skin.accent-dark')
 					}

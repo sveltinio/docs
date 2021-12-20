@@ -31,13 +31,14 @@
 
 		--color-text-body: #7f8198 /* waterloo */;
 		--color-text-body-hover: #9596a9 /* santa */;
-		--color-text-body-dark: #5576f9 /* oyster */;
+		--color-text-body-dark: #9596a9 /* santa */;
 		--color-text-body-dark-hover: #5576f9 /* oyster */;
 
 		--color-text-link: #5576f9 /* oyster */;
 		--color-text-link-hover: #5c617a /* comet */;
-		--color-text-link-dark: #8098fb /* periblue */;
-		--color-text-link-dark-hover: #c5c7d3 /* metal */;
+		--color-text-link-dark: #9596a9 /* manatee */;
+		--color-text-link-dark-hover: #8098fb /* periblue */;
+		/*--color-text-link-dark-hover: #c5c7d3  metal */
 
 		--color-input-base: #4065f9 /* mana */;
 		--color-input-base-hover: #464a5d /* river */;
