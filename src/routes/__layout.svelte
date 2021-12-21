@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
+	import { theme } from '$lib/shared/stores';
 	import userSettings from '$config/user_settings.js';
 	import sveltinVersion from '$config/defaults.js';
 	import menu from '$config/menu.js';
@@ -16,8 +17,6 @@
 	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
 
 	let dark: boolean;
-	dark = false;
-
 	let navIsOpen = false;
 
 	function handleEscape({ key }) {
@@ -32,11 +31,9 @@
 			(!('theme' in localStorage) &&
 				window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
-			console.log('dark is true');
 			dark = true;
 		} else {
 			dark = false;
-			console.log('dark is false');
 		}
 	});
 </script>
@@ -62,16 +59,14 @@
 			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 				document.documentElement.classList.add('dark');
 				document.cookie = 'theme=dark;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
+				dark = true;
 			} else {
 				document.documentElement.classList.remove('dark');
 				document.cookie = 'theme=light;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
+				dark = false;
 			}
 		} else {
-			let data = localStorage.getItem('theme');
-			if (data) {
-				data = JSON.parse(data);
-				document.documentElement.classList.add(data.mode);
-			}
+			dark = false;
 		}
 	</script>
 </svelte:head>

@@ -6,7 +6,8 @@
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 
 	import { fly, fade } from 'svelte/transition';
-	import { cubicIn, cubicInOut, cubicOut } from 'svelte/easing';
+	import { cubicInOut } from 'svelte/easing';
+	import { opacityTransition } from '$lib/shared/transitions';
 
 	export let data: any;
 	export let dark: any;
@@ -14,26 +15,6 @@
 
 	function handleNavMenu(): void {
 		navIsOpen = !navIsOpen;
-	}
-
-	function transition_opacity(
-		node,
-		{
-			delay = 0, // 0 ms before the transition begins
-			duration = 300 // Transition lasts for 300 ms
-		}
-	) {
-		// Get the node object's opacity
-		const o = +getComputedStyle(node).opacity;
-
-		// Return a transition object with these properties
-		return {
-			delay,
-			duration,
-
-			// Generate CSS animation; in this case animate the opacity
-			css: (t) => `opacity: ${t * o}`
-		};
 	}
 </script>
 
@@ -60,8 +41,8 @@
 					<div
 						class="absolute top-0 right-0 pt-2 -mr-12"
 						class:hidden={!navIsOpen}
-						in:transition_opacity
-						out:transition_opacity
+						in:opacityTransition
+						out:opacityTransition
 					>
 						<button
 							type="button"
