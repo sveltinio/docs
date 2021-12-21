@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
+	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
 	import FooterLinks from '$themes/dockerz/components/_FooterLinks.svelte';
 	import ModernImage from '$components/_ModernImage.svelte';
 	

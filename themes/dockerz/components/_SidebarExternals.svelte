@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ExternalLinkItem } from '$lib/schema';
+	import type { ExternalLinkItem } from '$lib/interfaces';
 	import ExternalLink from '$components/_ExternalLink.svelte';
 
 	export let externalLinksData: Array<ExternalLinkItem>;

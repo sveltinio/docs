@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
+	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
 	import { website } from '$config/website';
 	import ModernImage from '$components/_ModernImage.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';

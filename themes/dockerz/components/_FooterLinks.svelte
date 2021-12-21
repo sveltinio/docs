@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
+	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
 	import ExternalLink from '$components/_ExternalLink.svelte';
 	import sortBy from 'lodash-es/sortBy.js';
 

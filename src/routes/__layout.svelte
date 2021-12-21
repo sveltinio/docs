@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
-	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
+	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
 	import userSettings from '$config/user_settings.js';
 	import sveltinVersion from '$config/defaults.js';
 	import menu from '$config/menu.js';

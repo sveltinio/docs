@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
+	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
 
 	import CollapsableList from './_CollapsableList.svelte';
 	import SidebarExternals from './_SidebarExternals.svelte';
