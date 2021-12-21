@@ -1,3 +1,18 @@
+export interface MenuItem {
+	identifier: string;
+	name: string;
+	url: string;
+	weight: number;
+	children: Array<MenuItem>;
+}
+
+export interface ExternalLinkItem {
+	identifier: string;
+	name: string;
+	url: string;
+	weight: number;
+}
+
 export const ContentItemSchema = {
 	type: 'array',
 	items: {
