@@ -1,11 +1,12 @@
-<script>
-	import ModernImage from '$components/_ModernImage.svelte';
+<script lang="ts">
+	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
 	import { website } from '$config/website';
-
+	import ModernImage from '$components/_ModernImage.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 
-	export let data;
-	export let dark;
+	export let dark: boolean;
+	export let menuData: Array<MenuItem>;
+	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
 
 <div
@@ -33,7 +34,7 @@
 				>
 			</div>
 			<nav class="flex-1 mt-12">
-				<SidebarLinks {data} bind:dark />
+				<SidebarLinks bind:dark {menuData} {externalLinksData} />
 			</nav>
 		</div>
 	</div>
