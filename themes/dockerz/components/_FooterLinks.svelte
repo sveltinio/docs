@@ -1,9 +1,13 @@
 <script lang="ts">
-	import ExternalLink from '$components/_ExternalLink.svelte';
 	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
+	import ExternalLink from '$components/_ExternalLink.svelte';
+	import sortBy from 'lodash-es/sortBy.js';
 
 	export let menuData: Array<MenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
+
+	const menuItems = sortBy(menuData, 'weigth');
+	const externalLinks = sortBy(externalLinksData, 'weigth');
 </script>
 
 <div
@@ -16,7 +20,7 @@
 			>
 				<div class="grid grid-cols-1 lg:grid-cols-3">
 					<ul role="list" class="mt-4 space-y-4 lg:mt-0">
-						{#each menuData as item}
+						{#each menuItems as item}
 							<li>
 								<a
 									href={item.url}
@@ -28,7 +32,7 @@
 						{/each}
 					</ul>
 					<ul role="list" class="mt-4 space-y-4 lg:mt-0">
-						{#each externalLinksData as item}
+						{#each externalLinks as item}
 							<li>
 								<ExternalLink
 									name={item.name}
