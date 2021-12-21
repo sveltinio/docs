@@ -18,7 +18,7 @@
 	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
 
-	let dark: boolean;
+	let dark = false;
 	let navIsOpen = false;
 	const menuData = menu as unknown as MenuItem[];
 	const externalLinksData = externalLinks as unknown as ExternalLinkItem[];
