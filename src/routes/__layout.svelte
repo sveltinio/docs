@@ -79,11 +79,11 @@
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>
-		<SidebarDesktop data={menu} bind:dark />
+		<SidebarDesktop bind:dark {menuData} {externalLinksData} />
 		<div class="relative z-0 flex flex-1 overflow-hidden">
 			<div class="relative z-0 flex-1 overflow-y-auto focus:outline-none lg:pl-72">
 				<Toolbar bind:dark />
-				<SidebarMobile data={menu} bind:dark bind:navIsOpen />
+				<SidebarMobile bind:dark bind:navIsOpen {menuData} {externalLinksData} />
 				<main class="flex-1 mx-auto">
 					<slot />
 					<Footer

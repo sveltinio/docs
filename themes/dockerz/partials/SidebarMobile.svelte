@@ -1,17 +1,19 @@
 <script lang="ts">
-	import ModernImage from '$components/_ModernImage.svelte';
 	import { website } from '$config/website';
+	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
 	import CancelIcon from '@indaco/svelte-iconoir/icons/CancelIcon.svelte';
 	import MenuMobileBtn from '../components/_MenuMobileBtn.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
+	import ModernImage from '$components/_ModernImage.svelte';
 
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import { opacityTransition } from '$lib/shared/transitions';
 
-	export let data: any;
-	export let dark: any;
-	export let navIsOpen;
+	export let dark: boolean;
+	export let navIsOpen: boolean;
+	export let menuData: Array<MenuItem>;
+	export let externalLinksData: Array<ExternalLinkItem>;
 
 	function handleNavMenu(): void {
 		navIsOpen = !navIsOpen;
@@ -76,7 +78,7 @@
 						</a>
 					</div>
 					<nav class="px-2 mt-5 space-y-1">
-						<SidebarLinks {data} bind:dark />
+						<SidebarLinks bind:dark {menuData} {externalLinksData} />
 					</nav>
 				</div>
 				<div

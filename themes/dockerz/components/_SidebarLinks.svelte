@@ -1,19 +1,22 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
+	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
 
 	import CollapsableList from './_CollapsableList.svelte';
 	import SidebarExternals from './_SidebarExternals.svelte';
 	import sortBy from 'lodash-es/sortBy.js';
 
-	export let data;
-	export let dark;
+	export let dark: boolean;
+	export let menuData: Array<MenuItem>;
+	export let externalLinksData: Array<ExternalLinkItem>;
 
-	let menu = sortBy(data, 'weigth');
+	const menuItems = sortBy(menuData, 'weigth');
+	const externalLinks = sortBy(externalLinksData, 'weigth');
 </script>
 
 <div class="dark:border-skin-base-dark border-l">
 	<div>
-		{#each menu as item}
+		{#each menuItems as item}
 			{#if !item.children}
 				<a
 					href={item.url}
@@ -43,7 +46,7 @@
 			{/if}
 		{/each}
 	</div>
-	<SidebarExternals />
+	<SidebarExternals externalLinksData={externalLinks} />
 </div>
 
 <style>
