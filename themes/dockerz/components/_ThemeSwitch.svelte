@@ -7,13 +7,21 @@
 	export let dark: boolean;
 	export let visible: boolean;
 
+	function handleLightMode(): void {
+		theme.set('light');
+		dark = false;
+		visible = !visible;
+	}
+
 	function handleDarkMode(): void {
-		if (dark) {
-			theme.set('dark');
-		} else {
-			theme.set('light');
-		}
-		dark = !dark;
+		theme.set('dark');
+		dark = true;
+		visible = !visible;
+	}
+
+	function handleSystemMode(): void {
+		theme.set('system');
+		dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		visible = !visible;
 	}
 </script>
@@ -29,7 +37,7 @@
 			class="py-1 px-2 flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
 			role="option"
 			tabindex="-1"
-			on:click|preventDefault={handleDarkMode}
+			on:click|preventDefault={handleLightMode}
 		>
 			<SunLightIcon class="w-5 h-5 mr-2" />
 			Light
@@ -47,7 +55,7 @@
 			class="py-1 px-2 flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
 			role="option"
 			tabindex="-1"
-			on:click|preventDefault={handleDarkMode}
+			on:click|preventDefault={handleSystemMode}
 		>
 			<ComputerIcon class="w-5 h-5 mr-2 " />
 			System
