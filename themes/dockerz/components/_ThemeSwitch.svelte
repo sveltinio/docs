@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { theme } from '$lib/shared/stores';
 	import SunLightIcon from '@indaco/svelte-iconoir/icons/SunLightIcon.svelte';
 	import HalfMoonIcon from '@indaco/svelte-iconoir/icons/HalfMoonIcon.svelte';
 	import ComputerIcon from '@indaco/svelte-iconoir/icons/ComputerIcon.svelte';
-	import { theme } from '$lib/shared/stores';
 
 	export let dark: boolean;
 	export let visible: boolean;
@@ -20,8 +20,10 @@
 	}
 
 	function handleSystemMode(): void {
-		theme.set('system');
-		dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const isAutoSettings = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		let themeName = isAutoSettings ? 'dark' : 'light';
+		theme.set(themeName);
+		dark = isAutoSettings;
 		visible = !visible;
 	}
 </script>
