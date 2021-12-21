@@ -3,9 +3,11 @@
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
+	import type { MenuItem, ExternalLinkItem } from '$lib/schema';
 	import userSettings from '$config/user_settings.js';
 	import sveltinVersion from '$config/defaults.js';
 	import menu from '$config/menu.js';
+	import externalLinks from '$config/external_links.js';
 	import GoogleFonts from '$components/GoogleFonts.svelte';
 	import SEO from '$components/SEO.svelte';
 	import GoogleAnalytics from '$components/GoogleAnalytics.svelte';
@@ -18,6 +20,8 @@
 
 	let dark: boolean;
 	let navIsOpen = false;
+	const menuData = menu as unknown as MenuItem[];
+	const externalLinksData = externalLinks as unknown as ExternalLinkItem[];
 
 	function handleEscape({ key }) {
 		if (key === 'Escape') {
@@ -82,7 +86,12 @@
 				<SidebarMobile data={menu} bind:dark bind:navIsOpen />
 				<main class="flex-1 mx-auto">
 					<slot />
-					<Footer cliVersion={sveltinVersion} />
+					<Footer
+						cliVersion={sveltinVersion}
+						websiteData={website}
+						{menuData}
+						{externalLinksData}
+					/>
 				</main>
 			</div>
 		</div>
