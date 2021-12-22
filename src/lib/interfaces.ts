@@ -50,6 +50,11 @@ export interface ExternalLinkItem {
 	weight: number;
 }
 
+export interface NavigationItem {
+	title: string;
+	slug: string;
+}
+
 export interface ContentItem {
 	title: string;
 	slug: string;

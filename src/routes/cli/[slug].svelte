@@ -7,7 +7,7 @@
 
 	import Ajv from 'ajv';
 	import SchemaValidator from '$lib/utils/schema_validator';
-	import type { ContentItem } from '$lib/interfaces';
+	import type { ContentItem, NavigationItem } from '$lib/interfaces';
 	import { ContentItemSchema } from '$lib/schema';
 
 	const ajv = new Ajv();
@@ -26,8 +26,14 @@
 
 			if (item) {
 				const resourceName = 'cli';
-				const next = published[itemIndex - 1]?.slug;
-				const previous = published[itemIndex + 1]?.slug;
+				const next: NavigationItem = {
+					title: published[itemIndex - 1]?.title,
+					slug: published[itemIndex - 1]?.slug
+				};
+				const previous: NavigationItem = {
+					title: published[itemIndex + 1]?.title,
+					slug: published[itemIndex + 1]?.slug
+				};
 
 				return {
 					props: {
@@ -54,12 +60,12 @@
 
 <script lang="ts">
 	import TOC from '$components/_TOC.svelte';
-	import PrevNext from '$themes/dockerz/components/PrevNext.svelte';
+	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
 
 	export let item: ContentItem;
 	export let resourceName: string;
-	export let previous: string;
-	export let next: string;
+	export let previous: NavigationItem;
+	export let next: NavigationItem;
 </script>
 
 <svelte:head>
