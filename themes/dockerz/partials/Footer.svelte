@@ -1,15 +1,10 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
-	import FooterLinks from '$themes/dockerz/components/_FooterLinks.svelte';
 	import ModernImage from '$components/_ModernImage.svelte';
-	
-	export let cliVersion: string;
-	export let websiteData;
-	export let menuData: Array<MenuItem>;
-	export let externalLinksData: Array<ExternalLinkItem>;
-</script>
+	import type { WebSite } from '$lib/interfaces';
 
-<FooterLinks {menuData} {externalLinksData} />
+	export let cliVersion: string;
+	export let websiteData: WebSite;
+</script>
 
 <footer
 	class="border-t border-antiflash bg-skin-base dark:bg-skin-base-dark dark:border-skin-muted-dark"

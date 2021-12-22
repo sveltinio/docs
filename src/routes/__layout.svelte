@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
-	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
+	import type { WebSite, MenuItem, ExternalLinkItem } from '$lib/interfaces';
 	import userSettings from '$config/user_settings.js';
 	import sveltinVersion from '$config/defaults.js';
 	import menu from '$config/menu.js';
@@ -11,17 +11,20 @@
 	import GoogleFonts from '$components/GoogleFonts.svelte';
 	import SEO from '$components/SEO.svelte';
 	import GoogleAnalytics from '$components/GoogleAnalytics.svelte';
-	import Footer from '$themes/dockerz/partials/Footer.svelte';
+	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
+	import BottomPageLinks from '$themes/dockerz/partials/BottomPageLinks.svelte';
+	import Footer from '$themes/dockerz/partials/Footer.svelte';
 	import ScrollToTop from '$themes/dockerz/components/ScrollToTop.svelte';
-	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
-	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
 
 	let dark = false;
 	let navIsOpen = false;
+
+	const websiteData = website as unknown as WebSite;
 	const menuData = menu as unknown as MenuItem[];
 	const externalLinksData = externalLinks as unknown as ExternalLinkItem[];
+	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
 
 	function handleEscape({ key }) {
 		if (key === 'Escape') {
@@ -59,14 +62,15 @@
 	{/if}
 
 	<script>
+		console.log(localStorage);
 		if (!('theme' in localStorage)) {
 			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 				document.documentElement.classList.add('dark');
-				document.cookie = 'theme=dark;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
+				//document.cookie = 'theme=dark;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
 				dark = true;
 			} else {
 				document.documentElement.classList.remove('dark');
-				document.cookie = 'theme=light;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
+				//document.cookie = 'theme=light;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT;';
 				dark = false;
 			}
 		} else {
@@ -86,12 +90,8 @@
 				<SidebarMobile bind:dark bind:navIsOpen {menuData} {externalLinksData} />
 				<main class="flex-1 mx-auto">
 					<slot />
-					<Footer
-						cliVersion={sveltinVersion}
-						websiteData={website}
-						{menuData}
-						{externalLinksData}
-					/>
+					<BottomPageLinks {menuData} {externalLinksData} />
+					<Footer cliVersion={sveltinVersion} {websiteData} />
 				</main>
 			</div>
 		</div>
