@@ -3,11 +3,9 @@
 	import NavArrowUpIcon from '@indaco/svelte-iconoir/icons/NavArrowUpIcon.svelte';
 
 	export let headerText;
-	let expanded = false;
 
-	function handleExpanded() {
-		expanded = !expanded;
-	}
+	let expanded = false;
+	const toggleExpand = () => (expanded = !expanded);
 
 	$: toggleArrowUp = expanded ? 'block' : 'hidden';
 	$: toggleArrowDown = expanded ? 'hidden' : 'block';
@@ -16,7 +14,7 @@
 <div>
 	<button
 		aria-expanded={expanded}
-		on:click={handleExpanded}
+		on:click={toggleExpand}
 		class="hover:bg-skin-light dark:hover:bg-skin-dark focus:border-skin-muted inline-flex items-center w-full pr-4 border-l-2 border-transparent"
 	>
 		<span
