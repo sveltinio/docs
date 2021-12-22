@@ -13,9 +13,9 @@
 		<div class="dark:divide-skin-muted-dark grid grid-cols-1 lg:grid-cols-2 lg:divide-x">
 			<div>
 				{#if previous.title}
-					<a href={`/${resource}/${previous.slug}`}>
+					<a href={`/${resource}/${previous.slug}`} class="group">
 						<div
-							class=" bg-ghost dark:bg-cinder dark:hover:bg-tuna hover:bg-metal sm:px-6 lg:px-8 group px-4 pt-8 pb-16"
+							class="px-4 pt-8 pb-16 bg-skin-base dark:bg-skin-base-dark hover:bg-skin-base-hover dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
 						>
 							<span
 								class=" text-comet dark:text-manatee dark:hover:text-oyster text-sm font-normal"
@@ -34,9 +34,9 @@
 
 			<div>
 				{#if next.title}
-					<a href={`/${resource}/${next.slug}`}>
+					<a href={`/${resource}/${next.slug}`} class="group ">
 						<div
-							class=" md:mt-0 bg-skin-base dark:bg-skin-base-dark hover:bg-skin-base-hover dark:hover:bg-skin-dark sm:px-6 lg:px-8 group px-4 pt-8 pb-16"
+							class="px-4 pt-8 pb-16 bg-skin-base dark:bg-skin-base-dark hover:bg-skin-base-hover dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
 						>
 							<span
 								class="text-sm font-normal text-skin-base dark:text-skin-base-dark"
