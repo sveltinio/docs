@@ -16,7 +16,7 @@
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
 	import BottomPageLinks from '$themes/dockerz/partials/BottomPageLinks.svelte';
 	import Footer from '$themes/dockerz/partials/Footer.svelte';
-	import ScrollToTop from '$themes/dockerz/components/ScrollToTop.svelte';
+	import ScrollToTop from '$themes/dockerz/partials/ScrollToTop.svelte';
 
 	let dark = false;
 	let navIsOpen = false;
@@ -96,5 +96,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- <ScrollToTop /> -->
+	<ScrollToTop />
 </div>

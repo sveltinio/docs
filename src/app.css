@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
 	:root {
 		--pure-white: #ffffff;
 		--dark: #22272e /* tuna */;
