@@ -9,6 +9,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import { opacityTransition } from '$lib/shared/transitions';
+	import SveltinLogo from '../components/_SveltinLogo.svelte';
 
 	export let dark: boolean;
 	export let navIsOpen: boolean;
@@ -61,20 +62,8 @@
 					<div
 						class="flex items-center flex-shrink-0 px-4 text-skin-heading dark:text-skin-heading-dark-hover"
 					>
-						<a href="/"
-							><span class="inline-flex items-center font-bold tracking-tight">
-								<ModernImage
-									pathToFile={website.logo_small}
-									altText="{website.title} logo small"
-									webp
-									avif={false}
-									class="w-5 h-auto lazyload"
-									width="20px"
-									height="auto"
-								/>
-
-								<span class="ml-4 text-skin-heading lg:text-2xl">Sveltin</span>
-							</span>
+						<a href="/">
+							<SveltinLogo />
 						</a>
 					</div>
 					<nav class="px-2 mt-5 space-y-1">
