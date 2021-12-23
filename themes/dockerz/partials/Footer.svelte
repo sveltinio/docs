@@ -30,7 +30,7 @@
 					/>
 					<div class="flex flex-col justify-center items-center">
 						<p
-							class="mt-2 mx-auto ml-0 text-sm text-skin-body dark:text-skin-body-dark lg:ml-12"
+							class="mt-2 mx-auto ml-0 text-sm font-semibold text-skin-body dark:text-skin-body-dark lg:ml-12"
 						>
 							This site uses the <span class="italic">Dockerz</span> theme by <ExternalLink
 								name="wickedlab"
