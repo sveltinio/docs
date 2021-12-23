@@ -3,6 +3,7 @@
 
 	import ModernImage from '$components/_ModernImage.svelte';
 	import type { WebSite } from '$lib/interfaces';
+	import SveltinLogo from '../components/_SveltinLogo.svelte';
 
 	export let cliVersion: string;
 	export let websiteData: WebSite;
@@ -19,23 +20,15 @@
 				<div
 					class="flex flex-col justify-center items-center w-full font-light tracking-tighter lg:flex-row lg:justify-between"
 				>
-					<ModernImage
-						pathToFile={websiteData.logo}
-						altText="{websiteData.title} logo"
-						webp
-						avif={false}
-						class="w-28 h-auto lazyload"
-						width="24px"
-						height="32px"
-					/>
+					<SveltinLogo />
 					<div class="flex flex-col justify-center items-center">
 						<p
 							class="mt-2 mx-auto ml-0 text-sm font-semibold text-skin-body dark:text-skin-body-dark lg:ml-12"
 						>
-							This site uses the <span class="italic">Dockerz</span> theme by <ExternalLink
-								name="wickedlab"
-								url="https://wickedlabs.dev/"
-								class=" underline">WickedLab</ExternalLink
+							This site uses the <span class="italic">Dockerz</span>&nbsp;theme by <ExternalLink
+								name="thehasselnot"
+								url="https://thehasselnot.com/"
+								class=" underline">The Hasselnöt</ExternalLink
 							>.&nbsp; <br class="block lg:hidden" /> Icons by <ExternalLink
 								name="Iconoir"
 								url="https://iconoir.com"
