@@ -20,7 +20,7 @@
 			{#if !item.children}
 				<a
 					href={item.url}
-					class="text-skin-link dark:text-skin-link-dark hover:text-skin-link-hover hover:bg-skin-light group  dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark flex items-center p-2 pl-6 text-base font-light "
+					class="flex items-center p-2 pl-6 text-base font-light text-skin-link dark:text-skin-link-dark hover:text-skin-link-hover hover:bg-skin-light group dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark"
 					class:active={!dark && $page.path === item.url}
 					class:active-dark={dark && $page.path === item.url}
 				>
