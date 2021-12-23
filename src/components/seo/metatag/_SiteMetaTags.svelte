@@ -1,6 +1,8 @@
 <script lang="ts">
+	import type { WebSite } from '$lib/interfaces';
 	import { MetaTags, MetaTagsProps } from 'svelte-meta-tags';
-	export let data;
+	
+	export let data: WebSite;
 
 	const metatags: MetaTagsProps = {
 		title: `${data.title}`,

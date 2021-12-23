@@ -1,3 +1,5 @@
+import { stringify } from 'ajv';
+
 export interface WebSite {
 	name: string;
 	baseURL: string;
@@ -76,4 +78,36 @@ export interface MetadataItem {
 	title: string;
 	slug: string;
 	headline: string;
+}
+
+export interface JsonLdSiteNavigationElementItem {
+	position: number;
+	name: string;
+	description: string;
+	url: string;
+}
+
+export function jsonLdSiteNavigationElementToObject(item: JsonLdSiteNavigationElementItem): Object {
+	return {
+		'@type': 'SiteNavigationElement',
+		position: item.position,
+		name: item.name,
+		description: item.description,
+		url: item.url
+	};
+}
+
+export interface JsonLdBreadcrumbsItem {
+	position: number;
+	name: string;
+	url: string;
+}
+
+export function JsonLdBreadcrumbsItemToObject(item: JsonLdBreadcrumbsItem): Object {
+	return {
+		'@type': 'ListItem',
+		position: item.position,
+		name: item.name,
+		item: item.url
+	};
 }

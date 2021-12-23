@@ -7,6 +7,7 @@
 	import userSettings from '$config/user_settings.js';
 	import sveltinVersion from '$config/defaults.js';
 	import menu from '$config/menu.js';
+	import orderBy from 'lodash-es/orderBy.js';
 	import externalLinks from '$config/external_links.js';
 	import GoogleFonts from '$components/GoogleFonts.svelte';
 	import SEO from '$components/SEO.svelte';
@@ -22,7 +23,8 @@
 	let navIsOpen = false;
 
 	const websiteData = website as unknown as WebSite;
-	const menuData = menu as unknown as MenuItem[];
+	const menuItems = orderBy(menu, 'weight');
+	const menuData = menuItems as unknown as MenuItem[];
 	const externalLinksData = externalLinks as unknown as ExternalLinkItem[];
 	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
 
@@ -48,15 +50,20 @@
 <svelte:window on:keyup={handleEscape} />
 
 <svelte:head>
-	<html lang={website.language} />
-	<title>{website.name}</title>
-	<meta name="description" content={website.description} />
+	<html lang={websiteData.language} />
+	<title>{websiteData.name}</title>
+	<link rel="canonical" href={websiteData.baseURL} />
+	<meta name="description" content={websiteData.description} />
 	<meta
 		name="robots"
 		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 	/>
-	<link rel="canonical" href={website.baseURL} />
+	{#if websiteData.keywords != ''}
+		<meta name="keywords" content={websiteData.keywords} />
+	{/if}
+
 	<GoogleFonts fonts={userSettings.googleFonts} />
+
 	{#if googleAnalytics != ''}
 		<GoogleAnalytics UA_ID={googleAnalytics} />
 	{/if}
@@ -79,7 +86,7 @@
 	</script>
 </svelte:head>
 
-<SEO data={website} />
+<SEO websiteData={website} {menuData} />
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>

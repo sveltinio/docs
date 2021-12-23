@@ -1,22 +1,25 @@
-<script>
-	import menu from '$config/menu.js';
+<script lang="ts">
 	import { JsonLd } from 'svelte-meta-tags';
 	import forEach from 'lodash-es/forEach.js';
-	import orderBy from 'lodash-es/orderBy.js';
+	import {
+		WebSite,
+		MenuItem,
+		jsonLdSiteNavigationElementToObject,
+		JsonLdSiteNavigationElementItem
+	} from '$lib/interfaces';
 
-	export let data;
+	export let data: WebSite;
+	export let menuData: MenuItem[];
 
-	const menuItem = orderBy(menu, 'weight');
-
-	let elementList = [];
-	forEach(menuItem, function (item) {
-		elementList.push({
-			'@type': 'SiteNavigationElement',
+	let elementList = Array<Object>();
+	forEach(menuData, function (item) {
+		const elem: JsonLdSiteNavigationElementItem = {
 			position: item.weight,
 			name: item.identifier,
 			description: item.identifier,
 			url: `${data.baseURL}` + item.url
-		});
+		};
+		elementList.push(jsonLdSiteNavigationElementToObject(elem));
 	});
 </script>
 

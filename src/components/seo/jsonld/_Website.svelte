@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
+	import type { WebSite } from '$lib/interfaces';
 	import { JsonLd } from 'svelte-meta-tags';
 
-	export let data;
+	export let data: WebSite;
 
 	const sameAs = Object.values(data.socials).filter((v) => v != '');
 </script>
