@@ -98,7 +98,7 @@
 				<main class="flex-1 mx-auto">
 					<slot />
 					<BottomPageLinks {menuData} {externalLinksData} />
-					<Footer cliVersion={sveltinVersion} {websiteData} />
+					<Footer cliVersion={sveltinVersion} />
 				</main>
 			</div>
 		</div>
