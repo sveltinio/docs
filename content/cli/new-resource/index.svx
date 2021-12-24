@@ -1,0 +1,42 @@
+---
+title: New Resource
+slug: new-resource
+headline: Command to create new resources
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin new resource
+
+Command to create new resources
+
+### Synopsis
+
+Command to create new resources.
+
+What is a "resource" for Sveltin?
+A resource is a way to group, serve and expose your content.
+
+This command:
+
+- Create a <resource_name> folder within "content" folder, so that you can add new content for the resource
+- Scaffold a GET endpoint for the resource within "src/routes/api/<api_version>/<resource_name> so that you resource is ready to be consumed by the REST endpoint
+- Add the resource as route within the "src/routes" folder, creating its own folder
+- Scaffold index.svelte component to list all the content belongs to a resource
+- Scaffold [slug].svelte component
+
+```bash
+sveltin new resource [name] [flags]
+```
+
+### Options
+
+```bash
+  -h, --help   help for resource
+```
+
+### SEE ALSO
+
+- [sveltin new](sveltin_new.md) - Command to create projects, resources, contents, pages, metadata, theme

@@ -1,0 +1,32 @@
+---
+title: Server
+slug: server
+headline: Run the server
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin server
+
+Run the server
+
+### Synopsis
+
+It wraps svelte-kit defined commands to run the server
+
+```bash
+sveltin server [flags]
+```
+
+### Options
+
+```bash
+  -h, --help                     help for server
+  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
+```
+
+### SEE ALSO
+
+- [sveltin](sveltin.md) - sveltin is the main command to work with SvelteKit powered static websites.

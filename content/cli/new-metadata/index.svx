@@ -1,0 +1,39 @@
+---
+title: New Metadata
+slug: new-metadata
+headline: Command to add new metadata to an existing resource
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin new metadata
+
+Command to add new metadata to an existing resource
+
+### Synopsis
+
+Command to add new metadata from your content to an existing resource.
+
+What is a "metadata" for Sveltin?
+Whatever you enter in the front-matter of your markdown content for which you want content grouped by it.
+
+- 1:1 relationship is the use for metadata type "single" (E.g. posts by category)
+- 1:many relationship is the use for metadata type "list" (E.g. posts by tags)
+
+```bash
+sveltin new metadata [name] --resource [resource] --type [single|list] [flags]
+```
+
+### Options
+
+```bash
+  -h, --help              help for metadata
+  -r, --resource string   Name of the resource the new metadata is belongs to.
+  -t, --type string       Type of the new metadata. (possible values: single or list)
+```
+
+### SEE ALSO
+
+- [sveltin new](sveltin_new.md) - Command to create projects, resources, contents, pages, metadata, theme

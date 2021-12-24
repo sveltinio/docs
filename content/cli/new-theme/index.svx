@@ -1,0 +1,33 @@
+---
+title: New Theme
+slug: new-theme
+headline: Create a new theme structure
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin new theme
+
+Create a new theme structure
+
+### Synopsis
+
+Create a new theme (skeleton) called [name] in "themes" folder
+
+```bash
+sveltin new theme [name] [flags]
+```
+
+### Options
+
+```bash
+  -c, --css string               The name of the CSS framework to use. Possible values: css, tailwindcss, bulma, bootstrap
+  -h, --help                     help for theme
+  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
+```
+
+### SEE ALSO
+
+- [sveltin new](sveltin_new.md) - Command to create projects, resources, contents, pages, metadata, theme

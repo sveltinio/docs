@@ -1,0 +1,37 @@
+---
+title: Prepare
+slug: prepare
+headline: Get all the dependencies from the `package.json` file
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin prepare
+
+Get all the dependencies from the `package.json` file
+
+### Synopsis
+
+Initialize the Sveltin project getting all depencencies from the package.json file.
+
+It wraps (npm|pnpm|yarn) install.
+
+By default, sveltin uses `pnpm` as package manager. You can choose npm or yarn simply passing it via the –-package-manager flag.
+
+```bash
+sveltin prepare [flags]
+```
+
+### Options
+
+```bash
+  -h, --help                     help for prepare
+  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
+  -u, --update                   Update dependencies
+```
+
+### SEE ALSO
+
+- [sveltin](sveltin.md) - sveltin is the main command to work with SvelteKit powered static websites.

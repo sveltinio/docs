@@ -1,0 +1,42 @@
+---
+title: New
+slug: new
+headline: Command to create projects, resources, contents, pages, metadata, theme
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin new
+
+Command to create projects, resources, contents, pages, metadata, theme
+
+### Synopsis
+
+This command creates customized resources like blog posts, a new theme for your website, new page etc. depending on the subcommand used with it.
+
+Examples:
+
+sveltin new blog
+sveltin new resource posts
+sveltin new theme basic
+
+```bash
+sveltin new <project> [flags]
+```
+
+### Options
+
+```bash
+  -h, --help   help for new
+```
+
+### SEE ALSO
+
+- [sveltin](sveltin.md) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin new content](sveltin_new_content.md) - Create a new content for existing resource
+- [sveltin new metadata](sveltin_new_metadata.md) - Command to add new metadata as a Sveltekit resource
+- [sveltin new page](sveltin_new_page.md) - Create a new public page
+- [sveltin new resource](sveltin_new_resource.md) - Command to create new resources
+- [sveltin new theme](sveltin_new_theme.md) - Create a new theme structure

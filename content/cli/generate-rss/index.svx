@@ -1,0 +1,33 @@
+---
+title: Generate RSS
+slug: generate-rss
+headline: Generate a rss.xml file for your Sveltin project
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin generate rss
+
+Generate a rss.xml file for your Sveltin project
+
+### Synopsis
+
+Do you wish to have an RSS feed for your content?
+
+The "generate rss" command generates it for you.
+
+```bash
+sveltin generate rss [flags]
+```
+
+### Options
+
+```bash
+  -h, --help   help for rss
+```
+
+### SEE ALSO
+
+- [sveltin generate](sveltin_generate.md) - Command to generate static files (sitemap, rss, menu)

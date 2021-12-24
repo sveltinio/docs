@@ -1,0 +1,31 @@
+---
+title: Generate Sitemap
+slug: generate-sitemap
+headline: Generate a sitemap.xml file for your Sveltin project
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin generate sitemap
+
+Generate a sitemap.xml file for your Sveltin project
+
+### Synopsis
+
+It creates a sitemap file for your Sveltin project.
+
+```bash
+sveltin generate sitemap [flags]
+```
+
+### Options
+
+```bash
+  -h, --help   help for sitemap
+```
+
+### SEE ALSO
+
+- [sveltin generate](sveltin_generate.md) - Command to generate static files (sitemap, rss, menu)

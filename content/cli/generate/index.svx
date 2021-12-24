@@ -1,0 +1,34 @@
+---
+title: Generate
+slug: generate
+headline: Command to generate static files (sitemap, rss, menu)
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin generate
+
+Command to generate static files (sitemap, rss, menu)
+
+### Synopsis
+
+Used to generate static files through its own subcommands
+
+```bash
+sveltin generate [flags]
+```
+
+### Options
+
+```bash
+  -h, --help   help for generate
+```
+
+### SEE ALSO
+
+- [sveltin](sveltin.md) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin generate menu](sveltin_generate_menu.md) - Generate the menu config file for your Sveltin project
+- [sveltin generate rss](sveltin_generate_rss.md) - Generate a rss.xml file for your Sveltin project
+- [sveltin generate sitemap](sveltin_generate_sitemap.md) - Generate a sitemap.xml file for your Sveltin project

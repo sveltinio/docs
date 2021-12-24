@@ -1,0 +1,59 @@
+---
+title: Sveltin
+slug: sveltin
+headline: The main command
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin
+
+sveltin is the main command.
+
+### Synopsis
+
+sveltin is the main command used to build your SvelteKit powered static websites.
+
+```bash
+sveltin [command]
+```
+
+### Available commands
+
+```bash
+  build       Builds a production version of your static website.
+  generate    Command to generate static files like sitemap, rss etc.
+  help        Help about any command.
+  new         Command to add new resources.
+  prepare     Get all the dependencies.
+  preview     Preview the production version locally.
+  serve       Run the server.
+```
+
+### Options
+
+```bash
+  -h, --help      help for sveltin
+  -v, --version   version for sveltin
+```
+
+### SEE ALSO
+
+- [sveltin new](new) - Create a new sveltin based project.
+- [sveltin new resource](new-resource) - Create new resources.
+- [sveltin new content](new-content) - Create a new content for already created resource.
+- [sveltin new metadata](newmetadata) - Add a new metadata from your content as a Sveltekit resource.
+- [sveltin new page](new-page) - Create a new public page.
+- [sveltin new theme](new-theme) - Create a new theme.
+- [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project.
+- [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project.
+- [sveltin generate sitemap](generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
+- [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project.
+- [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project.
+- [sveltin generate sitemap](generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
+- [sveltin server](server) - Wrap svelte-kit defined commands to run the server.
+- [sveltin prepare](prepare) - Initialize the Sveltin project getting all depencencies.
+- [sveltin build](build) - Build a production version of your static website.
+- [sveltin preview](preview) - Wrap sveltekit-preview command.

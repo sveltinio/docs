@@ -1,0 +1,32 @@
+---
+title: Generate Menu
+slug: generate-menu
+headline: Generate the menu config file for your Sveltin project
+author: indaco
+date: 24-Dec-2021
+cover: image.png
+draft: false
+---
+
+## sveltin generate menu
+
+Generate the menu config file for your Sveltin project
+
+### Synopsis
+
+It creates a 'menu.json' file into the 'config' folder to be used by Svelte components.
+
+```bash
+sveltin generate menu [flags]
+```
+
+### Options
+
+```bash
+  -f, --full   Generate menu file including content names for all resources.
+  -h, --help   help for menu
+```
+
+### SEE ALSO
+
+- [sveltin generate](sveltin_generate.md) - Command to generate static files (sitemap, rss, menu)
