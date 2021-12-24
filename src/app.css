@@ -19,12 +19,15 @@
 		--color-text-base-dark-hover: #8098fb /* periblue */;
 
 		--color-text-muted: #5c617a /* comet */;
-		--color-text-muted-hover: #5576f9 /* oyster */;
+		--color-text-muted-hover: #0b7599 /* darkcyan */;
 		--color-text-muted-dark: #a0a1b2 /* santa */;
 		--color-text-muted-dark-hover: #8098fb /* periblue */;
 
 		--color-text-link: #0b7599 /* darkcyan */;
 		--color-text-link-hover: #074f66 /* darkslategray */;
+		--color-text-link-dark: #e6f4f1 /* brightgray */;
+		--color-text-link-dark-hover: #58a9cf /* carolinablue */;
+
 		--color-text-accent-dark: #9596a9 /* manatee */;
 		--color-text-accent-dark-hover: #8098fb /* periblue */;
 
@@ -35,13 +38,8 @@
 
 		--color-text-body: #7f8198 /* waterloo */;
 		--color-text-body-hover: #9596a9 /* santa */;
-		--color-text-body-dark: #5576f9 /* oyster */;
+		--color-text-body-dark: #e6f4f1 /* brightgray */;
 		--color-text-body-dark-hover: #5576f9 /* oyster */;
-
-		--color-text-link: #0b7599 /* darkcyan */;
-		--color-text-link-hover: #074f66 /* darkslategray */;
-		--color-text-link-dark: #8098fb /* periblue */;
-		--color-text-link-dark-hover: #c5c7d3 /* metal */;
 
 		--color-input-base: #4065f9 /* mana */;
 		--color-input-base-hover: #464a5d /* river */;
@@ -64,7 +62,7 @@
 		--color-border-base-dark: #22272e /* tuna */;
 		--color-border-muted: #0b7599 /* darkcyan */;
 		--color-border-muted-dark: #2d333b /* gun */;
-		--color-border-accent: #074f66 /* oyster */;
+		--color-border-accent: #0b7599 /* oyster */;
 		--color-border-accent-dark: #1e2028 /* pearl */;
 	}
 

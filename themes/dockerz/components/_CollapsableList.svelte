@@ -15,10 +15,10 @@
 	<button
 		aria-expanded={expanded}
 		on:click={toggleExpand}
-		class="hover:bg-skin-light dark:hover:bg-skin-dark focus:border-skin-muted inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+		class="inline-flex items-center w-full pr-4 hover:bg-skin-light dark:hover:bg-skin-dark focus:border-skin-muted border-l-2 border-transparent"
 	>
 		<span
-			class="text-skin-accent hover:text-skin-accent-hover dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover group inline-flex items-center p-2 pl-6 text-base font-light"
+			class="group inline-flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover"
 		>
 			{headerText}
 		</span>
