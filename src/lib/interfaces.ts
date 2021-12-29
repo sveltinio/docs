@@ -8,7 +8,6 @@ export interface WebSite {
 	slogan: string;
 	description: string;
 	logo: string;
-	logo_small: string;
 	copyright: string;
 	keywords: string;
 	contactEmail: string;
