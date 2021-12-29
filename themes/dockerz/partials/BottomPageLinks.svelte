@@ -22,7 +22,7 @@
 							<li>
 								<a
 									href={item.url}
-									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-xl lg:text-base"
+									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-lg lg:text-base"
 								>
 									{item.name}
 								</a>

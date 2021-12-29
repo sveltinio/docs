@@ -1,15 +1,13 @@
 <script lang="ts">
-	import { website } from '$config/website';
 	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
 	import CancelIcon from '@indaco/svelte-iconoir/icons/CancelIcon.svelte';
 	import MenuMobileBtn from '../components/_MenuMobileBtn.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
-	import ModernImage from '$components/_ModernImage.svelte';
 
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import { opacityTransition } from '$lib/shared/transitions';
-	import SveltinLogo from '../components/_SveltinLogo.svelte';
+	import LogoLink from '../components/_LogoLink.svelte';
 
 	export let dark: boolean;
 	export let navIsOpen: boolean;
@@ -62,10 +60,7 @@
 					<div
 						class="flex items-center flex-shrink-0 px-4 text-skin-heading dark:text-skin-heading-dark-hover"
 					>
-						<a href="/">
-							<SveltinLogo />
-							<span class="sr-only">Sveltin Logo</span>
-						</a>
+						<LogoLink handleNavMenu={() => handleNavMenu()} />
 					</div>
 					<nav class="px-2 mt-5 space-y-1">
 						<SidebarLinks
