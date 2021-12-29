@@ -68,7 +68,12 @@
 						</a>
 					</div>
 					<nav class="px-2 mt-5 space-y-1">
-						<SidebarLinks bind:dark {menuData} {externalLinksData} />
+						<SidebarLinks
+							bind:dark
+							{menuData}
+							{externalLinksData}
+							handleNavMenu={() => handleNavMenu()}
+						/>
 					</nav>
 				</div>
 				<div

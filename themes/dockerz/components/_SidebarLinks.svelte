@@ -9,6 +9,7 @@
 	export let dark: boolean;
 	export let menuData: Array<MenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
+	export let handleNavMenu = () => {};
 
 	const menuItems = sortBy(menuData, 'weigth');
 	const externalLinks = sortBy(externalLinksData, 'weigth');
@@ -23,6 +24,7 @@
 					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark"
 					class:active={!dark && $page.path === item.url}
 					class:active-dark={dark && $page.path === item.url}
+					on:click={handleNavMenu}
 				>
 					{item.name}
 				</a>
@@ -36,6 +38,7 @@
 									class="group flex items-center p-2 pl-3 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark focus:border-skin-muted"
 									class:active={!dark && $page.path === child.url}
 									class:active-dark={dark && $page.path === child.url}
+									on:click={handleNavMenu}
 								>
 									{child.name}
 								</a>
