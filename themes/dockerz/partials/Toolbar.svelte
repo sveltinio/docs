@@ -13,7 +13,7 @@
 			<div
 				class="relative flex items-center justify-center flex-1 px-2 space-x-8 lg:ml-6 lg:justify-end"
 			>
-				<SearchBar />
+				<!--	<SearchBar /> -->
 				<DarkModeToggle bind:dark />
 			</div>
 		</div>

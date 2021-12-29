@@ -69,7 +69,7 @@
 	{/if}
 
 	<script>
-		console.log(localStorage);
+		//console.log(localStorage);
 		if (!('theme' in localStorage)) {
 			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 				document.documentElement.classList.add('dark');
@@ -98,7 +98,7 @@
 				<main class="flex-1 mx-auto">
 					<slot />
 					<BottomPageLinks {menuData} {externalLinksData} />
-					<Footer cliVersion={sveltinVersion} />
+					<Footer />
 				</main>
 			</div>
 		</div>

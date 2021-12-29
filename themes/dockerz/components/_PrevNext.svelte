@@ -10,7 +10,9 @@
 	class="bg-skin-base dark:bg-skin-base-dark dark:hover:bg-skin-base-dark-hover border-t-2 border-skin-accent dark:border-skin-accent-dark"
 >
 	<div class="max-w-7xl mx-auto">
-		<div class="dark:divide-skin-muted-dark grid grid-cols-1 lg:grid-cols-2 lg:divide-x">
+		<div
+			class="dark:text-skin-muted-dark grid grid-cols-1 lg:grid-cols-2 lg:dark:divide-skin-muted-dark lg:divide-x"
+		>
 			<div>
 				{#if previous.title}
 					<a href={`/${resource}/${previous.slug}`} class="group">

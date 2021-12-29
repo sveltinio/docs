@@ -3,8 +3,8 @@ title: sveltin build
 slug: build
 headline: Builds a production version of your static website
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 
@@ -34,4 +34,4 @@ sveltin build [flags]
 
 ### SEE ALSO
 
-- [sveltin](sveltin.md) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin](sveltin) - sveltin is the main command to work with SvelteKit powered static websites.

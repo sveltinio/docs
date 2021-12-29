@@ -3,8 +3,8 @@ title: Sveltin
 slug: sveltin
 headline: The main command
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 

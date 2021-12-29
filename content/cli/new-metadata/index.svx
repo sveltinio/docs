@@ -3,8 +3,8 @@ title: New Metadata
 slug: new-metadata
 headline: Command to add new metadata to an existing resource
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 
@@ -36,4 +36,4 @@ sveltin new metadata [name] --resource [resource] --type [single|list] [flags]
 
 ### SEE ALSO
 
-- [sveltin new](sveltin_new.md) - Command to create projects, resources, contents, pages, metadata, theme
+- [sveltin new](new) - Command to create projects, resources, contents, pages, metadata, theme

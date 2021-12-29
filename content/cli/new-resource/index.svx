@@ -1,14 +1,13 @@
 ---
-title: New Resource
+title: sveltin new resource
 slug: new-resource
 headline: Command to create new resources
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 
-## sveltin new resource
 
 Command to create new resources
 
@@ -39,4 +38,4 @@ sveltin new resource [name] [flags]
 
 ### SEE ALSO
 
-- [sveltin new](sveltin_new.md) - Command to create projects, resources, contents, pages, metadata, theme
+- [sveltin new](new) - Command to create projects, resources, contents, pages, metadata, theme

@@ -10,9 +10,7 @@
 	const externalLinks = sortBy(externalLinksData, 'weigth');
 </script>
 
-<div
-	class="border-t border-antiflash bg-skin-base dark:border-skin-muted-dark dark:bg-skin-base-dark"
->
+<div class="border-t bg-skin-base dark:border-skin-muted-dark dark:bg-skin-base-dark">
 	<div class="mx-auto max-w-7xl">
 		<div class="grid grid-cols-2 mx-auto max-w-none">
 			<div

@@ -2,7 +2,6 @@
 	export const ssr = false;
 	import type { Load } from '@sveltejs/kit';
 	import { website } from '$config/website.js';
-	import userSettings from '$config/user_settings.js';
 	import { siteConfig } from '$lib/Env.js';
 
 	import Ajv from 'ajv';
@@ -59,13 +58,22 @@
 </script>
 
 <script lang="ts">
-	import TOC from '$components/_TOC.svelte';
+	import { onMount } from 'svelte';
+	import { theme, updateTheme } from '$lib/shared/stores';
 	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
 
 	export let item: ContentItem;
 	export let resourceName: string;
 	export let previous: NavigationItem;
 	export let next: NavigationItem;
+
+	onMount(() => {
+		const timeout = setTimeout(updateTheme, 1000);
+		return () => {
+			clearTimeout(timeout);
+		};
+	});
+	$: isDark = $theme === 'dark' ? true : false;
 </script>
 
 <svelte:head>
@@ -102,14 +110,7 @@
 			<div class="max-w-3xl">
 				<div class="mx-auto space-y-24 text-lg text-left">
 					<div class="space-y-8">
-						<TOC
-							resource={resourceName}
-							slug={item.slug}
-							headings={item.headings}
-							withChildren={false}
-						/>
-
-						<div class="markdown-content">
+						<div class="md-content" class:md-content-dark={isDark}>
 							{@html item.html}
 						</div>
 					</div>
@@ -121,7 +122,11 @@
 <PrevNext resource={resourceName} {previous} {next} />
 
 <style>
-	.markdown-content {
-		@apply prose prose-wicked;
+	.md-content {
+		@apply prose prose-sveltin;
+	}
+
+	.md-content-dark {
+		@apply prose-invert;
 	}
 </style>

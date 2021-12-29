@@ -3,8 +3,8 @@ title: Generate Menu
 slug: generate-menu
 headline: Generate the menu config file for your Sveltin project
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 
@@ -29,4 +29,4 @@ sveltin generate menu [flags]
 
 ### SEE ALSO
 
-- [sveltin generate](sveltin_generate.md) - Command to generate static files (sitemap, rss, menu)
+- [sveltin generate](generate) - Command to generate static files (sitemap, rss, menu)

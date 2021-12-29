@@ -1,7 +1,7 @@
 const external_links = [
 	{
 		identifier: 'landing',
-		name: 'Home page',
+		name: 'Landing page',
 		url: 'http://sveltin.io',
 		weight: 1
 	},

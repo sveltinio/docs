@@ -3,8 +3,8 @@ title: New Page
 slug: new-page
 headline: Create a new public page
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 
@@ -35,4 +35,4 @@ sveltin new page [name] [flags]
 
 ### SEE ALSO
 
-- [sveltin new](sveltin_new.md) - Command to create projects, resources, contents, pages, metadata, theme
+- [sveltin new](new) - Command to create projects, resources, contents, pages, metadata, theme

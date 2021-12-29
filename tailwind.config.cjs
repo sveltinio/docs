@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 const config = {
 	content: [
 		'./src/components/*.{html,svelte,js,ts}',
@@ -151,7 +153,7 @@ const config = {
 						}
 					}
 				},
-				wicked: {
+				sveltin: {
 					css: {
 						'--tw-prose-body': theme('textColor.skin.body'),
 						'--tw-prose-headings': theme('textColor.skin.heading'),
@@ -166,8 +168,8 @@ const config = {
 						'--tw-prose-captions': theme('textColor.skin.body'),
 						'--tw-prose-th-borders': theme('textColor.skin.accent'),
 						'--tw-prose-td-borders': theme('textColor.skin.accent'),
-						'--tw-prose-invert-body': theme('textColor.skin.body-dark'),
-						'--tw-prose-invert-headings': theme('textColor.skin.heading-dark'),
+						'--tw-prose-invert-body': theme('colors.zinc.400'),
+						'--tw-prose-invert-headings': theme('colors.zinc.300'),
 						'--tw-prose-invert-lead': theme('textColor.skin.accent-dark'),
 						'--tw-prose-invert-links': theme('textColor.skin.link-dark'),
 						'--tw-prose-invert-bold': theme('textColor.skin.heading-dark'),
@@ -187,7 +189,20 @@ const config = {
 	plugins: [
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/line-clamp'),
-		require('@tailwindcss/aspect-ratio')
+		require('@tailwindcss/aspect-ratio'),
+		plugin(function ({ addVariant, e, postcss }) {
+			addVariant('firefox', ({ container, separator }) => {
+				const isFirefoxRule = postcss.atRule({
+					name: '-moz-document',
+					params: 'url-prefix()'
+				});
+				isFirefoxRule.append(container.nodes);
+				container.append(isFirefoxRule);
+				isFirefoxRule.walkRules((rule) => {
+					rule.selector = `.${e(`firefox${separator}${rule.selector.slice(1)}`)}`;
+				});
+			});
+		})
 	]
 };
 

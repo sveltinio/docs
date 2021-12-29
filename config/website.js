@@ -3,21 +3,20 @@ const website = {
 	baseURL: 'https://docs.sveltin.io',
 	language: 'en-GB',
 	title: 'docs',
-	slogan: '',
-	description: '',
-	logo: 'logo.png',
-	logo_small: 'logo_small.png',
+	slogan: 'Documentation site for Sveltin CLI',
+	description: 'Documentation site for Sveltin CLI',
+	logo: 'sveltin-logo.png',
 	copyright: '2021, YOUR_NAME_HERE',
-	keywords: '',
+	keywords: 'sveltekit, svelte, documentation, cli, sveltin, static site generator, tailwind',
 	contactEmail: '',
 	sitemap: {
-		changefreq: 'weekly',
+		changefreq: 'monthly',
 		priority: 0.5
 	},
 	socials: {
 		linkedin: '',
 		twitter: '',
-		github: '',
+		github: 'https://github.com/sveltinio',
 		facebook: '',
 		instagram: '',
 		youtube: ''

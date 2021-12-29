@@ -3,8 +3,8 @@ title: Prepare
 slug: prepare
 headline: Get all the dependencies from the `package.json` file
 author: indaco
-date: 24-Dec-2021
-cover: image.png
+created_at: 24-Dec-2021
+updated_at: 29-Dec-2021
 draft: false
 ---
 
@@ -34,4 +34,4 @@ sveltin prepare [flags]
 
 ### SEE ALSO
 
-- [sveltin](sveltin.md) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin](sveltin) - sveltin is the main command to work with SvelteKit powered static websites.

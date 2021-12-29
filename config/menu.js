@@ -1,8 +1,8 @@
 const menu = [
 	{
-		identifier: 'about',
-		name: 'About Sveltin',
-		url: '/about',
+		identifier: 'why',
+		name: 'Why Sveltin?',
+		url: '/why',
 		weight: 1
 	},
 
@@ -13,12 +13,6 @@ const menu = [
 		weight: 2
 	},
 	{
-		identifier: 'tutorials',
-		name: 'Tutorials',
-		url: '/tutorials',
-		weight: 3
-	},
-	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
@@ -26,105 +20,105 @@ const menu = [
 		children: [
 			{
 				identifier: 'sveltin',
-				name: 'Sveltin',
+				name: 'sveltin',
 				url: '/cli/sveltin',
 				weight: 1
 			},
 
 			{
 				identifier: 'new',
-				name: 'New',
+				name: 'new',
 				url: '/cli/new',
 				weight: 2
 			},
 
 			{
 				identifier: 'new-resource',
-				name: 'New-Resource',
+				name: 'new resource',
 				url: '/cli/new-resource',
 				weight: 3
 			},
 
 			{
 				identifier: 'new-content',
-				name: 'New-Content',
+				name: 'new content',
 				url: '/cli/new-content',
 				weight: 4
 			},
 
 			{
 				identifier: 'new-metadata',
-				name: 'New-Metadata',
+				name: 'new metadata',
 				url: '/cli/new-metadata',
 				weight: 5
 			},
 
 			{
 				identifier: 'new-page',
-				name: 'New-Page',
+				name: 'new page',
 				url: '/cli/new-page',
 				weight: 6
 			},
 
 			{
 				identifier: 'new-theme',
-				name: 'New-Theme',
+				name: 'new theme',
 				url: '/cli/new-theme',
 				weight: 7
 			},
 
 			{
 				identifier: 'generate',
-				name: 'Generate',
+				name: 'generate',
 				url: '/cli/generate',
 				weight: 8
 			},
 
 			{
 				identifier: 'generate-menu',
-				name: 'Generate-Menu',
+				name: 'generate menu',
 				url: '/cli/generate-menu',
 				weight: 9
 			},
 
 			{
 				identifier: 'generate-rss',
-				name: 'Generate-Rss',
+				name: 'generate rss',
 				url: '/cli/generate-rss',
 				weight: 10
 			},
 
 			{
 				identifier: 'generate-sitemap',
-				name: 'Generate-Sitemap',
+				name: 'generate sitemap',
 				url: '/cli/generate-sitemap',
 				weight: 11
 			},
 
 			{
 				identifier: 'server',
-				name: 'Server',
+				name: 'server',
 				url: '/cli/server',
 				weight: 12
 			},
 
 			{
 				identifier: 'prepare',
-				name: 'Prepare',
+				name: 'prepare',
 				url: '/cli/prepare',
 				weight: 13
 			},
 
 			{
 				identifier: 'build',
-				name: 'Build',
+				name: 'build',
 				url: '/cli/build',
 				weight: 14
 			},
 
 			{
 				identifier: 'preview',
-				name: 'Preview',
+				name: 'preview',
 				url: '/cli/preview',
 				weight: 15
 			}
