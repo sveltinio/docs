@@ -11,3 +11,7 @@ theme.subscribe((value) => {
 		window.localStorage.setItem('theme', value);
 	}
 });
+
+export const updateTheme = () => {
+	theme.set(initialValue);
+};
