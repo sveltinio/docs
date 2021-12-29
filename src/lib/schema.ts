@@ -9,16 +9,16 @@ export const ContentItemSchema = {
 			slug: {
 				type: 'string'
 			},
-			author: {
-				type: 'string'
-			},
 			headline: {
 				type: 'string'
 			},
-			date: {
+			author: {
 				type: 'string'
 			},
-			cover: {
+			created_at: {
+				type: 'string'
+			},
+			updated_at: {
 				type: 'string'
 			},
 			draft: {
@@ -35,7 +35,7 @@ export const ContentItemSchema = {
 				type: 'string'
 			}
 		},
-		required: ['title', 'slug', 'author', 'headline', 'date', 'cover', 'draft', 'headings', 'html'],
+		required: ['title', 'slug', 'headline', 'draft', 'headings', 'html'],
 		additionalProperties: true
 	},
 	uniqueItems: true
