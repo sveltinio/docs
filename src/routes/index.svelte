@@ -10,10 +10,10 @@
 <section
 	class="mx-auto bg-skin-light dark:bg-skin-dark border-b border-skin-muted max-w-7xl dark:border-skin-muted-dark"
 >
-	<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-32 pt-44">
+	<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-32 pt-20 lg:pt-44">
 		<h1
 			data-animate="title"
-			class="py-10 mx-auto text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:text-5xl"
+			class="py-2 mx-auto text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:text-5xl lg:py-10 "
 			style="opacity: 1; transform: translateY(0px);"
 		>
 			Welcome to Sveltin

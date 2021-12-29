@@ -1,5 +1,5 @@
 <h2
-	class="text-lg font-normal text-skin-heading dark:text-skin-heading-dark hover:text-skin-heading-hover lg:text-2xl"
+	class="text-lg font-normal text-skin-heading hover:text-skin-heading-hover dark:text-skin-heading-dark dark:hover:text-skin-heading-dark-hover lg:text-2xl"
 >
 	What is Sveltin?
 </h2>

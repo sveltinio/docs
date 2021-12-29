@@ -18,6 +18,7 @@
 			<div class="flex items-center px-4 shrink-0 text-skin-heading dark:text-skin-white">
 				<a href="/">
 					<SveltinLogo />
+					<span class="sr-only">Sveltin Logo</span>
 				</a>
 			</div>
 			<nav class="flex-1 mt-12">

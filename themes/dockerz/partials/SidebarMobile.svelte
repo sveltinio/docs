@@ -64,6 +64,7 @@
 					>
 						<a href="/">
 							<SveltinLogo />
+							<span class="sr-only">Sveltin Logo</span>
 						</a>
 					</div>
 					<nav class="px-2 mt-5 space-y-1">
