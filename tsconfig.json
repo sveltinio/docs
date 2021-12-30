@@ -29,6 +29,7 @@
 			"$config/*": ["config/*"],
 			"$content/*": ["content/*"],
 			"$components/*": ["src/components/*"],
+			"$data/*": ["data/*"],
 			"$themes/*": ["themes/*"]
 		}
 	},

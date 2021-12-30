@@ -1,4 +1,4 @@
-const userSettings = {
+const externals = {
 	googleFonts: [
 		{
 			name: 'IBM+Plex+Sans',
@@ -18,4 +18,4 @@ const userSettings = {
 	}
 };
 
-export { userSettings as default };
+export { externals as default };

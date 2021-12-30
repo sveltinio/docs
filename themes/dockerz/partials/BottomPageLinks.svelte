@@ -16,13 +16,13 @@
 			<div
 				class="px-4 py-8 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 lg:px-8"
 			>
-				<div class="grid grid-cols-1 lg:grid-cols-3">
-					<ul role="list" class="mt-4 space-y-4 lg:mt-0">
+				<div class="grid grid-cols-1 lg:grid-cols-2">
+					<ul role="list" class="mt-2 space-y-4 lg:mt-0">
 						{#each menuItems as item}
 							<li>
 								<a
 									href={item.url}
-									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-lg lg:text-base"
+									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-base"
 								>
 									{item.name}
 								</a>
@@ -35,7 +35,7 @@
 								<ExternalLink
 									name={item.name}
 									url={item.url}
-									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-lg lg:text-base"
+									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-base"
 								>
 									{item.name}
 								</ExternalLink>
@@ -50,12 +50,12 @@
 			>
 				<div class="mt-8 md:mt-0 md:order-1 lg:pr-12">
 					<p
-						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-lg lg:text-base"
+						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base"
 					>
 						© 2021 Sveltin.io and contributors
 					</p>
 					<p
-						class="mt-2 text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-lg lg:text-base lg:mt-0"
+						class="mt-2 text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base lg:mt-0"
 					>
 						The Sveltin logos are copyright © Mirco Veltri 2021.
 					</p>

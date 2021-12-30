@@ -4,7 +4,7 @@
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
 	import type { WebSite, MenuItem, ExternalLinkItem } from '$lib/interfaces';
-	import userSettings from '$config/user_settings.js';
+	import externals from '$config/externals.js';
 	import sveltinVersion from '$config/defaults.js';
 	import menu from '$config/menu.js';
 	import orderBy from 'lodash-es/orderBy.js';
@@ -26,7 +26,7 @@
 	const menuItems = orderBy(menu, 'weight');
 	const menuData = menuItems as unknown as MenuItem[];
 	const externalLinksData = externalLinks as unknown as ExternalLinkItem[];
-	const googleAnalytics = userSettings.googleAnalytics.UA_ID;
+	const googleAnalytics = externals.googleAnalytics.UA_ID;
 
 	function handleEscape({ key }) {
 		if (key === 'Escape') {
@@ -62,7 +62,7 @@
 		<meta name="keywords" content={websiteData.keywords} />
 	{/if}
 
-	<GoogleFonts fonts={userSettings.googleFonts} />
+	<GoogleFonts fonts={externals.googleFonts} />
 
 	{#if googleAnalytics != ''}
 		<GoogleAnalytics UA_ID={googleAnalytics} />

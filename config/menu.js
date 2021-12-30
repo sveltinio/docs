@@ -5,18 +5,17 @@ const menu = [
 		url: '/why',
 		weight: 1
 	},
-
 	{
-		identifier: 'getting-started',
-		name: 'Getting Started',
-		url: '/getting-started',
+		identifier: 'application-structure',
+		name: 'Application Structure',
+		url: '/application-structure',
 		weight: 2
 	},
 	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
-		weight: 4,
+		weight: 3,
 		children: [
 			{
 				identifier: 'sveltin',
