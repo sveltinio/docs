@@ -12,7 +12,7 @@
 	const ajv = new Ajv();
 	const schemaValidator = new SchemaValidator(ajv);
 
-	export const load: Load = async ({ page: { params } }) => {
+	export const load: Load = async ({ params }) => {
 		const { slug } = params;
 		const url = '/api/v1/cli/published.json';
 		const res = await fetch(url);
@@ -87,7 +87,7 @@
 	/>
 	<meta property="og:description" content={item.headline} />
 	<meta property="article:author" content={item.author} />
-	<meta property="article:published_time" content={item.date} />
+	<meta property="article:published_time" content={item.updated_at} />
 </svelte:head>
 
 <section
@@ -111,6 +111,13 @@
 						<div class="md-content" class:md-content-dark={isDark}>
 							{@html item.html}
 						</div>
+					</div>
+					<div class="space-y-8">
+						<p
+							class="text-sm font-light text-skin-body dark:text-skin-body-dark sm:text-base md:mt-5"
+						>
+							Last updated: {item.updated_at}
+						</p>
 					</div>
 				</div>
 			</div>
