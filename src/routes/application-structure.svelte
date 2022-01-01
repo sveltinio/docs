@@ -47,20 +47,24 @@
 									class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
 								>
 									<div
-										class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+										class="shadow overflow-hidden border-b border-gray-200 dark:border-gray-500 sm:rounded-lg"
 									>
-										<table class="min-w-full divide-y divide-gray-200">
-											<thead class="bg-gray-50">
+										<table
+											class="min-w-full divide-y divide-gray-200 dark:divide-gray-500"
+										>
+											<thead
+												class="bg-gray-50 dark:border-gray-300 dark:bg-skin-base-dark"
+											>
 												<tr>
 													<th
 														scope="col"
-														class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+														class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-skin-body-dark uppercase tracking-wider"
 													>
 														File/Folder
 													</th>
 													<th
 														scope="col"
-														class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+														class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-skin-body-dark uppercase tracking-wider"
 													>
 														Purpose
 													</th>
@@ -69,14 +73,14 @@
 											<tbody>
 												{#each applicationStructure as f}
 													<!-- Even row -->
-													<tr class="bg-white">
+													<tr class="bg-skin-light dark:bg-skin-dark">
 														<td
-															class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+															class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-skin-body-dark"
 														>
 															{f.name}
 														</td>
 														<td
-															class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+															class="px-6 py-4 whitespace-nowrap text-sm text-skin-body dark:text-skin-body-dark"
 														>
 															{@html f.purpose}
 														</td>
