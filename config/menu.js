@@ -60,66 +60,59 @@ const menu = [
 			},
 
 			{
-				identifier: 'new-theme',
-				name: 'new theme',
-				url: '/cli/new-theme',
-				weight: 7
-			},
-
-			{
 				identifier: 'generate',
 				name: 'generate',
 				url: '/cli/generate',
-				weight: 8
+				weight: 7
 			},
 
 			{
 				identifier: 'generate-menu',
 				name: 'generate menu',
 				url: '/cli/generate-menu',
-				weight: 9
+				weight: 8
 			},
 
 			{
 				identifier: 'generate-rss',
 				name: 'generate rss',
 				url: '/cli/generate-rss',
-				weight: 10
+				weight: 9
 			},
 
 			{
 				identifier: 'generate-sitemap',
 				name: 'generate sitemap',
 				url: '/cli/generate-sitemap',
-				weight: 11
+				weight: 10
 			},
 
 			{
 				identifier: 'server',
 				name: 'server',
 				url: '/cli/server',
-				weight: 12
+				weight: 11
 			},
 
 			{
 				identifier: 'prepare',
 				name: 'prepare',
 				url: '/cli/prepare',
-				weight: 13
+				weight: 12
 			},
 
 			{
 				identifier: 'build',
 				name: 'build',
 				url: '/cli/build',
-				weight: 14
+				weight: 13
 			},
 
 			{
 				identifier: 'preview',
 				name: 'preview',
 				url: '/cli/preview',
-				weight: 15
+				weight: 14
 			}
 		]
 	}

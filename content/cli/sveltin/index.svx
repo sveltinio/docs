@@ -4,7 +4,7 @@ slug: sveltin
 headline: The main command
 author: indaco
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 01-Jan-2022
 draft: false
 ---
 
@@ -23,13 +23,13 @@ sveltin [command]
 ### Available commands
 
 ```bash
-  build       Builds a production version of your static website.
-  generate    Command to generate static files like sitemap, rss etc.
-  help        Help about any command.
-  new         Command to add new resources.
-  prepare     Get all the dependencies.
-  preview     Preview the production version locally.
-  serve       Run the server.
+  build        Builds a production version of your static website.
+  generate     Command to generate static files like sitemap, rss etc.
+  help         Help about any command.
+  new          Command to add new resources.
+  prepare      Get all the dependencies.
+  preview      Preview the production version locally.
+  server       Run the server.
 ```
 
 ### Options
@@ -46,7 +46,6 @@ sveltin [command]
 - [sveltin new content](new-content) - Create a new content for already created resource.
 - [sveltin new metadata](newmetadata) - Add a new metadata from your content as a Sveltekit resource.
 - [sveltin new page](new-page) - Create a new public page.
-- [sveltin new theme](new-theme) - Create a new theme.
 - [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project.
 - [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project.
 - [sveltin generate sitemap](generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.

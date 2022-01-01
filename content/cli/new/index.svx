@@ -4,7 +4,7 @@ slug: new
 headline: Command to create projects, resources, contents, pages, metadata, theme
 author: indaco
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 31-Dec-2021
 draft: false
 ---
 
@@ -19,8 +19,9 @@ This command creates customized resources like blog posts, a new theme for your 
 Examples:
 
 sveltin new blog
+sveltin new blog --css tailwindcss
+sveltin new blog --css vanillacss -t myTheme
 sveltin new resource posts
-sveltin new theme basic
 
 ```bash
 sveltin new <project> [flags]
@@ -29,7 +30,10 @@ sveltin new <project> [flags]
 ### Options
 
 ```bash
-  -h, --help   help for new
+  -h, --help                     help for new
+  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
+  -t, --theme-name      string   The name of the theme you are going to create
+  -c, --css             string   The name of the CSS framework to use. Possible values: vanillacss, tailwindcss, bulma, bootstrap
 ```
 
 ### SEE ALSO

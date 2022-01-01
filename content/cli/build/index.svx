@@ -28,8 +28,7 @@ sveltin build [flags]
 ### Options
 
 ```bash
-  -h, --help                     help for build
-  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
+  -h, --help   help for preview
 ```
 
 ### SEE ALSO

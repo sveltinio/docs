@@ -61,7 +61,8 @@ export interface ContentItem {
 	slug: string;
 	author: string;
 	headline: string;
-	date: string;
+	created_at: string;
+	updated_at: string;
 	cover: string;
 	draft: boolean;
 	headings: Array<Record<string, unknown>>;

@@ -27,9 +27,8 @@ sveltin prepare [flags]
 ### Options
 
 ```bash
-  -h, --help                     help for prepare
-  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
-  -u, --update                   Update dependencies
+  -h, --help     help for prepare
+  -u, --update   Update dependencies
 ```
 
 ### SEE ALSO
