@@ -58,7 +58,8 @@ const applicationStructure = [
 	},
 	{
 		name: 'themes/<t>',
-		purpose: 'Here is where you should/could create UI components and partials.'
+		purpose:
+			'<code class="font-mono text-sm">t</code> is the name of your theme. By default, a folder <code class="font-mono text-sm">project_name_theme</code> <br/> is placed here when you create a new project.<br/>To set your theme a different name, use the <strong class="font-mono text-sm">-t</strong> flag when you create a <br/> new sveltin project'
 	},
 	{
 		name: 'themes/<t>/components',
