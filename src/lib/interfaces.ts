@@ -1,12 +1,18 @@
-import { stringify } from 'ajv';
+declare global {
+	interface Window {
+		dataLayer: Array<any>;
+	}
+}
 
 export interface WebSite {
 	name: string;
 	baseURL: string;
 	language: string;
 	title: string;
+	subTitle: string;
 	slogan: string;
 	description: string;
+	seoDescription: string;
 	logo: string;
 	copyright: string;
 	keywords: string;
@@ -41,6 +47,7 @@ export interface MenuItem {
 	name: string;
 	url: string;
 	weight: number;
+	external: boolean;
 	children: Array<MenuItem>;
 }
 
@@ -61,8 +68,7 @@ export interface ContentItem {
 	slug: string;
 	author: string;
 	headline: string;
-	created_at: string;
-	updated_at: string;
+	date: string;
 	cover: string;
 	draft: boolean;
 	headings: Array<Record<string, unknown>>;
@@ -78,6 +84,11 @@ export interface MetadataItem {
 	title: string;
 	slug: string;
 	headline: string;
+}
+
+export interface GoogleFont {
+	name: string;
+	weight: Array<number>;
 }
 
 export interface JsonLdSiteNavigationElementItem {
