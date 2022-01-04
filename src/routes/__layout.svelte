@@ -50,24 +50,8 @@
 <svelte:window on:keyup={handleEscape} />
 
 <svelte:head>
-	<html lang={websiteData.language} />
-	<title>{websiteData.name}</title>
-	<link rel="canonical" href={websiteData.baseURL} />
-	<meta name="description" content={websiteData.description} />
-	<meta
-		name="robots"
-		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-	/>
-	{#if websiteData.keywords != ''}
-		<meta name="keywords" content={websiteData.keywords} />
-	{/if}
-
+	<SEO websiteData={website} {menuData} />
 	<GoogleFonts fonts={externals.googleFonts} />
-
-	{#if googleAnalytics != ''}
-		<GoogleAnalytics UA_ID={googleAnalytics} />
-	{/if}
-
 	<script>
 		//console.log(localStorage);
 		if (!('theme' in localStorage)) {
@@ -86,7 +70,9 @@
 	</script>
 </svelte:head>
 
-<SEO websiteData={website} {menuData} />
+{#if googleAnalytics != ''}
+	<GoogleAnalytics UA_ID={googleAnalytics} />
+{/if}
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>

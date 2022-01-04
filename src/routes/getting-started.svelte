@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Getting Started | {website.name}</title>
+	<title>Getting Started with Sveltin| {website.name}</title>
 </svelte:head>
 <!-- PAGE TITLE-->
 <section

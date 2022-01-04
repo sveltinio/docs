@@ -10,7 +10,7 @@ const externals = {
 		}
 	],
 	googleAnalytics: {
-		UA_ID: ''
+		propertyID: ''
 	},
 	github: {
 		username: 'sveltinio',
