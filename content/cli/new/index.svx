@@ -30,10 +30,10 @@ sveltin new <project> [flags]
 ### Options
 
 ```bash
-  -h, --help                     help for new
-  -p, --package-manager string   The name of the your preferred package manager. (default "pnpm")
-  -t, --theme-name      string   The name of the theme you are going to create
-  -c, --css             string   The name of the CSS framework to use. Possible values: vanillacss, tailwindcss, bulma, bootstrap
+  -h, --help                  help for new
+  -n, --npmClient    string   The name of the your preferred package manager. (default "pnpm")
+  -t, --theme-name   string   The name of the theme you are going to create
+  -c, --css          string   The name of the CSS framework to use. Possible values: vanillacss, tailwindcss, bulma, bootstrap
 ```
 
 ### SEE ALSO
