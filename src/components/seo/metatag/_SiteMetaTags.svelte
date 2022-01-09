@@ -1,15 +1,13 @@
 <script lang="ts">
-	import sveltinVersion from '$config/defaults.js';
 	import type { WebSite } from '$lib/interfaces';
 
-	const generatorText = 'Sveltin v' + sveltinVersion;
 	export let data: WebSite;
 </script>
 
 <title>{data.title}</title>
 <link rel="canonical" href={data.baseURL} />
 <meta name="description" content={data.seoDescription} />
-<meta name="generator" content={generatorText} />
+<meta name="generator" content="sveltin" />
 {#if data.keywords != ''}
 	<meta name="keywords" content={data.keywords} />
 {/if}
