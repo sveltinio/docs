@@ -71,7 +71,7 @@
 </svelte:head>
 
 {#if googleAnalytics != ''}
-	<GoogleAnalytics UA_ID={googleAnalytics} />
+	<GoogleAnalytics trackingId={googleAnalytics} />
 {/if}
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
@@ -83,7 +83,7 @@
 				<SidebarMobile bind:dark bind:navIsOpen {menuData} {externalLinksData} />
 				<main class="flex-1 mx-auto">
 					<slot />
-					<BottomPageLinks {menuData} {externalLinksData} />
+					<BottomPageLinks {websiteData} {menuData} {externalLinksData} />
 					<Footer />
 				</main>
 			</div>

@@ -6,7 +6,7 @@
 	export let data: WebSite;
 </script>
 
-<title>{data.name}</title>
+<title>{data.title}</title>
 <link rel="canonical" href={data.baseURL} />
 <meta name="description" content={data.seoDescription} />
 <meta name="generator" content={generatorText} />

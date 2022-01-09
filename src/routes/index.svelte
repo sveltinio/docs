@@ -3,9 +3,6 @@
 	import Overview from '$themes/dockerz/components/about/_Overview.svelte';
 </script>
 
-<svelte:head>
-	<title>Sveltin Documentation</title>
-</svelte:head>
 <!-- PAGE TITLE-->
 <section
 	class="mx-auto bg-skin-light dark:bg-skin-dark border-b border-skin-muted max-w-7xl dark:border-skin-muted-dark"

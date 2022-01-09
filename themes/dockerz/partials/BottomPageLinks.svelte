@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
+	import type { MenuItem, ExternalLinkItem, WebSite } from '$lib/interfaces';
 	import ExternalLink from '$components/_ExternalLink.svelte';
 	import sortBy from 'lodash-es/sortBy.js';
 
+	export let websiteData: WebSite;
 	export let menuData: Array<MenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 
@@ -45,14 +46,14 @@
 				</div>
 			</div>
 			<div
-				class="px-4 py-8 md:mt-0 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 lg:px-8"
+				class="px-4 py-4 md:mt-0 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 sm:py-8 lg:px-8"
 				id="contact"
 			>
 				<div class="mt-8 md:mt-0 md:order-1 lg:pr-12">
 					<p
 						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base"
 					>
-						© 2021 Sveltin.io and contributors
+						{websiteData.copyright} Sveltin.io and contributors
 					</p>
 					<p
 						class="mt-2 text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base lg:mt-0"

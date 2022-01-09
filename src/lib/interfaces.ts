@@ -9,7 +9,6 @@ export interface WebSite {
 	baseURL: string;
 	language: string;
 	title: string;
-	subTitle: string;
 	slogan: string;
 	description: string;
 	seoDescription: string;
