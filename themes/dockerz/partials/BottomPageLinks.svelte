@@ -53,7 +53,13 @@
 					<p
 						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base"
 					>
-						{websiteData.copyright} Sveltin.io and contributors
+						{websiteData.copyright} Sveltin.io and <ExternalLink
+							name="sveltin contributors"
+							url="https://github.com/orgs/sveltinio/people"
+							class="hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover"
+						>
+							contributors
+						</ExternalLink>.
 					</p>
 					<p
 						class="mt-2 text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base lg:mt-0"
