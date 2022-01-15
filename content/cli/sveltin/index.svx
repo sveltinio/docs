@@ -42,17 +42,17 @@ sveltin [command]
 ### SEE ALSO
 
 - [sveltin new](new) - Create a new sveltin based project.
-- [sveltin new resource](new-resource) - Create new resources.
-- [sveltin new content](new-content) - Create a new content for already created resource.
-- [sveltin new metadata](new-metadata) - Add a new metadata from your content as a Sveltekit resource.
-- [sveltin new page](new-page) - Create a new public page.
-- [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project.
-- [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project.
-- [sveltin generate sitemap](generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
-- [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project.
-- [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project.
-- [sveltin generate sitemap](generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
-- [sveltin server](server) - Wrap svelte-kit defined commands to run the server.
-- [sveltin prepare](prepare) - Initialize the Sveltin project getting all depencencies.
-- [sveltin build](build) - Build a production version of your static website.
-- [sveltin preview](preview) - Wrap sveltekit-preview command.
+- [sveltin new resource](/cli/new-resource) - Create new resources.
+- [sveltin new content](/cli/new-content) - Create a new content for already created resource.
+- [sveltin new metadata](/cli/new-metadata) - Add a new metadata from your content as a Sveltekit resource.
+- [sveltin new page](/cli/new-page) - Create a new public page.
+- [sveltin generate menu](/cli/generate-menu) - Generate the menu config file for your Sveltin project.
+- [sveltin generate rss](/cli/generate-rss) - Generate a rss.xml file for your Sveltin project.
+- [sveltin generate sitemap](/cli/generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
+- [sveltin generate menu](/cli/generate-menu) - Generate the menu config file for your Sveltin project.
+- [sveltin generate rss](/vgenerate-rss) - Generate a rss.xml file for your Sveltin project.
+- [sveltin generate sitemap](/cli/generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
+- [sveltin server](/cli/server) - Wrap svelte-kit defined commands to run the server.
+- [sveltin prepare](/cli/prepare) - Initialize the Sveltin project getting all depencencies.
+- [sveltin build](/cli/build) - Build a production version of your static website.
+- [sveltin preview](/cli/preview) - Wrap sveltekit-preview command.
