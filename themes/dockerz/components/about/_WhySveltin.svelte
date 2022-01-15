@@ -1,5 +1,5 @@
 <script>
-	import ExternalLink from '$components/_ExternalLink.svelte';
+	import { ExternalLink } from '@sveltinio/essentials';
 </script>
 
 <div class="space-y-12" id="why">

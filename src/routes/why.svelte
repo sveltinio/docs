@@ -1,6 +1,4 @@
 <script context="module">
-	import { website } from '$config/website.js';
-	import WebPage from '$components/seo/jsonld/WebPage.svelte';
 	import WhySveltin from '$themes/dockerz/components/about/_WhySveltin.svelte';
 	import ExistingApproaches from '$themes/dockerz/components/about/_ExistingApproaches.svelte';
 	import LookingFor from '$themes/dockerz/components/about/_LookingFor.svelte';
@@ -10,11 +8,7 @@
 
 <svelte:head>
 	<title>Why Sveltin ?</title>
-	<meta name="description" content="" />
 </svelte:head>
-
-<!-- JSON-LD WebPage-->
-<WebPage name="why" description="" publisher={website.title} baseURL={website.baseURL} />
 
 <!-- PAGE TITLE-->
 <section

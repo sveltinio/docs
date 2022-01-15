@@ -17,7 +17,7 @@
 		</p>
 	</div>
 	<div>
-		<ul role="list" class="space-y-3 text-base list-none sm:text-lg md:mt-5">
+		<ul class="space-y-3 text-base list-none sm:text-lg md:mt-5">
 			<li class="font-light text-skin-body dark:text-skin-body-dark">
 				↳ The way project and content are structured (yeah, that is mainly due to Hugo in my
 				case)

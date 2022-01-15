@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
+	import type { ExternalLinkItem } from '$lib/interfaces';
 
 	import CollapsableList from './_CollapsableList.svelte';
 	import SidebarExternals from './_SidebarExternals.svelte';
 	import sortBy from 'lodash-es/sortBy.js';
+	import type { MenuItem } from '@sveltinio/seo/types';
 
 	export let dark: boolean;
 	export let menuData: Array<MenuItem>;

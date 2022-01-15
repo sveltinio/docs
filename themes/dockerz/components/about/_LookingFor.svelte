@@ -20,7 +20,7 @@
 			website:
 		</p>
 		<div>
-			<ul role="list" class="space-y-3 text-base list-none sm:text-lg md:mt-5">
+			<ul class="space-y-3 text-base list-none sm:text-lg md:mt-5">
 				<li class="font-light text-skin-body dark:text-skin-body-dark">↳ iteratively</li>
 				<li class="font-light text-skin-body dark:text-skin-body-dark">↳ incrementally</li>
 				<li class="font-light text-skin-body dark:text-skin-body-dark">

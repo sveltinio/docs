@@ -19,7 +19,7 @@
 			Sveltin is a two side story:
 		</p>
 		<div>
-			<ul role="list" class="space-y-3 text-base list-none sm:text-lg md:mt-5">
+			<ul class="space-y-3 text-base list-none sm:text-lg md:mt-5">
 				<li class="font-light text-skin-body dark:text-skin-body-dark">
 					↳ The CLI: built in Go, uses Cobra, Viper, PromptUI and others
 				</li>

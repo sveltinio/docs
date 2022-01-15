@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem, WebSite } from '$lib/interfaces';
-	import ExternalLink from '$components/_ExternalLink.svelte';
+	import type { MenuItem, WebSite } from '@sveltinio/seo/types';
+	import type { ExternalLinkItem } from '$lib/interfaces';
 	import sortBy from 'lodash-es/sortBy.js';
+	import { ExternalLink } from '@sveltinio/essentials';
 
 	export let websiteData: WebSite;
 	export let menuData: Array<MenuItem>;
@@ -18,7 +19,7 @@
 				class="px-4 py-8 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 lg:px-8"
 			>
 				<div class="grid grid-cols-1 lg:grid-cols-2">
-					<ul role="list" class="mt-2 space-y-4 lg:mt-0">
+					<ul class="mt-2 space-y-4 lg:mt-0">
 						{#each menuItems as item}
 							<li>
 								<a
@@ -30,10 +31,11 @@
 							</li>
 						{/each}
 					</ul>
-					<ul role="list" class="mt-4 space-y-4 lg:mt-0">
+					<ul class="mt-4 space-y-4 lg:mt-0">
 						{#each externalLinks as item}
 							<li>
 								<ExternalLink
+									id={`ext-${item.name}`}
 									name={item.name}
 									url={item.url}
 									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-base"

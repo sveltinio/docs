@@ -44,7 +44,7 @@ sveltin [command]
 - [sveltin new](new) - Create a new sveltin based project.
 - [sveltin new resource](new-resource) - Create new resources.
 - [sveltin new content](new-content) - Create a new content for already created resource.
-- [sveltin new metadata](newmetadata) - Add a new metadata from your content as a Sveltekit resource.
+- [sveltin new metadata](new-metadata) - Add a new metadata from your content as a Sveltekit resource.
 - [sveltin new page](new-page) - Create a new public page.
 - [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project.
 - [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project.

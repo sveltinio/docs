@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ExternalLinkItem } from '$lib/interfaces';
-	import ExternalLink from '$components/_ExternalLink.svelte';
 
+	import { ExternalLink } from '@sveltinio/essentials';
 	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
 
@@ -13,6 +13,7 @@
 {#each externalLinksData as item}
 	<div class="mt-3">
 		<ExternalLink
+			id={`link-${item.name}`}
 			name={item.name}
 			url={item.url}
 			class="flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:hover:text-skin-link-dark-hover dark:text-skin-link-dark dark:hover:bg-skin-dark group"

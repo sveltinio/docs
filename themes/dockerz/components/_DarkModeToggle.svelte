@@ -19,7 +19,7 @@
 <svelte:window on:keyup={handleEscape} />
 
 <button
-	on:click|preventDefault={toggleThemeSwithVisibility}
+	on:click={toggleThemeSwithVisibility}
 	use:clickOutside={{ enabled: isThemeSwitchVisible, cb: () => (isThemeSwitchVisible = false) }}
 >
 	{#if dark}

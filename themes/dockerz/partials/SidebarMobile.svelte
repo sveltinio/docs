@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
+	import type { ExternalLinkItem } from '$lib/interfaces';
 	import CancelIcon from '@indaco/svelte-iconoir/icons/CancelIcon.svelte';
 	import MenuMobileBtn from '../components/_MenuMobileBtn.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
@@ -8,6 +8,7 @@
 	import { cubicInOut } from 'svelte/easing';
 	import { opacityTransition } from '$lib/shared/transitions';
 	import LogoLink from '../components/_LogoLink.svelte';
+	import type { MenuItem } from '@sveltinio/seo/types';
 
 	export let dark: boolean;
 	export let navIsOpen: boolean;

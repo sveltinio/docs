@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { MenuItem, ExternalLinkItem } from '$lib/interfaces';
-	import { website } from '$config/website';
-	import ModernImage from '$components/_ModernImage.svelte';
+	import type { MenuItem } from '@sveltinio/seo/types';
+	import type { ExternalLinkItem } from '$lib/interfaces';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 	import SveltinLogo from '../components/_SveltinLogo.svelte';
 

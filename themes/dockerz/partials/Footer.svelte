@@ -1,5 +1,6 @@
 <script lang="ts">
-	import ExternalLink from '$components/_ExternalLink.svelte';
+	import { ExternalLink } from '@sveltinio/essentials';
+
 	import SveltinLogo from '../components/_SveltinLogo.svelte';
 </script>
 

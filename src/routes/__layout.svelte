@@ -3,15 +3,17 @@
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
-	import type { WebSite, MenuItem, ExternalLinkItem } from '$lib/interfaces';
-	import externals from '$config/externals.js';
-	import sveltinVersion from '$config/defaults.js';
-	import menu from '$config/menu.js';
+	import { userSettings } from '$config/externals.js';
+	import { menu } from '$config/menu.js';
 	import orderBy from 'lodash-es/orderBy.js';
-	import externalLinks from '$config/external_links.js';
-	import GoogleFonts from '$components/GoogleFonts.svelte';
-	import SEO from '$components/SEO.svelte';
-	import GoogleAnalytics from '$components/GoogleAnalytics.svelte';
+	import { externalLinks } from '$config/external_links.js';
+	import { GoogleFonts, GoogleAnalytics } from '@sveltinio/services';
+	import {
+		JsonLdSiteNavigationElements,
+		JsonLdWebPage,
+		JsonLdWebSite,
+		SiteMetaTags
+	} from '@sveltinio/seo';
 	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
@@ -22,11 +24,8 @@
 	let dark = false;
 	let navIsOpen = false;
 
-	const websiteData = website as unknown as WebSite;
-	const menuItems = orderBy(menu, 'weight');
-	const menuData = menuItems as unknown as MenuItem[];
-	const externalLinksData = externalLinks as unknown as ExternalLinkItem[];
-	const googleAnalytics = externals.googleAnalytics.UA_ID;
+	const sortedMenu = orderBy(menu, 'weight');
+	const googleAnalytics = userSettings.googleAnalytics.propertyID;
 
 	function handleEscape({ key }) {
 		if (key === 'Escape') {
@@ -49,9 +48,13 @@
 
 <svelte:window on:keyup={handleEscape} />
 
+<SiteMetaTags websiteData={website} />
+<JsonLdWebSite websiteData={website} />
+<JsonLdWebPage websiteData={website} />
+<JsonLdSiteNavigationElements websiteData={website} menuData={sortedMenu} />
+
 <svelte:head>
-	<SEO websiteData={website} {menuData} />
-	<GoogleFonts fonts={externals.googleFonts} />
+	<GoogleFonts fonts={userSettings.googleFonts} />
 	<script>
 		//console.log(localStorage);
 		if (!('theme' in localStorage)) {
@@ -76,14 +79,23 @@
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>
-		<SidebarDesktop bind:dark {menuData} {externalLinksData} />
+		<SidebarDesktop bind:dark menuData={sortedMenu} externalLinksData={externalLinks} />
 		<div class="relative z-0 flex flex-1 overflow-hidden">
 			<div class="relative z-0 flex-1 overflow-y-auto focus:outline-none lg:pl-72">
 				<Toolbar bind:dark />
-				<SidebarMobile bind:dark bind:navIsOpen {menuData} {externalLinksData} />
+				<SidebarMobile
+					bind:dark
+					bind:navIsOpen
+					menuData={menu}
+					externalLinksData={externalLinks}
+				/>
 				<main class="flex-1 mx-auto">
 					<slot />
-					<BottomPageLinks {websiteData} {menuData} {externalLinksData} />
+					<BottomPageLinks
+						websiteData={website}
+						menuData={sortedMenu}
+						externalLinksData={externalLinks}
+					/>
 					<Footer />
 				</main>
 			</div>

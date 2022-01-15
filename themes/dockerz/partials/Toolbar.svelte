@@ -1,5 +1,4 @@
 <script lang="ts">
-	import SearchBar from '../components/_SearchBar.svelte';
 	import DarkModeToggle from '../components/_DarkModeToggle.svelte';
 
 	export let dark: boolean;
@@ -13,7 +12,6 @@
 			<div
 				class="relative flex items-center justify-center flex-1 px-2 space-x-8 lg:ml-6 lg:justify-end"
 			>
-				<!--	<SearchBar /> -->
 				<DarkModeToggle bind:dark />
 			</div>
 		</div>

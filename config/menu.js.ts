@@ -1,4 +1,6 @@
-const menu = [
+import type { MenuItem } from '@sveltinio/seo/types';
+
+const menu: Array<MenuItem> = [
 	{
 		identifier: 'why',
 		name: 'Why Sveltin?',
@@ -118,4 +120,4 @@ const menu = [
 	}
 ];
 
-export { menu as default };
+export { menu };

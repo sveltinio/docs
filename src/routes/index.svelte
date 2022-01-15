@@ -1,5 +1,4 @@
-<script context="module">
-	import { website } from '$config/website.js';
+<script>
 	import Overview from '$themes/dockerz/components/about/_Overview.svelte';
 </script>
 
@@ -19,7 +18,6 @@
 <!-- PAGE CONTENT -->
 <section class="pt-6 pb-24 bg-skin-light dark:bg-skin-dark">
 	<div class="px-4 mx-auto sm:px-6 md:px-32">
-		<!-- Replace with your content -->
 		<section>
 			<div class="max-w-3xl">
 				<div class="mx-auto space-y-24 text-lg text-left">

@@ -1,27 +1,35 @@
 <script lang="ts" context="module">
 	import type { Load } from '@sveltejs/kit';
-
-	import Ajv from 'ajv';
-	import SchemaValidator from '$lib/utils/schema_validator';
-	import type { ContentItem } from '$lib/interfaces';
-	import { ContentItemSchema } from '$lib/schema';
-
-	const ajv = new Ajv();
-	const schemaValidator = new SchemaValidator(ajv);
+	import {
+		ContentMetadata,
+		ResourceContent,
+		ResourceContentMaker
+	} from '@sveltinio/widgets/types';
 
 	export const load: Load = async ({ fetch }) => {
-		const url = '/api/v1/cli/published.json';
-		const res = await fetch(url);
+		const _url = '/api/v1/cli/published.json';
+		const res = await fetch(_url);
 		if (res.ok) {
 			const data = await res.json();
-			const cli = schemaValidator.validate<Array<ContentItem>>(ContentItemSchema, data);
+			const resourceName = 'cli';
+
+			const itemsList: Array<ResourceContent> = [];
+			data.forEach((element) => {
+				const item = ResourceContentMaker.createWithValues(
+					resourceName,
+					<ContentMetadata>element,
+					''
+				);
+				itemsList.push(item);
+			});
+
 			return {
-				props: { cli }
+				props: { itemsList }
 			};
 		}
 		return {
 			status: res.status,
-			error: new Error(`Ops! Something went wrong loading ${url}`)
+			error: new Error(`Ops! Something went wrong loading ${_url}`)
 		};
 	};
 </script>
@@ -32,9 +40,9 @@
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import sortBy from 'lodash-es/sortBy.js';
-	export let cli: Array<ContentItem>;
+	export let itemsList: Array<ResourceContent>;
 
-	cli = sortBy(cli, 'title');
+	itemsList = sortBy(itemsList, 'title');
 
 	onMount(() => {
 		const timeout = setTimeout(updateTheme, 1000);
@@ -67,15 +75,15 @@
 			<div class="max-w-3xl">
 				<div class="mx-auto space-y-24 text-lg text-left">
 					<div class="space-y-8">
-						<ul role="list">
-							{#each cli as item}
+						<ul>
+							{#each itemsList as item}
 								<li class="px-4 py-4 sm:px-0">
 									<a
 										class:cli-text={!isDark}
 										class:cli-text-dark={isDark}
 										sveltekit:prefetch
-										href={`${base}/cli/${item.slug}`}
-										>{item.title.toLowerCase()}</a
+										href={`${base}/${item.resource}/${item.metadata.slug}`}
+										>{item.metadata.title.toLowerCase()}</a
 									>
 								</li>
 							{/each}

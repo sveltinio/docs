@@ -1,4 +1,5 @@
-const external_links = [
+import type { ExternalLinkItem } from '../src/lib/interfaces';
+const externalLinks: Array<ExternalLinkItem> = [
 	{
 		identifier: 'landing',
 		name: 'Landing page',
@@ -13,4 +14,4 @@ const external_links = [
 	}
 ];
 
-export { external_links as default };
+export { externalLinks };
