@@ -40,7 +40,6 @@ const config = {
 					$content: path.resolve('content'),
 					$data: path.resolve('data'),
 					$lib: path.resolve('src/lib'),
-					$components: path.resolve('src/components'),
 					$themes: path.resolve('themes')
 				}
 			}
