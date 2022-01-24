@@ -42,6 +42,7 @@ specifiers:
   remark-preview: ^1.0.2
   remark-reading-time: 1.0.1
   remark-slug: ^7.0.1
+  rimraf: ^3.0.2
   svelte: ^3.46.2
   svelte-check: ^2.3.0
   svelte-preprocess: ^4.10.2
@@ -92,6 +93,7 @@ devDependencies:
   remark-preview: 1.0.2
   remark-reading-time: 1.0.1
   remark-slug: 7.0.1
+  rimraf: 3.0.2
   svelte: 3.46.2
   svelte-check: 2.3.0_7ff82f86d2b584ac3c0682d6a10f68b9
   svelte-preprocess: 4.10.2_608c594ab12bc3595290e63e403d651b

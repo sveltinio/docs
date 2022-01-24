@@ -3,7 +3,8 @@
 	"version": "0.1.0",
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"clean": "rimraf build",
+		"build": "npm run clean && svelte-kit build",
 		"preview": "svelte-kit preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -53,6 +54,7 @@
 		"remark-preview": "^1.0.2",
 		"remark-reading-time": "1.0.1",
 		"remark-slug": "^7.0.1",
+		"rimraf": "^3.0.2",
 		"svelte": "^3.46.2",
 		"svelte-check": "^2.3.0",
 		"svelte-preprocess": "^4.10.2",
