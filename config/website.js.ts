@@ -1,6 +1,6 @@
-import type { WebSite } from '@sveltinio/seo/types';
+import type { IWebSite } from '@sveltinio/seo/types';
 
-const website: WebSite = {
+const website: IWebSite = {
 	name: 'docs.sveltin.io',
 	baseURL: 'https://docs.sveltin.io',
 	language: 'en-GB',
@@ -11,7 +11,7 @@ const website: WebSite = {
 		'Sveltin CLI Documentation site. Here you can learn more on how to use Sveltin CLI to boost you productivity working on SvelteKit powered static websites.',
 	seoDescription:
 		'Sveltin CLI Documentation site. Here you can learn more on how to use Sveltin CLI to boost you productivity working on SvelteKit powered static websites.',
-	favicon: 'favicon.ico',
+	favicon: 'favicon.png',
 	copyright: 'Apache 2.0 License @ 2021-present',
 	keywords:
 		'sveltekit, sveltin, documentation, endpoints, slug, cli, svelte, static site generator, tailwind',
