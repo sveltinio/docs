@@ -56,7 +56,7 @@
 		title: 'All Sveltin commands?',
 		description: 'Here you can see the list of all available Sveltin commands and subcommands.',
 		keywords: website.keywords,
-		image: website.baseURL + '/' + website.logo,
+		image: website.baseURL + '/' + website.favicon,
 		opengraph: {
 			type: OpenGraphType.Website
 		},

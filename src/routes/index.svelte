@@ -15,7 +15,7 @@
 			type: OpenGraphType.Website
 		},
 		twitter: {
-			type: TwitterCardType.Summary
+			type: TwitterCardType.Large
 		}
 	};
 </script>

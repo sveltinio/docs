@@ -10,7 +10,7 @@
 		description:
 			'Here you can learn about the Application Structure for a Sveltin based website.',
 		keywords: website.keywords,
-		image: website.baseURL + '/' + website.logo,
+		image: website.baseURL + '/' + website.favicon,
 		opengraph: {
 			type: OpenGraphType.Website
 		},

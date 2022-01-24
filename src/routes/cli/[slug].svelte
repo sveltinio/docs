@@ -81,7 +81,7 @@
 
 	const cmdPageData: IWebPageMetadata = {
 		url: pageURL.href,
-		title: item.metadata.title,
+		title: 'sveltin ' + item.metadata.title + ' - command',
 		description: item.metadata.headline,
 		author: item.metadata.author,
 		image: website.baseURL + '/' + website.favicon,
