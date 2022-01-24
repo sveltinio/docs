@@ -1,5 +1,5 @@
 ---
-title: sveltin build
+title: Build
 slug: build
 headline: Builds a production version of your static website
 author: indaco

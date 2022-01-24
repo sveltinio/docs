@@ -1,5 +1,5 @@
 ---
-title: sveltin new resource
+title: New Resource
 slug: new-resource
 headline: Command to create new resources
 author: indaco
@@ -8,6 +8,7 @@ updated_at: 29-Dec-2021
 draft: false
 ---
 
+## sveltin new resource
 
 Command to create new resources
 
