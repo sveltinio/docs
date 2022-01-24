@@ -414,7 +414,7 @@ packages:
     dev: true
 
   /@sveltinio/seo/0.1.3:
-    resolution: {integrity: sha512-De+zYO34ftuxEw7XwgbcwIG5iAZt8wmQX9FU8ioKmB+FzLiJ5Hwv+jct5FySbXgPqasxTY5OzIxeY+vMyLDqsA==}
+    resolution: {integrity: sha512-zh0ih3kGQ+SiaIWEnm4azECUfoQPArakMxsozY5jiWDUcNvCqQ1DWwQ7EFuF+Q/I57qCu1QHDg0PIUKvdPRm1A==}
     dev: true
 
   /@sveltinio/services/0.1.2:
