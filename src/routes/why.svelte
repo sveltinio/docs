@@ -13,6 +13,7 @@
 		description:
 			'Here you can read more on why Sveltin and the rationals behind the decision to build Sveltin.',
 		keywords: website.keywords,
+		image: website.baseURL + '/' + website.favicon,
 		opengraph: {
 			type: OpenGraphType.Website
 		},

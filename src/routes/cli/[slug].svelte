@@ -67,6 +67,7 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { website } from '$config/website.js';
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
 	import { JsonLdWebPage, PageMetaTags } from '@sveltinio/seo';
@@ -83,6 +84,7 @@
 		title: item.metadata.title,
 		description: item.metadata.headline,
 		author: item.metadata.author,
+		image: website.baseURL + '/' + website.favicon,
 		opengraph: {
 			type: OpenGraphType.Article,
 			article: {

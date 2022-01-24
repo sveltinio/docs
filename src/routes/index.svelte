@@ -10,6 +10,7 @@
 		description:
 			'Sveltin is a CLI (Command Line Interface) created to boost the developers productivity working on SvelteKit powered static websites.',
 		keywords: website.keywords,
+		image: website.baseURL + '/' + website.logo,
 		opengraph: {
 			type: OpenGraphType.Website
 		},
