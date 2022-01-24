@@ -6,11 +6,13 @@
 		ResourceContentMaker
 	} from '@sveltinio/widgets/types';
 
-	export const load: Load = async ({ fetch }) => {
+	export const load: Load = async ({ url, fetch }) => {
+		const pageURL = url;
 		const _url = '/api/v1/cli/published.json';
-		const res = await fetch(_url);
+		const [res] = await Promise.all([fetch(_url)]);
 		if (res.ok) {
-			const data = await res.json();
+			const res2 = res.clone();
+			const data = await res2.json();
 			const resourceName = 'cli';
 
 			const itemsList: Array<ResourceContent> = [];
@@ -24,13 +26,14 @@
 			});
 
 			return {
-				props: { itemsList }
+				props: { pageURL, itemsList }
+			};
+		} else {
+			return {
+				status: res.status,
+				error: new Error(`Ops! Something went wrong loading ${_url}`)
 			};
 		}
-		return {
-			status: res.status,
-			error: new Error(`Ops! Something went wrong loading ${_url}`)
-		};
 	};
 </script>
 
@@ -40,9 +43,26 @@
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import sortBy from 'lodash-es/sortBy.js';
+	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+
+	export let pageURL: URL;
 	export let itemsList: Array<ResourceContent>;
 
 	itemsList = sortBy(itemsList, 'title');
+
+	const cliPage: IWebPageMetadata = {
+		url: pageURL.href,
+		title: 'All Sveltin commands?',
+		description: 'Here you can see the list of all available Sveltin commands and subcommands.',
+		keywords: website.keywords,
+		opengraph: {
+			type: OpenGraphType.Website
+		},
+		twitter: {
+			type: TwitterCardType.Summary
+		}
+	};
 
 	onMount(() => {
 		const timeout = setTimeout(updateTheme, 1000);
@@ -53,9 +73,8 @@
 	$: isDark = $theme === 'dark' ? true : false;
 </script>
 
-<svelte:head>
-	<title>CLI | {website.name}</title>
-</svelte:head>
+<PageMetaTags data={cliPage} />
+<JsonLdWebPage data={cliPage} />
 
 <section
 	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"
@@ -82,7 +101,7 @@
 										class:cli-text={!isDark}
 										class:cli-text-dark={isDark}
 										sveltekit:prefetch
-										href={`${base}/${item.resource}/${item.metadata.slug}`}
+										href={`${pageURL.origin}/${item.resource}/${item.metadata.slug}`}
 										>{item.metadata.title.toLowerCase()}</a
 									>
 								</li>

@@ -1,60 +1,66 @@
 <script lang="ts" context="module">
 	import type { Load } from '@sveltejs/kit';
-	import { website } from '$config/website.js';
-	import { siteConfig } from '$lib/Env.js';
 	import { ResourceContent, ResourceContentMaker } from '@sveltinio/widgets/types';
 	import type { ContentMetadata } from '@sveltinio/widgets/types';
 
-	export const load: Load = async ({ url, params, fetch }) => {
+	export const load: Load = async ({ url, fetch, params }) => {
+		const pageURL = url;
 		const { slug } = params;
 		const _url = '/api/v1/cli/published.json';
-		const res = await fetch(_url);
 
-		if (res.ok) {
-			const published = await res.json();
-			const selectedItemIndex = published.findIndex((elem) => slug === elem.slug);
-			const selectedItem = published[selectedItemIndex];
+		try {
+			const res = await fetch(_url);
+			if (res.ok) {
+				const res2 = res.clone();
+				const data = await res2.json();
 
-			if (selectedItem) {
-				const resourceName = 'cli';
-				const item = ResourceContentMaker.createWithValues(
-					resourceName,
-					<ContentMetadata>selectedItem,
-					selectedItem.html
-				);
-				const previous: ResourceContent = {
-					resource: resourceName,
-					metadata: <ContentMetadata>{
-						title: published[selectedItemIndex + 1]?.title,
-						slug: published[selectedItemIndex + 1]?.slug
-					}
-				};
-				const next: ResourceContent = {
-					resource: resourceName,
-					metadata: <ContentMetadata>{
-						title: published[selectedItemIndex - 1]?.title,
-						slug: published[selectedItemIndex - 1]?.slug
-					}
-				};
+				const selectedItemIndex = data.findIndex((elem) => slug === elem.slug);
+				const selectedItem = data[selectedItemIndex];
 
-				return {
-					props: {
-						item,
-						next,
-						previous
-					}
-				};
+				if (selectedItem) {
+					const resourceName = 'cli';
+					const item = ResourceContentMaker.createWithValues(
+						resourceName,
+						<ContentMetadata>selectedItem,
+						selectedItem.html
+					);
+					const previous: ResourceContent = {
+						resource: resourceName,
+						metadata: <ContentMetadata>{
+							title: data[selectedItemIndex + 1]?.title,
+							slug: data[selectedItemIndex + 1]?.slug
+						}
+					};
+					const next: ResourceContent = {
+						resource: resourceName,
+						metadata: <ContentMetadata>{
+							title: data[selectedItemIndex - 1]?.title,
+							slug: data[selectedItemIndex - 1]?.slug
+						}
+					};
+
+					return {
+						props: {
+							pageURL,
+							item,
+							previous,
+							next
+						}
+					};
+				} else {
+					return {
+						status: 404,
+						error: new Error(`Ops! What you are looking for does not exists`)
+					};
+				}
 			}
-
-			return {
-				status: 404,
-				error: new Error(`Ops! What you are looking for does not exists`)
-			};
+		} catch (error) {
+			console.log('ERROR: ' + error);
 		}
 
 		return {
 			status: 404,
-			error: new Error(`Ops! Something went wrong loading ${url}`)
+			error: new Error(`Ops! Something went wrong loading ${_url}`)
 		};
 	};
 </script>
@@ -63,10 +69,31 @@
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
+	import { JsonLdWebPage, PageMetaTags } from '@sveltinio/seo';
+	import type { IWebPageMetadata } from '@sveltinio/seo/types';
+	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 
 	export let item: ResourceContent;
 	export let previous: ResourceContent;
 	export let next: ResourceContent;
+	export let pageURL: URL;
+
+	const cmdPageData: IWebPageMetadata = {
+		url: pageURL.href,
+		title: item.metadata.title,
+		description: item.metadata.headline,
+		author: item.metadata.author,
+		opengraph: {
+			type: OpenGraphType.Article,
+			article: {
+				published_at: item.metadata.created_at,
+				modified_at: item.metadata.updated_at
+			}
+		},
+		twitter: {
+			type: TwitterCardType.Summary
+		}
+	};
 
 	onMount(() => {
 		const timeout = setTimeout(updateTheme, 1000);
@@ -77,19 +104,8 @@
 	$: isDark = $theme === 'dark' ? true : false;
 </script>
 
-<svelte:head>
-	<title>{item.metadata.title} - {website.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={item.metadata.title} />
-	<meta property="og:url" content={siteConfig.baseURL} />
-	<meta
-		property="og:image"
-		content="{siteConfig.baseURL}/{item.resource}/{item.metadata.slug}/{item.metadata.cover}"
-	/>
-	<meta property="og:description" content={item.metadata.headline} />
-	<meta property="article:author" content={item.metadata.author} />
-	<meta property="article:published_time" content={item.metadata.updated_at} />
-</svelte:head>
+<PageMetaTags data={cmdPageData} />
+<JsonLdWebPage data={cmdPageData} />
 
 <section
 	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"

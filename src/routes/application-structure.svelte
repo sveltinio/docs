@@ -1,11 +1,26 @@
-<script context="module">
+<script lang="ts" context="module">
 	import { website } from '$config/website.js';
 	import { applicationStructure } from '$data/structure.js';
+	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+
+	const appStructurePage: IWebPageMetadata = {
+		url: website.baseURL + '/application-structure',
+		title: 'Sveltin Application structure',
+		description:
+			'Here you can learn about the Application Structure for a Sveltin based website.',
+		keywords: website.keywords,
+		opengraph: {
+			type: OpenGraphType.Website
+		},
+		twitter: {
+			type: TwitterCardType.Summary
+		}
+	};
 </script>
 
-<svelte:head>
-	<title>Sveltin Application structure | {website.name}</title>
-</svelte:head>
+<PageMetaTags data={appStructurePage} />
+<JsonLdWebPage data={appStructurePage} />
 <!-- PAGE TITLE-->
 <section
 	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"

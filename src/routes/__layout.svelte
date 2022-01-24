@@ -8,24 +8,19 @@
 	import orderBy from 'lodash-es/orderBy.js';
 	import { externalLinks } from '$config/external_links.js';
 	import { GoogleFonts, GoogleAnalytics } from '@sveltinio/services';
-	import {
-		JsonLdSiteNavigationElements,
-		JsonLdWebPage,
-		JsonLdWebSite,
-		SiteMetaTags
-	} from '@sveltinio/seo';
 	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
 	import BottomPageLinks from '$themes/dockerz/partials/BottomPageLinks.svelte';
 	import Footer from '$themes/dockerz/partials/Footer.svelte';
 	import ScrollToTop from '$themes/dockerz/partials/ScrollToTop.svelte';
+	import { JsonLdSiteNavigationElements, JsonLdWebSite } from '@sveltinio/seo';
 
 	let dark = false;
 	let navIsOpen = false;
 
 	const sortedMenu = orderBy(menu, 'weight');
-	const googleAnalytics = userSettings.googleAnalytics.propertyID;
+	const gaPropertyID = userSettings.googleAnalytics.propertyID;
 
 	function handleEscape({ key }) {
 		if (key === 'Escape') {
@@ -48,9 +43,7 @@
 
 <svelte:window on:keyup={handleEscape} />
 
-<SiteMetaTags websiteData={website} />
 <JsonLdWebSite websiteData={website} />
-<JsonLdWebPage websiteData={website} />
 <JsonLdSiteNavigationElements websiteData={website} menuData={sortedMenu} />
 
 <svelte:head>
@@ -73,8 +66,8 @@
 	</script>
 </svelte:head>
 
-{#if googleAnalytics != ''}
-	<GoogleAnalytics trackingId={googleAnalytics} />
+{#if gaPropertyID != ''}
+	<GoogleAnalytics trackingId={gaPropertyID} />
 {/if}
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">

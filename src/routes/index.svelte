@@ -1,6 +1,26 @@
-<script>
+<script lang="ts">
+	import { website } from '$config/website.js';
 	import Overview from '$themes/dockerz/components/about/_Overview.svelte';
+	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+
+	const homePage: IWebPageMetadata = {
+		url: website.baseURL,
+		title: 'What is Sveltin?',
+		description:
+			'Sveltin is a CLI (Command Line Interface) created to boost the developers productivity working on SvelteKit powered static websites.',
+		keywords: website.keywords,
+		opengraph: {
+			type: OpenGraphType.Website
+		},
+		twitter: {
+			type: TwitterCardType.Summary
+		}
+	};
 </script>
+
+<PageMetaTags data={homePage} />
+<JsonLdWebPage data={homePage} />
 
 <!-- PAGE TITLE-->
 <section

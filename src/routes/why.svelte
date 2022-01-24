@@ -1,14 +1,29 @@
-<script context="module">
+<script lang="ts" context="module">
+	import { website } from '$config/website.js';
 	import WhySveltin from '$themes/dockerz/components/about/_WhySveltin.svelte';
 	import ExistingApproaches from '$themes/dockerz/components/about/_ExistingApproaches.svelte';
 	import LookingFor from '$themes/dockerz/components/about/_LookingFor.svelte';
 	import SveltinGoals from '$themes/dockerz/components/about/_SveltinGoals.svelte';
-	export const prerender = true;
+	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+
+	const whySveltinPage: IWebPageMetadata = {
+		url: website.baseURL + '/why',
+		title: 'Why Sveltin?',
+		description:
+			'Here you can read more on why Sveltin and the rationals behind the decision to build Sveltin.',
+		keywords: website.keywords,
+		opengraph: {
+			type: OpenGraphType.Website
+		},
+		twitter: {
+			type: TwitterCardType.Summary
+		}
+	};
 </script>
 
-<svelte:head>
-	<title>Why Sveltin ?</title>
-</svelte:head>
+<PageMetaTags data={whySveltinPage} />
+<JsonLdWebPage data={whySveltinPage} />
 
 <!-- PAGE TITLE-->
 <section
