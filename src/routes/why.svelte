@@ -13,10 +13,10 @@
 		title: 'Why Sveltin?',
 		description:
 			'Here you can read more on why Sveltin and the rationals behind the decision to build Sveltin.',
-		keywords: website.keywords,
+		keywords: website.keywords ? website.keywords : '',
 		image: getFavicon(website),
 		opengraph: {
-			type: OpenGraphType.Website
+			type: OpenGraphType.Article
 		},
 		twitter: {
 			type: TwitterCardType.Summary

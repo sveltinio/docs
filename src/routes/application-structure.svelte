@@ -13,7 +13,7 @@
 		keywords: website.keywords,
 		image: getFavicon(website),
 		opengraph: {
-			type: OpenGraphType.Website
+			type: OpenGraphType.Article
 		},
 		twitter: {
 			type: TwitterCardType.Summary

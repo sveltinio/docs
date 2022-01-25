@@ -28,14 +28,10 @@ export const getFavicon = (websiteData: IWebSite): string => {
 	return websiteData.baseURL + '/' + websiteData.favicon;
 };
 
-export const getCoverImagePath = (
-	urlData: URL,
-	item: ResourceContent,
-	websiteData: IWebSite
-): string => {
+export const getCoverImagePath = (item: ResourceContent, websiteData: IWebSite): string => {
 	if (item.metadata.cover && isNotEmpty(item.metadata.cover)) {
 		return (
-			urlData.origin +
+			websiteData.baseURL +
 			'/' +
 			`resources/${item.resource}/${item.metadata.slug}/${item.metadata.cover}`
 		);

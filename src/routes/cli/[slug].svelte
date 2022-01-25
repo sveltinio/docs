@@ -69,9 +69,8 @@
 	import { JsonLdWebPage, PageMetaTags } from '@sveltinio/seo';
 	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { getSlugPageUrl } from '$lib/utils/strings.js';
+	import { getSlugPageUrl, getCoverImagePath } from '$lib/utils/strings.js';
 
-	export let urlData: URL;
 	export let current: ResourceContent;
 	export let previous: ResourceContent;
 	export let next: ResourceContent;
@@ -81,7 +80,7 @@
 		title: 'sveltin command: ' + current.metadata.title,
 		description: current.metadata.headline,
 		author: current.metadata.author,
-		image: urlData.origin + '/' + website.favicon,
+		image: getCoverImagePath(current, website),
 		opengraph: {
 			type: OpenGraphType.Article,
 			article: {
