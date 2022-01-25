@@ -4,58 +4,54 @@
 	import type { ContentMetadata } from '@sveltinio/widgets/types';
 
 	export const load: Load = async ({ url, fetch, params }) => {
-		const pageURL = url;
+		const resourceName = 'cli';
+		const urlData = url;
 		const { slug } = params;
 		const _url = '/api/v1/cli/published.json';
 
-		try {
-			const res = await fetch(_url);
-			if (res.ok) {
-				const res2 = res.clone();
-				const data = await res2.json();
+		const res = await fetch(_url);
+		if (res.ok) {
+			const res2 = res.clone();
+			const data = await res2.json();
 
-				const selectedItemIndex = data.findIndex((elem) => slug === elem.slug);
-				const selectedItem = data[selectedItemIndex];
+			const selectedItemIndex = data.findIndex((elem) => slug === elem.slug);
+			const selectedItem = data[selectedItemIndex];
 
-				if (selectedItem) {
-					const resourceName = 'cli';
-					const item = ResourceContentMaker.createWithValues(
-						resourceName,
-						<ContentMetadata>selectedItem,
-						selectedItem.html
-					);
-					const previous: ResourceContent = {
-						resource: resourceName,
-						metadata: <ContentMetadata>{
-							title: data[selectedItemIndex + 1]?.title,
-							slug: data[selectedItemIndex + 1]?.slug
-						}
-					};
-					const next: ResourceContent = {
-						resource: resourceName,
-						metadata: <ContentMetadata>{
-							title: data[selectedItemIndex - 1]?.title,
-							slug: data[selectedItemIndex - 1]?.slug
-						}
-					};
+			if (selectedItem) {
+				const current = ResourceContentMaker.createWithValues(
+					resourceName,
+					<ContentMetadata>selectedItem,
+					selectedItem.html
+				);
+				const previous: ResourceContent = {
+					resource: resourceName,
+					metadata: <ContentMetadata>{
+						title: data[selectedItemIndex + 1]?.title,
+						slug: data[selectedItemIndex + 1]?.slug
+					}
+				};
+				const next: ResourceContent = {
+					resource: resourceName,
+					metadata: <ContentMetadata>{
+						title: data[selectedItemIndex - 1]?.title,
+						slug: data[selectedItemIndex - 1]?.slug
+					}
+				};
 
-					return {
-						props: {
-							pageURL,
-							item,
-							previous,
-							next
-						}
-					};
-				} else {
-					return {
-						status: 404,
-						error: new Error(`Ops! What you are looking for does not exists`)
-					};
-				}
+				return {
+					props: {
+						urlData,
+						current,
+						previous,
+						next
+					}
+				};
+			} else {
+				return {
+					status: 404,
+					error: new Error(`Ops! What you are looking for does not exists`)
+				};
 			}
-		} catch (error) {
-			console.log('ERROR: ' + error);
 		}
 
 		return {
@@ -74,22 +70,22 @@
 	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 
-	export let item: ResourceContent;
+	export let urlData: URL;
+	export let current: ResourceContent;
 	export let previous: ResourceContent;
 	export let next: ResourceContent;
-	export let pageURL: URL;
 
 	const cmdPageData: IWebPageMetadata = {
-		url: pageURL.href,
-		title: 'sveltin ' + item.metadata.title + ' - command',
-		description: item.metadata.headline,
-		author: item.metadata.author,
-		image: website.baseURL + '/' + website.favicon,
+		url: urlData.href,
+		title: 'sveltin command: ' + current.metadata.title,
+		description: current.metadata.headline,
+		author: current.metadata.author,
+		image: urlData.origin + '/' + website.favicon,
 		opengraph: {
 			type: OpenGraphType.Article,
 			article: {
-				published_at: item.metadata.created_at,
-				modified_at: item.metadata.updated_at
+				published_at: current.metadata.created_at,
+				modified_at: current.metadata.updated_at
 			}
 		},
 		twitter: {
@@ -116,7 +112,7 @@
 		<h1
 			class="py-2 mx-auto text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:text-5xl lg:py-10"
 		>
-			{item.metadata.title}
+			{current.metadata.title}
 		</h1>
 	</div>
 </section>
@@ -128,14 +124,14 @@
 				<div class="mx-auto space-y-24 text-lg text-left">
 					<div class="space-y-8">
 						<div class="md-content" class:md-content-dark={isDark}>
-							{@html item.html}
+							{@html current.html}
 						</div>
 					</div>
 					<div class="space-y-8">
 						<p
 							class="text-sm font-light text-skin-body dark:text-skin-body-dark sm:text-base md:mt-5"
 						>
-							Last updated: {item.metadata.updated_at}
+							Last updated: {current.metadata.updated_at}
 						</p>
 					</div>
 				</div>

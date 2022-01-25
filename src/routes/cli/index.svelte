@@ -7,13 +7,14 @@
 	} from '@sveltinio/widgets/types';
 
 	export const load: Load = async ({ url, fetch }) => {
-		const pageURL = url;
+		const resourceName = 'cli';
+		const urlData = url;
 		const _url = '/api/v1/cli/published.json';
-		const [res] = await Promise.all([fetch(_url)]);
+		const res = await fetch(_url);
+
 		if (res.ok) {
 			const res2 = res.clone();
 			const data = await res2.json();
-			const resourceName = 'cli';
 
 			const itemsList: Array<ResourceContent> = [];
 			data.forEach((element) => {
@@ -26,7 +27,7 @@
 			});
 
 			return {
-				props: { pageURL, itemsList }
+				props: { urlData, itemsList }
 			};
 		} else {
 			return {
@@ -42,20 +43,21 @@
 	import { website } from '$config/website.js';
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
-	import sortBy from 'lodash-es/sortBy.js';
+	import orderBy from 'lodash-es/orderBy.js';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
 
-	export let pageURL: URL;
+	export let urlData: URL;
 	export let itemsList: Array<ResourceContent>;
 
-	itemsList = sortBy(itemsList, 'title');
+	const sortedItemsList = orderBy(itemsList, (item) => item.metadata.created_at, ['desc']);
 
 	const cliPage: IWebPageMetadata = {
-		url: pageURL.href,
+		url: urlData.href,
 		title: 'All Sveltin commands?',
-		description: 'Here you can see the list of all available Sveltin commands and subcommands.',
-		keywords: website.keywords,
+		description:
+			'Here you can find the list of all available Sveltin commands and subcommands.',
+		keywords: website.keywords ? website.keywords : '',
 		image: website.baseURL + '/' + website.favicon,
 		opengraph: {
 			type: OpenGraphType.Website
@@ -102,7 +104,7 @@
 										class:cli-text={!isDark}
 										class:cli-text-dark={isDark}
 										sveltekit:prefetch
-										href={`${pageURL.origin}/${item.resource}/${item.metadata.slug}`}
+										href={`/${item.resource}/${item.metadata.slug}`}
 										>{item.metadata.title.toLowerCase()}</a
 									>
 								</li>

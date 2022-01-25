@@ -7,6 +7,7 @@
 	import { menu } from '$config/menu.js';
 	import orderBy from 'lodash-es/orderBy.js';
 	import { externalLinks } from '$config/external_links.js';
+	import { JsonLdSiteNavigationElements, JsonLdWebSite } from '@sveltinio/seo';
 	import { GoogleFonts, GoogleAnalytics } from '@sveltinio/services';
 	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
@@ -14,7 +15,6 @@
 	import BottomPageLinks from '$themes/dockerz/partials/BottomPageLinks.svelte';
 	import Footer from '$themes/dockerz/partials/Footer.svelte';
 	import ScrollToTop from '$themes/dockerz/partials/ScrollToTop.svelte';
-	import { JsonLdSiteNavigationElements, JsonLdWebSite } from '@sveltinio/seo';
 
 	let dark = false;
 	let navIsOpen = false;
