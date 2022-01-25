@@ -5,10 +5,10 @@
 	import CollapsableList from './_CollapsableList.svelte';
 	import SidebarExternals from './_SidebarExternals.svelte';
 	import sortBy from 'lodash-es/sortBy.js';
-	import type { MenuItem } from '@sveltinio/seo/types';
+	import type { IMenuItem } from '@sveltinio/seo/types';
 
 	export let dark: boolean;
-	export let menuData: Array<MenuItem>;
+	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 	export let handleNavMenu = () => {};
 

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { MenuItem, WebSite } from '@sveltinio/seo/types';
+	import type { IMenuItem, IWebSite } from '@sveltinio/seo/types';
 	import type { ExternalLinkItem } from '$lib/interfaces';
 	import sortBy from 'lodash-es/sortBy.js';
 	import { ExternalLink } from '@sveltinio/essentials';
 
-	export let websiteData: WebSite;
-	export let menuData: Array<MenuItem>;
+	export let websiteData: IWebSite;
+	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 
 	const menuItems = sortBy(menuData, 'weigth');

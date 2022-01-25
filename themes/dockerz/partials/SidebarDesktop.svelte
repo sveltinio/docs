@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { MenuItem } from '@sveltinio/seo/types';
+	import type { IMenuItem } from '@sveltinio/seo/types';
 	import type { ExternalLinkItem } from '$lib/interfaces';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 	import SveltinLogo from '../components/_SveltinLogo.svelte';
 
 	export let dark: boolean;
-	export let menuData: Array<MenuItem>;
+	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
 

@@ -8,11 +8,11 @@
 	import { cubicInOut } from 'svelte/easing';
 	import { opacityTransition } from '$lib/shared/transitions';
 	import LogoLink from '../components/_LogoLink.svelte';
-	import type { MenuItem } from '@sveltinio/seo/types';
+	import type { IMenuItem } from '@sveltinio/seo/types';
 
 	export let dark: boolean;
 	export let navIsOpen: boolean;
-	export let menuData: Array<MenuItem>;
+	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 
 	function handleNavMenu(): void {
