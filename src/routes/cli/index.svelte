@@ -55,7 +55,7 @@
 
 	const cliPage: IWebPageMetadata = {
 		url: getPageUrl(resourceName, website),
-		title: 'All Sveltin commands?',
+		title: 'All Sveltin commands',
 		description:
 			'Here you can find the list of all available Sveltin commands and subcommands.',
 		keywords: website.keywords ? website.keywords : '',
