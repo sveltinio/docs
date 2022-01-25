@@ -3,6 +3,7 @@
 	import Overview from '$themes/dockerz/components/about/_Overview.svelte';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { getFavicon } from '$lib/utils/strings.js';
 
 	const homePage: IWebPageMetadata = {
 		url: website.baseURL,
@@ -10,7 +11,7 @@
 		description:
 			'Sveltin is a CLI (Command Line Interface) created to boost the developers productivity working on SvelteKit powered static websites.',
 		keywords: website.keywords,
-		image: website.baseURL + '/' + website.logo,
+		image: getFavicon(website),
 		opengraph: {
 			type: OpenGraphType.Website
 		},

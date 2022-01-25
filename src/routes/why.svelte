@@ -6,14 +6,15 @@
 	import SveltinGoals from '$themes/dockerz/components/about/_SveltinGoals.svelte';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
 	const whySveltinPage: IWebPageMetadata = {
-		url: website.baseURL + '/why',
+		url: getPageUrl('why', website),
 		title: 'Why Sveltin?',
 		description:
 			'Here you can read more on why Sveltin and the rationals behind the decision to build Sveltin.',
 		keywords: website.keywords,
-		image: website.baseURL + '/' + website.favicon,
+		image: getFavicon(website),
 		opengraph: {
 			type: OpenGraphType.Website
 		},

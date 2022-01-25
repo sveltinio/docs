@@ -27,7 +27,7 @@
 			});
 
 			return {
-				props: { urlData, itemsList }
+				props: { resourceName, urlData, itemsList }
 			};
 		} else {
 			return {
@@ -46,19 +46,20 @@
 	import orderBy from 'lodash-es/orderBy.js';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
-	export let urlData: URL;
+	export let resourceName: string;
 	export let itemsList: Array<ResourceContent>;
 
-	const sortedItemsList = orderBy(itemsList, (item) => item.metadata.created_at, ['desc']);
+	const sortedItemsList = orderBy(itemsList, (item) => item.metadata.title, ['desc']);
 
 	const cliPage: IWebPageMetadata = {
-		url: urlData.href,
+		url: getPageUrl(resourceName, website),
 		title: 'All Sveltin commands?',
 		description:
 			'Here you can find the list of all available Sveltin commands and subcommands.',
 		keywords: website.keywords ? website.keywords : '',
-		image: website.baseURL + '/' + website.favicon,
+		image: getFavicon(website),
 		opengraph: {
 			type: OpenGraphType.Website
 		},
@@ -98,7 +99,7 @@
 				<div class="mx-auto space-y-24 text-lg text-left">
 					<div class="space-y-8">
 						<ul>
-							{#each itemsList as item}
+							{#each sortedItemsList as item}
 								<li class="px-4 py-4 sm:px-0">
 									<a
 										class:cli-text={!isDark}

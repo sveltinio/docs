@@ -69,6 +69,7 @@
 	import { JsonLdWebPage, PageMetaTags } from '@sveltinio/seo';
 	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import { getSlugPageUrl } from '$lib/utils/strings.js';
 
 	export let urlData: URL;
 	export let current: ResourceContent;
@@ -76,7 +77,7 @@
 	export let next: ResourceContent;
 
 	const cmdPageData: IWebPageMetadata = {
-		url: urlData.href,
+		url: getSlugPageUrl(current, website),
 		title: 'sveltin command: ' + current.metadata.title,
 		description: current.metadata.headline,
 		author: current.metadata.author,

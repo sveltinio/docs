@@ -1,3 +1,6 @@
+import type { IWebSite } from '@sveltinio/seo/types';
+import type { ResourceContent } from '@sveltinio/widgets/types';
+
 export const textToSlug = (text: string): string => {
 	return text
 		.toLowerCase()
@@ -11,4 +14,31 @@ export const convertToSentenceCase = (text: string): string => {
 
 export const isNotEmpty = (text: string): boolean => {
 	return Boolean(text);
+};
+
+export const getPageUrl = (name: string, websiteData: IWebSite): string => {
+	return websiteData.baseURL + '/' + name;
+};
+
+export const getSlugPageUrl = (item: ResourceContent, websiteData: IWebSite): string => {
+	return websiteData.baseURL + '/' + item.resource + '/' + item.metadata.slug;
+};
+
+export const getFavicon = (websiteData: IWebSite): string => {
+	return websiteData.baseURL + '/' + websiteData.favicon;
+};
+
+export const getCoverImagePath = (
+	urlData: URL,
+	item: ResourceContent,
+	websiteData: IWebSite
+): string => {
+	if (item.metadata.cover && isNotEmpty(item.metadata.cover)) {
+		return (
+			urlData.origin +
+			'/' +
+			`resources/${item.resource}/${item.metadata.slug}/${item.metadata.cover}`
+		);
+	}
+	return getFavicon(websiteData);
 };

@@ -3,14 +3,15 @@
 	import { applicationStructure } from '$data/structure.js';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
 	const appStructurePage: IWebPageMetadata = {
-		url: website.baseURL + '/application-structure',
+		url: getPageUrl('application-structure', website),
 		title: 'Sveltin Application structure',
 		description:
 			'Here you can learn about the Application Structure for a Sveltin based website.',
 		keywords: website.keywords,
-		image: website.baseURL + '/' + website.favicon,
+		image: getFavicon(website),
 		opengraph: {
 			type: OpenGraphType.Website
 		},
