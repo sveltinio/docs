@@ -51,7 +51,7 @@
 				class="px-4 py-4 md:mt-0 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 sm:py-8 lg:px-8"
 				id="contact"
 			>
-				<div class="mt-8 md:mt-0 md:order-1 lg:pr-12">
+				<div class="mt-8 md:mt-0 md:order-1">
 					<p
 						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base"
 					>
