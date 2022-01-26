@@ -1,23 +1,41 @@
-import type { MenuItem } from '@sveltinio/seo/types';
+import type { IMenuItem } from '@sveltinio/seo/types';
 
-const menu: Array<MenuItem> = [
+const menu: Array<IMenuItem> = [
+	{
+		identifier: 'home',
+		name: 'Home',
+		url: '/',
+		weight: 1
+	},
 	{
 		identifier: 'why',
 		name: 'Why Sveltin?',
 		url: '/why',
-		weight: 1
+		weight: 2
+	},
+	{
+		identifier: 'install',
+		name: 'Installation',
+		url: '/install',
+		weight: 3
+	},
+	{
+		identifier: 'quick',
+		name: 'Quick Start',
+		url: '/quick-start',
+		weight: 4
 	},
 	{
 		identifier: 'application-structure',
 		name: 'Application Structure',
 		url: '/application-structure',
-		weight: 2
+		weight: 5
 	},
 	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
-		weight: 3,
+		weight: 7,
 		children: [
 			{
 				identifier: 'sveltin',
