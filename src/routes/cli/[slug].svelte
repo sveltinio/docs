@@ -3,16 +3,14 @@
 	import { ResourceContent, ResourceContentMaker } from '@sveltinio/widgets/types';
 	import type { ContentMetadata } from '@sveltinio/widgets/types';
 
-	export const load: Load = async ({ url, fetch, params }) => {
+	export const load: Load = async ({ fetch, params }) => {
 		const resourceName = 'cli';
-		const urlData = url;
 		const { slug } = params;
 		const _url = '/api/v1/cli/published.json';
 
 		const res = await fetch(_url);
 		if (res.ok) {
-			const res2 = res.clone();
-			const data = await res2.json();
+			const data = await res.json();
 
 			const selectedItemIndex = data.findIndex((elem) => slug === elem.slug);
 			const selectedItem = data[selectedItemIndex];
@@ -40,7 +38,6 @@
 
 				return {
 					props: {
-						urlData,
 						current,
 						previous,
 						next

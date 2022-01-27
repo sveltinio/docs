@@ -39,7 +39,6 @@
 </script>
 
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { website } from '$config/website.js';
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
