@@ -95,7 +95,18 @@ sveltin prepare
 
 <p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Open the <span class="italic">config/website.js.ts</span> file and edit the info.</p>
 
-<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Create a public page as Svelte component. It will be served at <span class="italic">/contact</span></p>
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Let's see if everything is ok. Run the server:</p>
+
+<div class="md-content">
+
+```bash
+sveltin server
+```
+
+</div>
+
+
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Let move on! Create a public page as Svelte component to be served at <span class="italic">/contact</span></p>
 
 <div class="md-content">
 
@@ -105,7 +116,7 @@ sveltin new page contact --type svelte
 
 </div>
 
-<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Create a <span class="italic">posts</span> resource:</p>
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">So far so good! Nothing special there. Let flex the muscle again! <br/> No blog without posts so, start creating a <span class="italic">posts</span> resource:</p>
 
 <div class="md-content">
 
@@ -115,7 +126,17 @@ sveltin new resource posts
 
 </div>
 
-<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Add new content to posts. It will be served at <span class="italis">/posts/getting-started</span></p>
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Add new post to the posts resource to be served at <span class="italis">/posts/welcome</span></p>
+
+<div class="md-content">
+
+```bash
+sveltin new content posts/welcome
+```
+
+</div>
+
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">One more, please:</p>
 
 <div class="md-content">
 
@@ -125,7 +146,7 @@ sveltin new content posts/getting-started
 
 </div>
 
-<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Add a 'category' metadata so that the contents can be grouped by it. <br/>It will be served at <span class="italic">/posts/category</span></p>
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">A common use case is to have the content grouped by metadata, e.g. category. <br/>Add a 'category' metadata to have a list of grouped content at <span class="italic">/posts/category</span></p>
 
 <div class="md-content">
 
@@ -144,6 +165,10 @@ sveltin server
 ```
 
 </div>
+
+<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">Congratulation! Your sample project is up and running.
+<br/>Please, refer to the cli docs to learn more on adding more metadata types,
+<br/>generate the sitemap, rss, the menu structure etc.</p>
 
 						</div>
 					</div>
