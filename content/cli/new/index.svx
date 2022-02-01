@@ -18,10 +18,12 @@ This command creates customized resources like blog posts, a new theme for your 
 
 Examples:
 
+```bash
 sveltin new blog
 sveltin new blog --css tailwindcss
 sveltin new blog --css vanillacss -t myTheme
 sveltin new resource posts
+```
 
 ```bash
 sveltin new <project> [flags]
