@@ -2,7 +2,7 @@
 	import { website } from '$config/website.js';
 	import { applicationStructure } from '$data/structure.js';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
 	const appStructurePage: IWebPageMetadata = {
@@ -23,6 +23,8 @@
 
 <PageMetaTags data={appStructurePage} />
 <JsonLdWebPage data={appStructurePage} />
+<JsonLdBreadcrumbs baseURL={website.baseURL} parent="" currentTitle={appStructurePage.title} />
+
 <!-- PAGE TITLE-->
 <section
 	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"

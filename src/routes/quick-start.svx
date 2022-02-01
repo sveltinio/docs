@@ -5,7 +5,7 @@ title: Quick Start
 <script lang="ts">
 	import { website } from '$config/website.js';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
 	const quickStartPage: IWebPageMetadata = {
@@ -25,6 +25,7 @@ title: Quick Start
 
 <PageMetaTags data={ quickStartPage } />
 <JsonLdWebPage data={ quickStartPage } />
+<JsonLdBreadcrumbs baseURL={website.baseURL} parent="" currentTitle={quickStartPage.title} />
 
 <!-- PAGE TITLE-->
 <section

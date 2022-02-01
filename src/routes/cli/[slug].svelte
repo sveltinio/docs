@@ -63,7 +63,7 @@
 	import { website } from '$config/website.js';
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
-	import { JsonLdWebPage, PageMetaTags } from '@sveltinio/seo';
+	import { JsonLdWebPage, PageMetaTags, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { getSlugPageUrl, getCoverImagePath } from '$lib/utils/strings.js';
@@ -101,6 +101,11 @@
 
 <PageMetaTags data={cmdPageData} />
 <JsonLdWebPage data={cmdPageData} />
+<JsonLdBreadcrumbs
+	baseURL={website.baseURL}
+	parent={current.resource}
+	currentTitle={cmdPageData.title}
+/>
 
 <section
 	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"

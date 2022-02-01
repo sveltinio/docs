@@ -8,7 +8,6 @@
 
 	export const load: Load = async ({ url, fetch }) => {
 		const resourceName = 'cli';
-		const urlData = url;
 		const _url = '/api/v1/cli/published.json';
 		const res = await fetch(_url);
 
@@ -27,7 +26,7 @@
 			});
 
 			return {
-				props: { resourceName, urlData, itemsList }
+				props: { resourceName, itemsList }
 			};
 		} else {
 			return {
@@ -44,7 +43,7 @@
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import orderBy from 'lodash-es/orderBy.js';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
 	export let resourceName: string;
@@ -78,7 +77,7 @@
 
 <PageMetaTags data={cliPage} />
 <JsonLdWebPage data={cliPage} />
-
+<JsonLdBreadcrumbs baseURL={website.baseURL} parent={resourceName} currentTitle={cliPage.title} />
 <section
 	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"
 >

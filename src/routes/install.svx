@@ -6,7 +6,7 @@ title: Install
 	import { website } from '$config/website.js';
    import { ExternalLink} from '@sveltinio/essentials';
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
+	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
 	const installPage: IWebPageMetadata = {
@@ -26,6 +26,7 @@ title: Install
 
 <PageMetaTags data={installPage} />
 <JsonLdWebPage data={installPage} />
+<JsonLdBreadcrumbs baseURL={website.baseURL} parent="" currentTitle={installPage.title} />
 
 <!-- PAGE TITLE-->
 <section
