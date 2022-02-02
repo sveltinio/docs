@@ -27,9 +27,6 @@ const config = {
 		}),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		prerender: {
-			createIndexFiles: false
-		},
 		trailingSlash: 'never',
 		vite: {
 			server: {
