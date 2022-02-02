@@ -29,7 +29,7 @@
 					>).
 				</li>
 				<li class="font-light text-skin-body dark:text-skin-body-dark">
-					↳ Ready-To-Use Components: collections of public Svelte components
+					↳ Components: ready-to-use Svelte components
 				</li>
 			</ul>
 		</div>
