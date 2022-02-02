@@ -24,9 +24,12 @@
 					↳ The CLI: built in Go, uses Cobra, Viper, PromptUI and others
 				</li>
 				<li class="font-light text-skin-body dark:text-skin-body-dark">
-					↳ The Template App: based on the stardard SvelteKit starter (<code
-						class="text-base font-mono">npm init svelte@next</code
+					↳ The Template App: based on the stardard SvelteKit starter (<span
+						class="text-base font-mono">npm init svelte@next</span
 					>).
+				</li>
+				<li class="font-light text-skin-body dark:text-skin-body-dark">
+					↳ Ready-To-Use Components: collections of public Svelte components
 				</li>
 			</ul>
 		</div>
