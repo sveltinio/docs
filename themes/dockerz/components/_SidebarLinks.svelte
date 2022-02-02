@@ -22,6 +22,7 @@
 			{#if !item.children}
 				<a
 					href={item.url}
+					sveltekit:prefetch
 					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark"
 					class:active={!dark && $page.url.pathname === item.url}
 					class:active-dark={dark && $page.url.pathname === item.url}
@@ -36,6 +37,7 @@
 							<li>
 								<a
 									href={child.url}
+									sveltekit:prefetch
 									class="group flex items-center p-2 pl-3 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark focus:border-skin-muted"
 									class:active={!dark && $page.url.pathname === child.url}
 									class:active-dark={dark && $page.url.pathname === child.url}
