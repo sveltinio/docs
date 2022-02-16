@@ -1,3 +1,3 @@
-const sveltinVersion = '0.2.4';
+const sveltinVersion = '0.3.0';
 
 export { sveltinVersion };
