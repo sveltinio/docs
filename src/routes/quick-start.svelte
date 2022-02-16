@@ -190,6 +190,6 @@
 
 <style>
 	.md-content {
-		@apply py-4 px-6 rounded-md text-slate-50 font-mono text-sm bg-slate-800;
+		@apply py-4 px-6 rounded-md text-slate-50 tracking-wide text-base bg-slate-800;
 	}
 </style>

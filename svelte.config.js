@@ -25,13 +25,12 @@ const config = {
 			fallback: null,
 			precompress: true
 		}),
-		trailingSlash: 'never',
 		vite: {
 			server: {
 				fs: {
 					// Allow serving files from one level up to the project root
 					// Alternatevaly set server.fs.strict to false
-					allow: ['..']
+					strict: false
 				}
 			},
 			resolve: {

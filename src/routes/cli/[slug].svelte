@@ -1,4 +1,6 @@
 <script lang="ts" context="module">
+	export const prerender = true;
+
 	import type { Load } from '@sveltejs/kit';
 	import { ResourceContent, ResourceContentMaker } from '@sveltinio/widgets/types';
 	import type { ContentMetadata } from '@sveltinio/widgets/types';
