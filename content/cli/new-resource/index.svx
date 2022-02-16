@@ -39,4 +39,4 @@ sveltin new resource [name] [flags]
 
 ### SEE ALSO
 
-- [sveltin new](new) - Command to create projects, resources, contents, pages, metadata, theme
+- [sveltin new](/cli/new) - Command to create projects, resources, contents, pages, metadata, theme

@@ -29,4 +29,4 @@ sveltin generate menu [flags]
 
 ### SEE ALSO
 
-- [sveltin generate](generate) - Command to generate static files (sitemap, rss, menu)
+- [sveltin generate](/cli/generate) - Command to generate static files (sitemap, rss, menu)

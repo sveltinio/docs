@@ -30,4 +30,4 @@ sveltin prepare [flags]
 
 ### SEE ALSO
 
-- [sveltin](sveltin) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites.

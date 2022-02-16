@@ -28,7 +28,7 @@ sveltin generate [flags]
 
 ### SEE ALSO
 
-- [sveltin](sveltin) - sveltin is the main command to work with SvelteKit powered static websites.
-- [sveltin generate menu](generate-menu) - Generate the menu config file for your Sveltin project
-- [sveltin generate rss](generate-rss) - Generate a rss.xml file for your Sveltin project
-- [sveltin generate sitemap](generate-sitemap) - Generate a sitemap.xml file for your Sveltin project
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin generate menu](/cli/generate-menu) - Generate the menu config file for your Sveltin project
+- [sveltin generate rss](/cli/generate-rss) - Generate a rss.xml file for your Sveltin project
+- [sveltin generate sitemap](/cli/generate-sitemap) - Generate a sitemap.xml file for your Sveltin project

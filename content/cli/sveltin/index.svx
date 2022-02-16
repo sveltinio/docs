@@ -41,7 +41,7 @@ sveltin [command]
 
 ### SEE ALSO
 
-- [sveltin new](new) - Create a new sveltin based project.
+- [sveltin new](/cli/new) - Create a new sveltin based project.
 - [sveltin new resource](/cli/new-resource) - Create new resources.
 - [sveltin new content](/cli/new-content) - Create a new content for already created resource.
 - [sveltin new metadata](/cli/new-metadata) - Add a new metadata from your content as a Sveltekit resource.

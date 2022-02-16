@@ -18,6 +18,7 @@ const config = {
 		})
 	],
 	kit: {
+		trailingSlash: 'always',
 		adapter: adapter({
 			// default options are shown
 			pages: 'build',
@@ -25,6 +26,9 @@ const config = {
 			fallback: null,
 			precompress: true
 		}),
+		prerender: {
+			entries: ['*']
+		},
 		vite: {
 			server: {
 				fs: {
