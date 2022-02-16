@@ -5,7 +5,7 @@ specifiers:
   '@commitlint/config-conventional': ^16.2.1
   '@indaco/svelte-iconoir': 2.2.1
   '@sveltejs/adapter-static': ^1.0.0-next.28
-  '@sveltejs/kit': 1.0.0-next.256
+  '@sveltejs/kit': 1.0.0-next.261
   '@sveltinio/essentials': ^0.1.2
   '@sveltinio/seo': ^0.1.5
   '@sveltinio/services': ^0.1.2
@@ -57,7 +57,7 @@ devDependencies:
   '@commitlint/config-conventional': 16.2.1
   '@indaco/svelte-iconoir': 2.2.1
   '@sveltejs/adapter-static': 1.0.0-next.28
-  '@sveltejs/kit': 1.0.0-next.256_svelte@3.46.4
+  '@sveltejs/kit': 1.0.0-next.261_svelte@3.46.4
   '@sveltinio/essentials': 0.1.2
   '@sveltinio/seo': 0.1.5
   '@sveltinio/services': 0.1.2
@@ -369,8 +369,8 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.256_svelte@3.46.4:
-    resolution: {integrity: sha512-H0g/zOxyOoRKNieovgD+jr5Mq9GhD1SjRu0u3P87L6Ci9K0BBsf2y2Ry41RgxfrP92S87YnY1dMK8e1rm5PLNA==}
+  /@sveltejs/kit/1.0.0-next.261_svelte@3.46.4:
+    resolution: {integrity: sha512-Khm/E9lqSDTASgW7GKEphTsWjs5SjQcVQ34lWkNMSl8Bj3xX1MA0LXIKFGoJuFCoUOu+mN1M93sCE6fHiNomjQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
