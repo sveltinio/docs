@@ -25,6 +25,7 @@ const config = {
 			fallback: null,
 			precompress: true
 		}),
+		trailingSlash: 'ignore',
 		vite: {
 			server: {
 				fs: {
