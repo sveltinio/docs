@@ -59,7 +59,7 @@
 										↳ Git
 									</li>
 									<li class="font-light text-skin-body dark:text-skin-body-dark">
-										↳ Node (v16.13.1 or higher is required)
+										↳ Node (v16.9.0 or higher is required)
 									</li>
 								</ul>
 							</div>
