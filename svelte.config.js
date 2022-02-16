@@ -25,8 +25,6 @@ const config = {
 			fallback: null,
 			precompress: true
 		}),
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
 		vite: {
 			server: {
 				fs: {

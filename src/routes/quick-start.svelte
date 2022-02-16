@@ -67,13 +67,7 @@
 								Create a project:
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin new myBlog
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin new myBlog</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -86,9 +80,8 @@
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
 							>
 								Then, you select the CSS lib for your project. It can be vanilla
-								CSS, TailwindCSS, Bulma or Bootstrap. You can use the shortcut <span
-									class="text-base font-mono">--ccs</span
-								>
+								CSS, Sass / SCSS, Tailwind CSS, Bulma or Bootstrap. You can use the
+								shortcut <span class="text-base font-mono">--css</span>
 								flag. Check the
 								<a href="/cli/new" class="text-skin-link dark:text-skin-link-dark"
 									>new command</a
@@ -97,13 +90,7 @@
 
 							<p>Move to the project folder:</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										cd myBlog
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">cd myBlog</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -111,13 +98,7 @@
 								Install all the dependencies:
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin prepare
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin prepare</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -132,13 +113,7 @@
 								Let's see if everything is ok. Run the server:
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin server
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin server</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -147,13 +122,7 @@
 								at <span class="italic">/contact</span>
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin new page contact --type svelte
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin new page contact --type svelte</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -164,13 +133,7 @@
 								<span class="italic">posts</span> resource:
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin new resource posts
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin new resource posts</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -180,13 +143,7 @@
 								>
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin new content posts/welcome
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin new content posts/welcome</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -194,13 +151,7 @@
 								One more, please:
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin new content posts/getting-started
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin new content posts/getting-started</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -211,11 +162,7 @@
 							</p>
 
 							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin new metadata category --resource posts --type single
-									</code>
-								</pre>
+								sveltin new metadata category --resource posts --type single
 							</div>
 
 							<p
@@ -224,13 +171,7 @@
 								Run the server:
 							</p>
 
-							<div class="md-content">
-								<pre>
-									<code class="language-bash">
-										sveltin server
-									</code>
-								</pre>
-							</div>
+							<div class="md-content">sveltin server</div>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -249,6 +190,6 @@
 
 <style>
 	.md-content {
-		@apply prose prose-sveltin;
+		@apply py-4 px-6 rounded-md text-slate-50 font-mono text-sm bg-slate-800;
 	}
 </style>

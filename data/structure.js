@@ -5,22 +5,22 @@ const applicationStructure = [
 			'Accessible throughout the codebase as <strong class="font-mono text-sm">$config</strong>.'
 	},
 	{
-		name: 'config/website.js',
+		name: 'config/website.js.ts',
 		purpose:
 			'Contains configurations for the app<br/>E.g. name, description, logo, sitemap config, etc.'
 	},
 	{
-		name: 'config/externals.js',
+		name: 'config/externals.js.ts',
 		purpose:
 			'Contains info on external services used by the app<br/>E.g. Google Fonts, Analytics, etc.'
 	},
 	{
-		name: 'config/menu.js',
+		name: 'config/menu.js.ts',
 		purpose:
 			'Contains all the entries from the available routes.<br/>Used internally by sveltin to generate JsonLd objects too.'
 	},
 	{
-		name: 'config/defaults.js',
+		name: 'config/defaults.js.ts',
 		purpose: 'So far, contains info on the actual sveltin version'
 	},
 	{
@@ -31,11 +31,6 @@ const applicationStructure = [
 	{
 		name: 'src',
 		purpose: 'In SvelteKit powered apps, src is where you app lives.'
-	},
-	{
-		name: 'src/components',
-		purpose:
-			'Svelte private components used by other ones but not directly. <br/>Files should be named with a leading underscore prefix, _'
 	},
 	{
 		name: 'src/lib',

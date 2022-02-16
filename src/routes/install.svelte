@@ -77,15 +77,10 @@
 							</p>
 
 							<div class="md-content">
-								<pre>
-								<code class="language-bash">
-# Tap a new formula
-brew tap sveltinio/sveltin
-
-# Install
-brew install sveltin
-								</code>
-								</pre>
+								<p># Tap a new formula</p>
+								brew tap sveltinio/sveltin
+								<p># Install</p>
+								brew install sveltin
 							</div>
 
 							<h2
@@ -95,15 +90,10 @@ brew install sveltin
 							</h2>
 
 							<div class="md-content">
-								<pre>
-								<code class="language-bash">
-# Tap a new bucket scoop bucket add sveltinio
-https://github.com/sveltinio/scoop-sveltin.git
-
-# Install scoop
-install sveltinio/sveltin
-								</code>
-								</pre>
+								<p># Tap a new bucket</p>
+								scoop bucket add sveltinio https://github.com/sveltinio/scoop-sveltin.git
+								<p># Install</p>
+								scoop install sveltinio/sveltin
 							</div>
 
 							<h2
@@ -125,11 +115,7 @@ install sveltinio/sveltin
 							</div>
 
 							<div class="md-content">
-								<pre>
-								<code class="language-bash">
-go install github.com/sveltinio/sveltin@latest
-								</code>
-								</pre>
+								go install github.com/sveltinio/sveltin@latest
 							</div>
 
 							<h2
@@ -154,13 +140,12 @@ go install github.com/sveltinio/sveltin@latest
 							</div>
 
 							<div class="md-content">
-								<pre>
-								<code class="language-bash">
-https://github.com/sveltinio/sveltin/releases/download/$VERSION/$PACKAGE_NAME -o $PACKAGE_NAME
-sudo tar -xvf $PACKAGE_NAME -C /usr/local/bin/
-sudo chmod +x /usr/local/bin/sveltin
-								</code>
-								</pre>
+								<p>
+									https://github.com/sveltinio/sveltin/releases/download/$VERSION/$PACKAGE_NAME
+									-o $PACKAGE_NAME
+								</p>
+								<p>sudo tar -xvf $PACKAGE_NAME -C /usr/local/bin/</p>
+								<p>sudo chmod +x /usr/local/bin/sveltin</p>
 							</div>
 						</div>
 					</div>
@@ -173,6 +158,6 @@ sudo chmod +x /usr/local/bin/sveltin
 <!-- END OF PAGE CONTENT -->
 <style>
 	.md-content {
-		@apply prose prose-sveltin;
+		@apply py-4 px-6 rounded-md text-slate-50 font-mono text-sm bg-slate-800;
 	}
 </style>
