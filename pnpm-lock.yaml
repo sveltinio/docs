@@ -5,7 +5,7 @@ specifiers:
   '@commitlint/config-conventional': ^16.2.1
   '@indaco/svelte-iconoir': 2.2.1
   '@sveltejs/adapter-static': ^1.0.0-next.28
-  '@sveltejs/kit': 1.0.0-next.264
+  '@sveltejs/kit': 1.0.0-next.275
   '@sveltinio/essentials': ^0.1.2
   '@sveltinio/seo': ^0.1.5
   '@sveltinio/services': ^0.1.2
@@ -45,7 +45,7 @@ specifiers:
   remark-slug: ^7.0.1
   rimraf: ^3.0.2
   svelte: ^3.46.4
-  svelte-check: ^2.4.4
+  svelte-check: ^2.4.5
   svelte-preprocess: ^4.10.3
   tailwindcss: ^3.0.23
   tslib: ^2.3.1
@@ -57,7 +57,7 @@ devDependencies:
   '@commitlint/config-conventional': 16.2.1
   '@indaco/svelte-iconoir': 2.2.1
   '@sveltejs/adapter-static': 1.0.0-next.28
-  '@sveltejs/kit': 1.0.0-next.264_svelte@3.46.4
+  '@sveltejs/kit': 1.0.0-next.275_svelte@3.46.4
   '@sveltinio/essentials': 0.1.2
   '@sveltinio/seo': 0.1.5
   '@sveltinio/services': 0.1.2
@@ -97,7 +97,7 @@ devDependencies:
   remark-slug: 7.0.1
   rimraf: 3.0.2
   svelte: 3.46.4
-  svelte-check: 2.4.4_06670835898ebc1da7d1c97a8716c619
+  svelte-check: 2.4.5_06670835898ebc1da7d1c97a8716c619
   svelte-preprocess: 4.10.3_e1bf482d98c0166a5d6196b4af1639d5
   tailwindcss: 3.0.23_autoprefixer@10.4.2
   tslib: 2.3.1
@@ -369,8 +369,8 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.264_svelte@3.46.4:
-    resolution: {integrity: sha512-EKJ4ratXMw2Xrcz/XtTELT9SNxp5E7V5JEL334Px4TGiFtowfJ7eNMmNH/gLAXp51va9QFMB3oz1uGNvrQ//6g==}
+  /@sveltejs/kit/1.0.0-next.275_svelte@3.46.4:
+    resolution: {integrity: sha512-7bOdrOTzu+hsni3OgX88ItNglYCgK/+3cD4L1nKmbM9i5gAhplVwZJ5Lgq3RfQtzkizKmgoOANvjSsKL0yGrrw==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -3470,8 +3470,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.4.4_06670835898ebc1da7d1c97a8716c619:
-    resolution: {integrity: sha512-HIteHYYLipob5xtcpBSbkc6Qm7ig95U6Xyku4APQUUY5pZNY6+YuNchF+umw/kCZYy14qY6traRmKBCUo1geEA==}
+  /svelte-check/2.4.5_06670835898ebc1da7d1c97a8716c619:
+    resolution: {integrity: sha512-nRft8BbG2wcxyCdHDZ7X43xLcvDzua3xLwq6wzHGcAF3ka3Jyhv2rvgq0+SF9NwHLMefp9C2XkM6etzsxK/cMQ==}
     hasBin: true
     peerDependencies:
       svelte: ^3.24.0
