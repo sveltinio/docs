@@ -3,6 +3,7 @@
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
+	import Shell from '$themes/dockerz/components/_Shell.svelte';
 
 	const quickStartPage: IWebPageMetadata = {
 		url: getPageUrl('quick-start', website),
@@ -67,7 +68,11 @@
 								Create a project:
 							</p>
 
-							<div class="md-content">sveltin new myBlog</div>
+							<Shell>
+								<div>
+									<p>sveltin new myBlog</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -90,7 +95,11 @@
 
 							<p>Move to the project folder:</p>
 
-							<div class="md-content">cd myBlog</div>
+							<Shell>
+								<div>
+									<p>cd myBlog</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -98,7 +107,11 @@
 								Install all the dependencies:
 							</p>
 
-							<div class="md-content">sveltin prepare</div>
+							<Shell>
+								<div>
+									<p>sveltin prepare</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -113,7 +126,11 @@
 								Let's see if everything is ok. Run the server:
 							</p>
 
-							<div class="md-content">sveltin server</div>
+							<Shell>
+								<div>
+									<p>sveltin server</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -122,7 +139,11 @@
 								at <span class="italic">/contact</span>
 							</p>
 
-							<div class="md-content">sveltin new page contact --type svelte</div>
+							<Shell>
+								<div>
+									<p>sveltin new page contact --type svelte</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -133,7 +154,11 @@
 								<span class="italic">posts</span> resource:
 							</p>
 
-							<div class="md-content">sveltin new resource posts</div>
+							<Shell>
+								<div>
+									<p>sveltin new resource posts</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -143,7 +168,11 @@
 								>
 							</p>
 
-							<div class="md-content">sveltin new content posts/welcome</div>
+							<Shell>
+								<div>
+									<p>sveltin new content posts/welcome</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -151,7 +180,11 @@
 								One more, please:
 							</p>
 
-							<div class="md-content">sveltin new content posts/getting-started</div>
+							<Shell>
+								<div>
+									<p>sveltin new content posts/getting-started</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -161,9 +194,26 @@
 								content at <span class="italic">/posts/category</span>
 							</p>
 
-							<div class="md-content">
-								sveltin new metadata category --resource posts --type single
-							</div>
+							<Shell>
+								<div>
+									<p>
+										sveltin new metadata category --resource posts --type single
+									</p>
+								</div>
+							</Shell>
+
+							<p
+								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
+							>
+								Generate the sitemap and the rss feed file:
+							</p>
+
+							<Shell>
+								<div>
+									<p>sveltin generate sitemap</p>
+									<p>sveltin generate rss</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -171,7 +221,11 @@
 								Run the server:
 							</p>
 
-							<div class="md-content">sveltin server</div>
+							<Shell>
+								<div>
+									<p>sveltin server</p>
+								</div>
+							</Shell>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
@@ -187,9 +241,3 @@
 		</section>
 	</div>
 </section>
-
-<style>
-	.md-content {
-		@apply py-4 px-6 rounded-md text-slate-50 tracking-wide text-base bg-slate-800;
-	}
-</style>

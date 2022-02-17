@@ -4,6 +4,7 @@
 	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
+	import Shell from '$themes/dockerz/components/_Shell.svelte';
 
 	const installPage: IWebPageMetadata = {
 		url: getPageUrl('install', website),
@@ -76,12 +77,14 @@
 								Homebrew will also install Git and Node.
 							</p>
 
-							<div class="md-content">
-								<p># Tap a new formula</p>
-								brew tap sveltinio/sveltin
-								<p># Install</p>
-								brew install sveltin
-							</div>
+							<Shell>
+								<div>
+									<p class="text-teal-300 select-none"># Tap a new formula</p>
+									<p>brew tap sveltinio/sveltin</p>
+									<p class="text-teal-300 select-none"># Install</p>
+									<p>brew install sveltin</p>
+								</div>
+							</Shell>
 
 							<h2
 								class="text-lg font-normal text-skin-heading dark:text-skin-heading-dark hover:text-skin-heading-hover lg:text-2xl group"
@@ -89,12 +92,17 @@
 								Windows via Scoop
 							</h2>
 
-							<div class="md-content">
-								<p># Tap a new bucket</p>
-								scoop bucket add sveltinio https://github.com/sveltinio/scoop-sveltin.git
-								<p># Install</p>
-								scoop install sveltinio/sveltin
-							</div>
+							<Shell>
+								<div>
+									<p class="text-teal-300 select-none"># Tap a new bucket</p>
+									<p>
+										scoop bucket add sveltinio
+										https://github.com/sveltinio/scoop-sveltin.git
+									</p>
+									<p class="text-teal-300 select-none"># Install</p>
+									<p>scoop install sveltinio/sveltin</p>
+								</div>
+							</Shell>
 
 							<h2
 								class="text-lg font-normal text-skin-heading dark:text-skin-heading-dark hover:text-skin-heading-hover lg:text-2xl group"
@@ -114,9 +122,11 @@
 								</p>
 							</div>
 
-							<div class="md-content">
-								go install github.com/sveltinio/sveltin@latest
-							</div>
+							<Shell>
+								<div>
+									<p>go install github.com/sveltinio/sveltin@latest</p>
+								</div>
+							</Shell>
 
 							<h2
 								class="text-lg font-normal text-skin-heading dark:text-skin-heading-dark hover:text-skin-heading-hover lg:text-2xl group"
@@ -139,14 +149,16 @@
 								</p>
 							</div>
 
-							<div class="md-content">
-								<p>
-									https://github.com/sveltinio/sveltin/releases/download/$VERSION/$PACKAGE_NAME
-									-o $PACKAGE_NAME
-								</p>
-								<p>sudo tar -xvf $PACKAGE_NAME -C /usr/local/bin/</p>
-								<p>sudo chmod +x /usr/local/bin/sveltin</p>
-							</div>
+							<Shell>
+								<div>
+									<p>
+										https://github.com/sveltinio/sveltin/releases/download/$VERSION/$PACKAGE_NAME
+										-o $PACKAGE_NAME
+									</p>
+									<p>sudo tar -xvf $PACKAGE_NAME -C /usr/local/bin/</p>
+									<p>sudo chmod +x /usr/local/bin/sveltin</p>
+								</div>
+							</Shell>
 						</div>
 					</div>
 				</div>
@@ -156,8 +168,3 @@
 </section>
 
 <!-- END OF PAGE CONTENT -->
-<style>
-	.md-content {
-		@apply py-4 px-6 rounded-md text-slate-50 tracking-wide text-base bg-slate-800;
-	}
-</style>
