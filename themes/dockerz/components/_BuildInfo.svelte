@@ -17,6 +17,6 @@
 	<p
 		class="p-2 pl-6 text-sm font-light text-skin-base dark:hover:text-skin-base-dark-hover dark:text-skin-base-dark dark:hover:bg-skin-dark group"
 	>
-		SvelteKit v1.0.0-next.275
+		SvelteKit v1.0.0-next.276
 	</p>
 </div>
