@@ -4,7 +4,7 @@ slug: generate-menu
 headline: Generate the menu config file for your Sveltin project
 author: indaco
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 18-Feb-2022
 draft: false
 ---
 
@@ -15,6 +15,10 @@ Generate the menu config file for your Sveltin project
 ### Synopsis
 
 It creates a 'menu.json' file into the 'config' folder to be used by Svelte components.
+
+By default it list all resources and public pages.
+
+The `--full` flag will also includes content names for all resources.
 
 ```bash
 sveltin generate menu [flags]

@@ -4,7 +4,7 @@ slug: generate-rss
 headline: Generate a rss.xml file for your Sveltin project
 author: indaco
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 18-Feb-2022
 draft: false
 ---
 
@@ -14,12 +14,12 @@ Generate a rss.xml file for your Sveltin project
 
 ### Synopsis
 
-Do you wish to have an RSS feed for your content?
+It creates an rss file for your website.
 
-The "generate rss" command generates it for you.
+It makes use of the `.env.production` file to reflect the base url for your website.
 
 ```bash
-sveltin generate rss [flags]
+sveltin generate rss
 ```
 
 ### Options

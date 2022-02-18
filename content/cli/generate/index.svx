@@ -4,7 +4,7 @@ slug: generate
 headline: Command to generate static files (sitemap, rss, menu)
 author: indaco
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 18-Feb-2022
 draft: false
 ---
 
@@ -14,7 +14,9 @@ Command to generate static files (sitemap, rss, menu)
 
 ### Synopsis
 
-Used to generate static files through its own subcommands
+Used to generate static files through its own subcommands.
+
+Run 'sveltin generate -h' for further details.
 
 ```bash
 sveltin generate [flags]
