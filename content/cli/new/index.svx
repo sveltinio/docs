@@ -41,7 +41,7 @@ sveltin new <project> [flags]
 
 ### SEE ALSO
 
-- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites
 - [sveltin new content](/cli/new-content) - Create a new content for existing resource
 - [sveltin new metadata](/cli/new-metadata) - Command to add new metadata as a Sveltekit resource
 - [sveltin new page](/cli/new-page) - Create a new public page
