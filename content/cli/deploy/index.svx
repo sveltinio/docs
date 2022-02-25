@@ -1,0 +1,37 @@
+---
+title: Deploy
+slug: deploy
+headline: Generate the menu config file for your Sveltin project
+author: indaco
+created_at: 19-Feb-2022
+updated_at: 25-Feb-2022
+draft: false
+---
+
+## sveltin deploy
+
+Command to deploy your website over FTP.
+
+### Synopsis
+
+This command deploy your project on your hosting platform over FTP.
+
+It makes use of the `.env.production` file to reflect the base url for your website.
+
+Run `sveltin build` first.
+
+```bash
+sveltin deploy [flags]
+```
+
+### Options
+
+```bash
+  -d  --dryRun  dry run
+  -e  --exlude  list of files to not be deleted from the FTP server. Default: .htaccess
+  -h, --help    help for menu
+```
+
+### SEE ALSO
+
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites
