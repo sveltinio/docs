@@ -28,7 +28,7 @@ sveltin deploy [flags]
 
 ```bash
   -d  --dryRun  dry run
-  -e  --exlude  list of files to not be deleted from the FTP server. Default: .htaccess
+  -e  --exclude  list of files to not be deleted from the FTP server. Default: .htaccess
   -h, --help    help for menu
 ```
 
