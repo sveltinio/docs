@@ -126,6 +126,12 @@ const menu: Array<IMenuItem> = [
 				name: 'preview',
 				url: '/cli/preview',
 				weight: 15
+			},
+			{
+				identifier: 'deploy',
+				name: 'deploy',
+				url: '/cli/deploy',
+				weight: 16
 			}
 		]
 	}
