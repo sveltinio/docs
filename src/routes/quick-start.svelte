@@ -205,7 +205,9 @@
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
 							>
-								Generate the sitemap and the rss feed file:
+								Let's generate the sitemap and the RSS feed files. Open the
+								`env.production` file and edit `VITE_PUBLIC_BASE_PATH` to reflect
+								your domain name. Now, run the following sveltin's commands:
 							</p>
 
 							<Shell>
@@ -214,6 +216,14 @@
 									<p>sveltin generate rss</p>
 								</div>
 							</Shell>
+
+							<p
+								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
+							>
+								Sveltin will generate `sitemap.xml` and `rss.xml` files within the <span
+									class="italic">static</span
+								> folder so that they will be copied as they are during the build process.
+							</p>
 
 							<p
 								class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg"
