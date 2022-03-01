@@ -17,11 +17,11 @@ export const isNotEmpty = (text: string): boolean => {
 };
 
 export const getPageUrl = (name: string, websiteData: IWebSite): string => {
-	return websiteData.baseURL + '/' + name;
+	return websiteData.baseURL + '/' + name + '/';
 };
 
 export const getSlugPageUrl = (item: ResourceContent, websiteData: IWebSite): string => {
-	return websiteData.baseURL + '/' + item.resource + '/' + item.metadata.slug;
+	return websiteData.baseURL + '/' + item.resource + '/' + item.metadata.slug + '/';
 };
 
 export const getFavicon = (websiteData: IWebSite): string => {
