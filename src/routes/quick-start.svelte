@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { website } from '$config/website.js';
-	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import type { IWebPageMetadata } from '@sveltinio/seo/types';
+	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 	import Shell from '$themes/dockerz/components/_Shell.svelte';
@@ -109,7 +110,7 @@
 
 							<Shell>
 								<div>
-									<p>sveltin prepare</p>
+									<p>sveltin install</p>
 								</div>
 							</Shell>
 

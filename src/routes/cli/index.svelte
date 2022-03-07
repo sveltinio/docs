@@ -44,7 +44,8 @@
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
 	import orderBy from 'lodash-es/orderBy.js';
-	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import type { IWebPageMetadata } from '@sveltinio/seo/types';
+	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 

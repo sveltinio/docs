@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { website } from '$config/website.js';
 	import Overview from '$themes/dockerz/components/about/_Overview.svelte';
-	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import type { IWebPageMetadata } from '@sveltinio/seo/types';
+	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
 	import { getFavicon } from '$lib/utils/strings.js';
 

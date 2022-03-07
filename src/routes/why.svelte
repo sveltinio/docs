@@ -4,7 +4,8 @@
 	import ExistingApproaches from '$themes/dockerz/components/about/_ExistingApproaches.svelte';
 	import LookingFor from '$themes/dockerz/components/about/_LookingFor.svelte';
 	import SveltinGoals from '$themes/dockerz/components/about/_SveltinGoals.svelte';
-	import { IWebPageMetadata, OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
+	import type { IWebPageMetadata } from '@sveltinio/seo/types';
+	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
