@@ -27,6 +27,7 @@ const config = {
 			precompress: true
 		}),
 		prerender: {
+			default: true,
 			entries: ['*']
 		},
 		vite: {
