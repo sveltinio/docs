@@ -1,0 +1,33 @@
+---
+title: Install
+slug: install
+headline: Install all the dependencies from the `package.json` file
+author: indaco
+created_at: 24-Dec-2021
+updated_at: 7-Mar-2022
+draft: false
+---
+
+## sveltin install
+
+Get all the dependencies from the `package.json` file
+
+### Synopsis
+
+Initialize the Sveltin project installing all depencencies from the package.json file.
+
+It wraps (npm|pnpm|yarn) install.
+
+```bash
+sveltin install [flags]
+```
+
+### Options
+
+```bash
+  -h, --help     help for prepare
+```
+
+### SEE ALSO
+
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites.

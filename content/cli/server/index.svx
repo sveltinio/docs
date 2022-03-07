@@ -1,20 +1,20 @@
 ---
 title: Server
 slug: server
-headline: Run the server
+headline: Run the Vite server
 author: indaco
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 07-Mar-2022
 draft: false
 ---
 
 ## sveltin server
 
-Run the server
+Run the Vite server.
 
 ### Synopsis
 
-It wraps svelte-kit defined commands to run the server
+It wraps svelte-kit defined commands to run the Vite server.
 
 ```bash
 sveltin server [flags]
