@@ -153,8 +153,9 @@
 							<Shell>
 								<div>
 									<p>
+										wget
 										https://github.com/sveltinio/sveltin/releases/download/$VERSION/$PACKAGE_NAME
-										-o $PACKAGE_NAME
+										-O $PACKAGE_NAME
 									</p>
 									<p>sudo tar -xvf $PACKAGE_NAME -C /usr/local/bin/</p>
 									<p>sudo chmod +x /usr/local/bin/sveltin</p>
