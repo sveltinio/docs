@@ -15,7 +15,7 @@
 	<button
 		aria-expanded={expanded}
 		on:click={toggleExpand}
-		class="inline-flex items-center w-full pr-4 hover:bg-skin-light dark:hover:bg-skin-dark focus:border-skin-muted border-l-2 border-transparent"
+		class="inline-flex w-full items-center border-l-2 border-transparent pr-4 hover:bg-skin-light focus:border-skin-muted dark:hover:bg-skin-dark"
 	>
 		<span
 			class="group inline-flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover"
@@ -24,14 +24,14 @@
 		</span>
 
 		<NavArrowDownIcon
-			class="text-skin-accent dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover inline w-5 h-5 ml-auto transition-transform duration-200 transform {toggleArrowDown}"
+			class="ml-auto inline h-5 w-5 transform text-skin-accent transition-transform duration-200 dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover {toggleArrowDown}"
 		/>
 		<NavArrowUpIcon
-			class="text-skin-accent dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover inline w-5 h-5 ml-auto transition-transform duration-200 transform {toggleArrowUp}"
+			class="ml-auto inline h-5 w-5 transform text-skin-accent transition-transform duration-200 dark:text-skin-accent-dark dark:hover:text-skin-accent-dark-hover {toggleArrowUp}"
 		/>
 	</button>
 
-	<div class="dark:border-skin-base-dark -px-px p-2 pl-6 border-l" class:hidden={!expanded}>
+	<div class="-px-px border-l p-2 pl-6 dark:border-skin-base-dark" class:hidden={!expanded}>
 		<slot />
 	</div>
 </div>

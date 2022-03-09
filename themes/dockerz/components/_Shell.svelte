@@ -1,10 +1,10 @@
-<div class="w-full p-4 -mt-24 shadow-lg rounded-md text-slate-50  bg-slate-800 ">
-	<div class="flex gap-2 mb-2 top">
-		<div class="w-3 h-3 rounded-full bg-red-500" />
-		<div class="w-3 h-3 rounded-full bg-yellow-500" />
-		<div class="w-3 h-3 rounded-full bg-green-500" />
+<div class="-mt-24 w-full rounded-md bg-slate-800 p-4 text-slate-50  shadow-lg ">
+	<div class="top mb-2 flex gap-2">
+		<div class="h-3 w-3 rounded-full bg-red-500" />
+		<div class="h-3 w-3 rounded-full bg-yellow-500" />
+		<div class="h-3 w-3 rounded-full bg-green-500" />
 	</div>
-	<div class="mt-4 space-y-6 tracking-wide prose prose-invert">
+	<div class="prose prose-invert mt-4 space-y-6 tracking-wide">
 		<slot />
 	</div>
 </div>

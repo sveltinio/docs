@@ -2,7 +2,6 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
-	import { theme } from '$lib/shared/stores';
 	import { userSettings } from '$config/externals.js';
 	import { menu } from '$config/menu.js';
 	import orderBy from 'lodash-es/orderBy.js';
@@ -82,7 +81,7 @@
 					menuData={menu}
 					externalLinksData={externalLinks}
 				/>
-				<main class="flex-1 mx-auto">
+				<main class="mx-auto flex-1">
 					<slot />
 					<BottomPageLinks
 						websiteData={website}

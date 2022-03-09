@@ -5,13 +5,13 @@
 <div class="w-full max-w-lg lg:max-w-xs">
 	<label for="search" class="sr-only">Search</label>
 	<div class="relative">
-		<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
-			<SearchIcon class="w-5 h-5 text-skin-input-muted" aria-hidden="true" />
+		<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 ">
+			<SearchIcon class="h-5 w-5 text-skin-input-muted" aria-hidden="true" />
 		</div>
 		<input
 			id="search"
 			name="search"
-			class="block w-full py-2 pl-10 pr-3 leading-5 bg-skin-muted border rounded-md text-skin-input border-skin-base dark:bg-skin-dark placeholder-santa focus:outline-none focus:placeholder-oyster focus:ring-1 focus:ring-oyster focus:border-skin-accent sm:text-sm dark:border-river"
+			class="block w-full rounded-md border border-skin-base bg-skin-muted py-2 pl-10 pr-3 leading-5 text-skin-input placeholder-santa focus:border-skin-accent focus:placeholder-oyster focus:outline-none focus:ring-1 focus:ring-oyster dark:border-river dark:bg-skin-dark sm:text-sm"
 			placeholder="Search"
 			type="search"
 		/>

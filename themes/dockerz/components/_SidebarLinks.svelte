@@ -17,14 +17,14 @@
 	const externalLinks = sortBy(externalLinksData, 'weigth');
 </script>
 
-<div class="dark:border-skin-base-dark border-l">
+<div class="border-l dark:border-skin-base-dark">
 	<div>
 		{#each menuItems as item}
 			{#if !item.children}
 				<a
 					href={item.url}
 					sveltekit:prefetch
-					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark"
+					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover"
 					class:active={!dark && $page.url.pathname === item.url}
 					class:active-dark={dark && $page.url.pathname === item.url}
 					on:click={handleNavMenu}

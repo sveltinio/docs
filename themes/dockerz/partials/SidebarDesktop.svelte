@@ -10,17 +10,17 @@
 </script>
 
 <div
-	class="z-50 hidden bg-skin-muted lg:flex md:w-72 md:flex-col md:fixed md:inset-y-0 dark:bg-skin-base-dark"
+	class="z-50 hidden bg-skin-muted dark:bg-skin-base-dark md:fixed md:inset-y-0 md:w-72 md:flex-col lg:flex"
 >
-	<div class="flex flex-col flex-1 min-h-0 border-r border-skin-base dark:border-skin-muted-dark">
-		<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto lg:pl-6">
-			<div class="flex items-center px-4 shrink-0 text-skin-heading dark:text-skin-white">
+	<div class="flex min-h-0 flex-1 flex-col border-r border-skin-base dark:border-skin-muted-dark">
+		<div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4 lg:pl-6">
+			<div class="flex shrink-0 items-center px-4 text-skin-heading dark:text-skin-white">
 				<a href="/">
 					<SveltinLogo />
 					<span class="sr-only">Sveltin Logo</span>
 				</a>
 			</div>
-			<nav class="flex-1 mt-12">
+			<nav class="mt-12 flex-1">
 				<SidebarLinks bind:dark {menuData} {externalLinksData} />
 			</nav>
 		</div>

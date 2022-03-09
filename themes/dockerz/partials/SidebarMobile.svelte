@@ -34,36 +34,36 @@
 
 		{#if navIsOpen}
 			<div
-				class="relative flex flex-col flex-1 w-full max-w-xs bg-skin-light dark:bg-skin-muted-dark"
+				class="relative flex w-full max-w-xs flex-1 flex-col bg-skin-light dark:bg-skin-muted-dark"
 				class:hidden={!navIsOpen}
 				in:fly={{ x: -200, duration: 300, easing: cubicInOut }}
 				out:fly={{ x: -200, duration: 300, easing: cubicInOut }}
 			>
 				{#if navIsOpen}
 					<div
-						class="absolute top-0 right-0 pt-2 -mr-12"
+						class="absolute top-0 right-0 -mr-12 pt-2"
 						class:hidden={!navIsOpen}
 						in:opacityTransition
 						out:opacityTransition
 					>
 						<button
 							type="button"
-							class="flex items-center justify-center w-10 h-10 ml-1 rounded-full  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+							class="ml-1 flex h-10 w-10 items-center justify-center rounded-full  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
 							on:click={handleNavMenu}
 						>
 							<span class="sr-only">Close sidebar</span>
-							<CancelIcon class="w-6 h-6 text-skin-white" />
+							<CancelIcon class="h-6 w-6 text-skin-white" />
 						</button>
 					</div>
 				{/if}
 
-				<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+				<div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
 					<div
-						class="flex items-center flex-shrink-0 px-4 text-skin-heading dark:text-skin-heading-dark-hover"
+						class="flex flex-shrink-0 items-center px-4 text-skin-heading dark:text-skin-heading-dark-hover"
 					>
 						<LogoLink handleNavMenu={() => handleNavMenu()} />
 					</div>
-					<nav class="px-2 mt-5 space-y-1">
+					<nav class="mt-5 space-y-1 px-2">
 						<SidebarLinks
 							bind:dark
 							{menuData}
@@ -73,14 +73,14 @@
 					</nav>
 				</div>
 				<div
-					class="flex flex-shrink-0 p-4 pl-12 border-t  border-skin-base-dark dark:border-skin-base-dark"
+					class="flex flex-shrink-0 border-t border-skin-base-dark p-4  pl-12 dark:border-skin-base-dark"
 				>
 					<!------ CTA buttons goes here-->
 				</div>
 			</div>
 		{/if}
 
-		<div class="flex-shrink-0 w-14">
+		<div class="w-14 flex-shrink-0">
 			<!-- Force sidebar to shrink to fit close icon -->
 		</div>
 	</div>

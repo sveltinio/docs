@@ -27,11 +27,11 @@
 
 <!-- PAGE TITLE-->
 <section
-	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"
+	class="mx-auto max-w-7xl border-b border-skin-muted bg-skin-light dark:border-skin-muted-dark dark:bg-skin-dark"
 >
-	<div class="px-4 pt-20 mx-auto max-w-7xl sm:px-6 md:px-32 lg:pt-44">
+	<div class="mx-auto max-w-7xl px-4 pt-20 sm:px-6 md:px-32 lg:pt-44">
 		<h1
-			class="py-2 mx-auto text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:text-5xl lg:py-10"
+			class="mx-auto py-2 text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:py-10 lg:text-5xl"
 		>
 			{quickStartPage.title}
 		</h1>
@@ -40,17 +40,17 @@
 <!-- END OF PAGE TITLE-->
 
 <!-- PAGE CONTENT -->
-<section class="pt-6 pb-24 bg-skin-light dark:bg-skin-dark">
-	<div class="px-4 mx-auto sm:px-6 md:px-32">
+<section class="bg-skin-light pt-6 pb-24 dark:bg-skin-dark">
+	<div class="mx-auto px-4 sm:px-6 md:px-32">
 		<section>
 			<div class="max-w-3xl">
-				<div class="mx-auto space-y-24 text-lg text-left">
+				<div class="mx-auto space-y-24 text-left text-lg">
 					<div
-						class="space-y-8 text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg prose dark:prose-invert"
+						class="prose space-y-8 text-base font-light text-skin-body dark:prose-invert dark:text-skin-body-dark sm:text-lg"
 					>
 						<div class="space-y-12">
 							<h2
-								class="text-lg font-normal text-skin-heading dark:text-skin-heading-dark hover:text-skin-heading-hover lg:text-2xl group"
+								class="group text-lg font-normal text-skin-heading hover:text-skin-heading-hover dark:text-skin-heading-dark lg:text-2xl"
 							>
 								With few commands Sveltin flex the muscles 💪
 							</h2>
@@ -87,7 +87,7 @@
 							>
 								Then, you select the CSS lib for your project. It can be vanilla
 								CSS, Sass / SCSS, Tailwind CSS, Bulma or Bootstrap. You can use the
-								shortcut <span class="text-base font-mono">--css</span>
+								shortcut <span class="font-mono text-base">--css</span>
 								flag. Check the
 								<a href="/cli/new" class="text-skin-link dark:text-skin-link-dark"
 									>new command</a

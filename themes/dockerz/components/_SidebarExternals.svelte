@@ -5,8 +5,8 @@
 	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
 
-<div class="pl-6 mt-12">
-	<p class="text-skin-heading dark:text-skin-heading-dark text-sm font-semibold uppercase">
+<div class="mt-12 pl-6">
+	<p class="text-sm font-semibold uppercase text-skin-heading dark:text-skin-heading-dark">
 		External Links
 	</p>
 </div>
@@ -16,7 +16,7 @@
 			id={`link-${item.name}`}
 			name={item.name}
 			url={item.url}
-			class="flex items-center p-2 pl-6 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:hover:text-skin-link-dark-hover dark:text-skin-link-dark dark:hover:bg-skin-dark group"
+			class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover"
 		>
 			{item.name}
 		</ExternalLink>

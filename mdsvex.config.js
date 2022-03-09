@@ -1,6 +1,3 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
 import relativeImages from 'mdsvex-relative-images';
 import preview, { textFormatter, htmlFormatter } from 'remark-preview';
 

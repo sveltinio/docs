@@ -23,7 +23,7 @@
 	use:clickOutside={{ enabled: isThemeSwitchVisible, cb: () => (isThemeSwitchVisible = false) }}
 >
 	{#if dark}
-		<HalfMoonIcon class="text-skin-white w-7 h-7 rounded-full p-1" />
+		<HalfMoonIcon class="h-7 w-7 rounded-full p-1 text-skin-white" />
 	{:else}
 		<SunLightIcon class="text-skin-pure-dark w-7 h-7 rounded-full p-1" />
 	{/if}

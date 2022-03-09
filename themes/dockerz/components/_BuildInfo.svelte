@@ -1,21 +1,20 @@
 <script lang="ts">
 	import { sveltinVersion, svelteKitVersion } from '$config/defaults.js';
-	import { siteConfig } from '$lib/Env.js';
 </script>
 
-<div class="pl-6 mt-12">
-	<p class="text-skin-heading dark:text-skin-heading-dark text-xs font-semibold uppercase">
+<div class="mt-12 pl-6">
+	<p class="text-xs font-semibold uppercase text-skin-heading dark:text-skin-heading-dark">
 		Build Info
 	</p>
 </div>
 <div class="mt-3">
 	<p
-		class="p-2 pl-6 text-sm font-light text-skin-base dark:hover:text-skin-base-dark-hover dark:text-skin-base-dark dark:hover:bg-skin-dark group"
+		class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark dark:hover:bg-skin-dark dark:hover:text-skin-base-dark-hover"
 	>
 		Sveltin v{sveltinVersion}
 	</p>
 	<p
-		class="p-2 pl-6 text-sm font-light text-skin-base dark:hover:text-skin-base-dark-hover dark:text-skin-base-dark dark:hover:bg-skin-dark group"
+		class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark dark:hover:bg-skin-dark dark:hover:text-skin-base-dark-hover"
 	>
 		SvelteKit v{svelteKitVersion}
 	</p>

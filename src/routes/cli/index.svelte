@@ -8,7 +8,7 @@
 		ResourceContentMaker
 	} from '@sveltinio/widgets/types';
 
-	export const load: Load = async ({ url, fetch }) => {
+	export const load: Load = async ({ fetch }) => {
 		const resourceName = 'cli';
 		const _url = '/api/v1/cli/published.json';
 		const res = await fetch(_url);
@@ -82,22 +82,22 @@
 <JsonLdWebPage data={cliPage} />
 <JsonLdBreadcrumbs baseURL={website.baseURL} parent={resourceName} currentTitle={cliPage.title} />
 <section
-	class="mx-auto bg-skin-light border-b dark:bg-skin-dark border-skin-muted max-w-7xl dark:border-skin-muted-dark"
+	class="mx-auto max-w-7xl border-b border-skin-muted bg-skin-light dark:border-skin-muted-dark dark:bg-skin-dark"
 >
-	<div class="px-4 pt-20 mx-auto max-w-7xl sm:px-6 md:px-32 lg:pt-44">
+	<div class="mx-auto max-w-7xl px-4 pt-20 sm:px-6 md:px-32 lg:pt-44">
 		<h1
-			class="py-2 mx-auto text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:text-5xl lg:py-10"
+			class="mx-auto py-2 text-4xl font-light leading-none tracking-tighter text-skin-heading dark:text-skin-heading-dark lg:py-10 lg:text-5xl"
 		>
 			All sveltin commands
 		</h1>
 	</div>
 </section>
 
-<section class="mx-auto pt-6 pb-24 bg-skin-light dark:bg-skin-dark">
-	<div class="px-4 mx-auto sm:px-6 md:px-32">
+<section class="mx-auto bg-skin-light pt-6 pb-24 dark:bg-skin-dark">
+	<div class="mx-auto px-4 sm:px-6 md:px-32">
 		<section>
 			<div class="max-w-3xl">
-				<div class="mx-auto space-y-24 text-lg text-left">
+				<div class="mx-auto space-y-24 text-left text-lg">
 					<div class="space-y-8">
 						<ul>
 							{#each sortedItemsList as item}

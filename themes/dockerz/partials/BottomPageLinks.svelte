@@ -14,9 +14,9 @@
 
 <div class="border-t bg-skin-base dark:border-skin-muted-dark dark:bg-skin-base-dark">
 	<div class="mx-auto max-w-7xl">
-		<div class="grid grid-cols-2 mx-auto max-w-none">
+		<div class="mx-auto grid max-w-none grid-cols-2">
 			<div
-				class="px-4 py-8 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 lg:px-8"
+				class="bg-skin-base px-4 py-8 dark:border-skin-base-dark dark:bg-skin-base-dark sm:px-6 lg:px-8"
 			>
 				<div class="grid grid-cols-1 lg:grid-cols-2">
 					<ul class="mt-2 space-y-4 lg:mt-0">
@@ -24,7 +24,7 @@
 							<li>
 								<a
 									href={item.url}
-									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-base"
+									class="text-xs font-light text-skin-muted hover:text-skin-muted-hover dark:text-skin-muted-dark dark:hover:text-skin-muted-dark-hover sm:text-base"
 								>
 									{item.name}
 								</a>
@@ -38,7 +38,7 @@
 									id={`ext-${item.name}`}
 									name={item.name}
 									url={item.url}
-									class="text-xs font-light text-skin-muted dark:text-skin-muted-dark hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover sm:text-base"
+									class="text-xs font-light text-skin-muted hover:text-skin-muted-hover dark:text-skin-muted-dark dark:hover:text-skin-muted-dark-hover sm:text-base"
 								>
 									{item.name}
 								</ExternalLink>
@@ -48,10 +48,10 @@
 				</div>
 			</div>
 			<div
-				class="px-4 py-4 md:mt-0 bg-skin-base dark:bg-skin-base-dark dark:border-skin-base-dark sm:px-6 sm:py-8 lg:px-8"
+				class="bg-skin-base px-4 py-4 dark:border-skin-base-dark dark:bg-skin-base-dark sm:px-6 sm:py-8 md:mt-0 lg:px-8"
 				id="contact"
 			>
-				<div class="mt-8 md:mt-0 md:order-1">
+				<div class="mt-8 md:order-1 md:mt-0">
 					<p
 						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base"
 					>

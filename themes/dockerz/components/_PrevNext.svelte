@@ -6,25 +6,25 @@
 </script>
 
 <div
-	class="bg-skin-base dark:bg-skin-base-dark dark:hover:bg-skin-base-dark-hover border-t-2 border-skin-accent dark:border-skin-accent-dark"
+	class="border-t-2 border-skin-accent bg-skin-base dark:border-skin-accent-dark dark:bg-skin-base-dark dark:hover:bg-skin-base-dark-hover"
 >
-	<div class="max-w-7xl mx-auto">
+	<div class="mx-auto max-w-7xl">
 		<div
-			class="dark:text-skin-muted-dark grid grid-cols-1 lg:grid-cols-2 lg:dark:divide-skin-muted-dark lg:divide-x"
+			class="grid grid-cols-1 dark:text-skin-muted-dark lg:grid-cols-2 lg:divide-x lg:dark:divide-skin-muted-dark"
 		>
 			<div>
 				{#if previous.metadata.title}
 					<a href={`/${previous.resource}/${previous.metadata.slug}`} class="group">
 						<div
-							class="px-4 pt-8 pb-16 bg-skin-base dark:bg-skin-base-dark hover:bg-skin-base-hover dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
+							class="bg-skin-base px-4 pt-8 pb-16 hover:bg-skin-base-hover dark:bg-skin-base-dark dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
 						>
 							<span
-								class=" text-comet dark:text-manatee dark:hover:text-oyster text-sm font-normal"
+								class=" text-comet dark:text-manatee text-sm font-normal dark:hover:text-oyster"
 							>
 								Previous
 							</span>
 							<p
-								class=" lg:text-base text-comet dark:text-manatee sm:text-xl dark:group-hover:text-periblue group-hover:text-pearl text-xs font-light"
+								class=" text-comet dark:text-manatee dark:group-hover:text-periblue group-hover:text-pearl text-xs font-light sm:text-xl lg:text-base"
 							>
 								{previous.metadata.title}
 							</p>
@@ -37,7 +37,7 @@
 				{#if next.metadata.title}
 					<a href={`/${previous.resource}/${next.metadata.slug}`} class="group ">
 						<div
-							class="px-4 pt-8 pb-16 bg-skin-base dark:bg-skin-base-dark hover:bg-skin-base-hover dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
+							class="bg-skin-base px-4 pt-8 pb-16 hover:bg-skin-base-hover dark:bg-skin-base-dark dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
 						>
 							<span
 								class="text-sm font-normal text-skin-base dark:text-skin-base-dark"
@@ -45,7 +45,7 @@
 								Next
 							</span>
 							<p
-								class="space-x-2 text-xs font-light text-skin-base dark:text-skin-base-dark group-hover:text-skin-base-hover dark:group-hover:text-skin-base-dark-hover sm:text-xl lg:text-base"
+								class="space-x-2 text-xs font-light text-skin-base group-hover:text-skin-base-hover dark:text-skin-base-dark dark:group-hover:text-skin-base-dark-hover sm:text-xl lg:text-base"
 							>
 								{next.metadata.title}
 							</p>

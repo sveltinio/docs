@@ -28,7 +28,7 @@
 	<a
 		href="#top"
 		aria-label="Back to top"
-		class="fixed bottom-0 right-0 p-2 mx-5 my-5 rounded-full text-skin-white dark:text-gray-800-dark bg-sky-600 dark:bg-gray-600 hover:bg-sky-500 dark:hover:bg-gray-500 focus:outline-none transform transition-all ease-in-out duration-1000 animate-bounce {scrollButton}"
+		class="dark:text-gray-800-dark fixed bottom-0 right-0 mx-5 my-5 transform animate-bounce rounded-full bg-sky-600 p-2 text-skin-white transition-all duration-1000 ease-in-out hover:bg-sky-500 focus:outline-none dark:bg-gray-600 dark:hover:bg-gray-500 {scrollButton}"
 		on:click={goTop}
 	>
 		<ArrowUpCircledIcon size="24" />

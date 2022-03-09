@@ -30,36 +30,36 @@
 
 {#if visible}
 	<ul
-		class="absolute z-50 top-full right-0 bg-skin-light rounded-lg ring-1 ring-gray-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-gray-700 font-semibold dark:bg-skin-dark dark:ring-0 dark:highlight-white/5 dark:text-gray-300 mt-8"
+		class="dark:highlight-white/5 absolute top-full right-0 z-50 mt-8 w-36 overflow-hidden rounded-lg bg-skin-light py-1 text-sm font-semibold text-gray-700 shadow-lg ring-1 ring-gray-900/10 dark:bg-skin-dark dark:text-gray-300 dark:ring-0"
 		aria-orientation="vertical"
 		role="listbox"
 		tabindex="0"
 	>
 		<li
-			class="py-1 px-2 flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
+			class="flex cursor-pointer items-center py-1 px-2 hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
 			role="option"
 			tabindex="-1"
 			on:click|preventDefault={handleLightMode}
 		>
-			<SunLightIcon class="w-5 h-5 mr-2" />
+			<SunLightIcon class="mr-2 h-5 w-5" />
 			Light
 		</li>
 		<li
-			class="py-1 px-2 flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
+			class="flex cursor-pointer items-center py-1 px-2 hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
 			role="option"
 			tabindex="-1"
 			on:click|preventDefault={handleDarkMode}
 		>
-			<HalfMoonIcon class="w-5 h-5 mr-2" />
+			<HalfMoonIcon class="mr-2 h-5 w-5" />
 			Dark
 		</li>
 		<li
-			class="py-1 px-2 flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
+			class="flex cursor-pointer items-center py-1 px-2 hover:bg-gray-100 dark:hover:bg-skin-base-dark-hover"
 			role="option"
 			tabindex="-1"
 			on:click|preventDefault={handleSystemMode}
 		>
-			<ComputerIcon class="w-5 h-5 mr-2 " />
+			<ComputerIcon class="mr-2 h-5 w-5 " />
 			System
 		</li>
 	</ul>
