@@ -20,6 +20,8 @@ jobs:
 
       - run: npm install -g pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm format
+      - run: pnpm lint
       - run: pnpm build
         env:
           VITE_PUBLIC_BASE_PATH: https://docs.sveltin.io
