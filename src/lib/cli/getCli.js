@@ -9,4 +9,4 @@ const cliList = Object.entries(cli)
 	.sort((a, b) => (a.date < b.date ? 1 : -1));
 
 const published = filter(cliList, ['draft', false]);
-export default published;
+export { published };
