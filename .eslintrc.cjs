@@ -2,8 +2,11 @@ module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
 	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+	rules: {
+		'@typescript-eslint/no-empty-function': 'off'
+	},
 	plugins: ['svelte3', '@typescript-eslint'],
-	ignorePatterns: ['*.cjs'],
+	ignorePatterns: ['*.cjs', 'static/prism/prism.js'],
 	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
 	settings: {
 		'svelte3/typescript': () => require('typescript')
