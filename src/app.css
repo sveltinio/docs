@@ -127,3 +127,11 @@
 		--color-border-accent-dark: #1e2028 /* pearl */;
 	}
 }
+
+.md-content {
+	@apply prose prose-sveltin;
+}
+
+.md-content-dark {
+	@apply prose-invert;
+}

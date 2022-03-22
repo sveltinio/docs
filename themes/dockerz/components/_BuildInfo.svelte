@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { sveltinVersion, svelteKitVersion } from '$config/defaults.js';
+	import { sveltinVersion, sveltekitVersion } from '$config/defaults.js';
 </script>
 
 <div class="mt-12 pl-6">
@@ -16,6 +16,6 @@
 	<p
 		class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark dark:hover:bg-skin-dark dark:hover:text-skin-base-dark-hover"
 	>
-		SvelteKit v{svelteKitVersion}
+		SvelteKit v{sveltekitVersion}
 	</p>
 </div>
