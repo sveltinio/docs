@@ -2,12 +2,12 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
-	import { userSettings } from '$config/externals.js';
+	import { googleFonts } from '$config/externals.js';
 	import { menu } from '$config/menu.js';
 	import orderBy from 'lodash-es/orderBy.js';
 	import { externalLinks } from '$config/external_links.js';
 	import { JsonLdSiteNavigationElements, JsonLdWebSite } from '@sveltinio/seo';
-	import { GoogleFonts, GoogleAnalytics } from '@sveltinio/services';
+	import { GoogleFonts, GoogleAnalytics, UmamiAnalytics } from '@sveltinio/services';
 	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
@@ -19,7 +19,6 @@
 	let navIsOpen = false;
 
 	const sortedMenu = orderBy(menu, 'weight');
-	const gaPropertyID = userSettings.googleAnalytics.propertyID;
 
 	function handleEscape({ key }) {
 		if (key === 'Escape') {
@@ -45,8 +44,12 @@
 <JsonLdWebSite websiteData={website} />
 <JsonLdSiteNavigationElements websiteData={website} menuData={sortedMenu} />
 
+<GoogleFonts fonts={googleFonts} />
+<UmamiAnalytics
+	websiteID="654bad6a-6900-416c-bf93-cd8613b67360"
+	srcURL="https://umami.sveltin.io/umami.js"
+/>
 <svelte:head>
-	<GoogleFonts fonts={userSettings.googleFonts} />
 	<script>
 		//console.log(localStorage);
 		if (!('theme' in localStorage)) {
@@ -64,10 +67,6 @@
 		}
 	</script>
 </svelte:head>
-
-{#if gaPropertyID != ''}
-	<GoogleAnalytics trackingId={gaPropertyID} />
-{/if}
 
 <div class:dark class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>
