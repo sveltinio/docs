@@ -7,7 +7,7 @@
 	import orderBy from 'lodash-es/orderBy.js';
 	import { externalLinks } from '$config/external_links.js';
 	import { JsonLdSiteNavigationElements, JsonLdWebSite } from '@sveltinio/seo';
-	import { GoogleFonts, GoogleAnalytics, UmamiAnalytics } from '@sveltinio/services';
+	import { GoogleFonts, UmamiAnalytics } from '@sveltinio/services';
 	import Toolbar from '$themes/dockerz/partials/Toolbar.svelte';
 	import SidebarDesktop from '$themes/dockerz/partials/SidebarDesktop.svelte';
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
