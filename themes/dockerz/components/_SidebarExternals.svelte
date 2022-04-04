@@ -16,7 +16,7 @@
 			id={`link-${item.name}`}
 			name={item.name}
 			url={item.url}
-			class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover"
+			class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--external-{item.identifier}"
 		>
 			{item.name}
 		</ExternalLink>

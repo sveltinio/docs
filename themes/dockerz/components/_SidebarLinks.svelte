@@ -24,7 +24,7 @@
 				<a
 					href={item.url}
 					sveltekit:prefetch
-					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover"
+					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--{item.identifier}"
 					class:active={!dark && $page.url.pathname === item.url}
 					class:active-dark={dark && $page.url.pathname === item.url}
 					on:click={handleNavMenu}
@@ -39,7 +39,7 @@
 								<a
 									href={child.url}
 									sveltekit:prefetch
-									class="group flex items-center p-2 pl-3 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark focus:border-skin-muted"
+									class="group flex items-center p-2 pl-3 text-base font-light text-skin-link hover:text-skin-link-hover hover:bg-skin-light dark:text-skin-link-dark dark:hover:text-skin-link-dark-hover dark:hover:bg-skin-dark focus:border-skin-muted umami--click--{child.identifier}"
 									class:active={!dark && $page.url.pathname === child.url}
 									class:active-dark={dark && $page.url.pathname === child.url}
 									on:click={handleNavMenu}
