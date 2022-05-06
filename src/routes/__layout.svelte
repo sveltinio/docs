@@ -46,7 +46,7 @@
 
 <GoogleFonts fonts={googleFonts} />
 <UmamiAnalytics
-	websiteID="832244aa-472a-42e0-8aef-7382bf61fb9b"
+	websiteID="1467a0c5-0b8d-4687-97ee-3dc97eb8becc"
 	srcURL="https://umami.sveltin.io/umami.js"
 />
 <svelte:head>
