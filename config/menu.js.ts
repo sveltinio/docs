@@ -32,10 +32,16 @@ const menu: Array<IMenuItem> = [
 		weight: 5
 	},
 	{
+		identifier: 'theming',
+		name: 'Theming',
+		url: '/theming',
+		weight: 6
+	},
+	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
-		weight: 6,
+		weight: 7,
 		children: [
 			{
 				identifier: 'sveltin',
