@@ -9,7 +9,7 @@ const externalLinks: Array<ExternalLinkItem> = [
 	{
 		identifier: 'github',
 		name: 'GitHub Repo',
-		url: 'http://github.com/sveltinio/sveltin',
+		url: 'http://github.com/sveltinio',
 		weight: 2
 	}
 ];
