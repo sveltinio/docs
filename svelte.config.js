@@ -21,11 +21,13 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			precompress: true,
-			trailingSlash: 'always'
+			precompress: true
 		}),
+		trailingSlash: 'always',
 		prerender: {
+			crawl: true,
 			default: true,
+			enabled: true,
 			entries: ['*']
 		}
 	}
