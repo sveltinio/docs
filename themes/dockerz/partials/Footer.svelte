@@ -21,9 +21,9 @@
 							class="mx-auto mt-2 ml-0 text-sm font-medium text-skin-body dark:text-skin-body-dark lg:ml-12"
 						>
 							This site uses the <span class="italic">Dockerz</span>&nbsp;theme by <ExternalLink
-								name="apesoflondon"
-								url="https://apesoflondon.design/"
-								class=" underline">ApesofLondon</ExternalLink
+								name="michael andreuzza"
+								url="https://www.michaelandreuzza.com/"
+								class="underline">Michael Andreuzza</ExternalLink
 							>.&nbsp; <br class="block lg:hidden" /> Icons by <ExternalLink
 								name="Iconoir"
 								url="https://iconoir.com"
