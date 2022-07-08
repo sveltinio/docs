@@ -16,7 +16,6 @@ const config = {
 		'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString())
 	},
 	server: {
-		port: 3000,
 		fs: {
 			// Allow serving files from one level up to the project root
 			// Alternatevaly set server.fs.strict to false
@@ -27,6 +26,8 @@ const config = {
 		alias: {
 			$config: path.resolve('config'),
 			$content: path.resolve('content'),
+			$data: path.resolve('data'),
+			$lib: path.resolve('src/lib'),
 			$themes: path.resolve('themes')
 		}
 	},
