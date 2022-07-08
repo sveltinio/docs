@@ -22,7 +22,7 @@ const config = {
 			assets: 'build',
 			fallback: null,
 			precompress: true,
-			trailingSlash: 'never'
+			trailingSlash: 'always'
 		}),
 		prerender: {
 			default: true,
