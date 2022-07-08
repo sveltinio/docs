@@ -25,7 +25,7 @@
 	{#if dark}
 		<HalfMoonIcon class="h-7 w-7 rounded-full p-1 text-skin-white" />
 	{:else}
-		<SunLightIcon class="text-skin-pure-dark w-7 h-7 rounded-full p-1" />
+		<SunLightIcon class="h-7 w-7 rounded-full p-1 text-skin-pure-dark" />
 	{/if}
 	<span class="sr-only">Light/Dark mode button</span>
 </button>
