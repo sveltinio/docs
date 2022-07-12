@@ -2,9 +2,9 @@
 title: Generate
 slug: generate
 headline: Command to generate static files (sitemap, rss, menu)
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 18-Feb-2022
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -21,6 +21,11 @@ Run 'sveltin generate -h' for further details.
 ```bash
 sveltin generate [flags]
 ```
+
+### Aliases
+
+`g`, `gen`
+
 
 ### Options
 

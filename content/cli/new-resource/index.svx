@@ -2,9 +2,9 @@
 title: New Resource
 slug: new-resource
 headline: Command to create new resources
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -30,6 +30,11 @@ This command:
 ```bash
 sveltin new resource [name] [flags]
 ```
+
+### Aliases
+
+`r`
+
 
 ### Options
 

@@ -2,9 +2,9 @@
 title: New Page
 slug: new-page
 headline: Create a new public page
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -25,6 +25,11 @@ This command allows you to select between a svelte component page and a markdown
 ```bash
 sveltin new page [name] [flags]
 ```
+
+### Aliases
+
+`p`
+
 
 ### Options
 

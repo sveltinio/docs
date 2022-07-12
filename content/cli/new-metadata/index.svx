@@ -2,9 +2,9 @@
 title: New Metadata
 slug: new-metadata
 headline: Command to add new metadata to an existing resource
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 18-Feb-2022
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -27,6 +27,11 @@ Types:
 ```bash
 sveltin new metadata [name] --resource [resource] --type [single|list] [flags]
 ```
+
+### Aliases
+
+`m`, `groupedBy`
+
 
 ### Options
 

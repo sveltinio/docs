@@ -2,9 +2,9 @@
 title: Build
 slug: build
 headline: Builds a production version of your static website
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -24,6 +24,10 @@ your production environment
 ```bash
 sveltin build [flags]
 ```
+
+### Aliases
+
+`b`
 
 ### Options
 

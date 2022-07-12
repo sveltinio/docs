@@ -2,9 +2,9 @@
 title: Prepare
 slug: prepare
 headline: Wrap svelte-kit sync command.
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 07-Mar-2022
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -19,6 +19,10 @@ It wraps svelte-kit sync command to ensure types are set up and correct before r
 ```bash
 sveltin prepare [flags]
 ```
+
+### Aliases
+
+`sync`
 
 ### Options
 

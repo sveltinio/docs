@@ -2,9 +2,9 @@
 title: Preview
 slug: preview
 headline: Preview the production version locally
-author: indaco
+author: sveltin
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 12-Jul-2022
 draft: false
 ---
 

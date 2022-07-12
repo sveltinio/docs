@@ -2,9 +2,9 @@
 title: Deploy
 slug: deploy
 headline: Command to deploy your website over FTP
-author: indaco
+author: sveltinio
 created_at: 19-Feb-2022
-updated_at: 25-Feb-2022
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -23,6 +23,11 @@ Run `sveltin build` first.
 ```bash
 sveltin deploy [flags]
 ```
+
+### Aliases
+
+`publish`
+
 
 ### Options
 

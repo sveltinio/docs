@@ -2,9 +2,9 @@
 title: Install
 slug: install
 headline: Install all the dependencies from the `package.json` file
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 7-Mar-2022
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -21,6 +21,11 @@ It wraps (npm|pnpm|yarn) install.
 ```bash
 sveltin install [flags]
 ```
+
+### Aliases
+
+`i`, `init`
+
 
 ### Options
 

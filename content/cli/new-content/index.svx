@@ -2,9 +2,9 @@
 title: New Content
 slug: new-content
 headline: Create a new content for existing resource
-author: indaco
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 29-Dec-2021
+updated_at: 12-Jul-2022
 draft: false
 ---
 
@@ -34,6 +34,11 @@ As result:
 ```bash
 sveltin new content [name] [flags]
 ```
+
+### Aliases
+
+`c`
+
 
 ### Options
 
