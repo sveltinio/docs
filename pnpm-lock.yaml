@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.0.3
   '@commitlint/config-conventional': ^17.0.3
-  '@indaco/svelte-iconoir': ^2.5.0
+  '@indaco/svelte-iconoir': ^2.5.1
   '@sveltejs/adapter-static': 1.0.0-next.35
   '@sveltejs/kit': 1.0.0-next.370
   '@sveltinio/essentials': ^0.2.1
@@ -57,7 +57,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
-  '@indaco/svelte-iconoir': 2.5.0
+  '@indaco/svelte-iconoir': 2.5.1
   '@sveltejs/adapter-static': 1.0.0-next.35
   '@sveltejs/kit': 1.0.0-next.370_svelte@3.49.0+vite@2.9.14
   '@sveltinio/essentials': 0.2.1
@@ -330,8 +330,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@indaco/svelte-iconoir/2.5.0:
-    resolution: {integrity: sha512-BIypcOsuNfeEpFs9UNQotI1WuJEm/6I9WkEI0qBmDqfDdEx/3MZfk0x1Zh0Wls972CWI4ENUM1XTWGwqcyjltA==}
+  /@indaco/svelte-iconoir/2.5.1:
+    resolution: {integrity: sha512-vZ1BVjutwBMs2fwX3cqRIUqPFtIAkuU78RHKkxqZ4GmISsvz0H4LQ5bjTTbRiR6tboQaBRJI5mVojsafmVfh2Q==}
     dev: true
 
   /@jridgewell/resolve-uri/3.1.0:
