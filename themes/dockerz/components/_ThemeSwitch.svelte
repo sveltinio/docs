@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { theme } from '$lib/shared/stores';
-	import SunLightIcon from '@indaco/svelte-iconoir/icons/SunLightIcon.svelte';
-	import HalfMoonIcon from '@indaco/svelte-iconoir/icons/HalfMoonIcon.svelte';
-	import ComputerIcon from '@indaco/svelte-iconoir/icons/ComputerIcon.svelte';
+	import { SunLightIcon, HalfMoonIcon, ComputerIcon } from '@indaco/svelte-iconoir';
 
 	export let dark: boolean;
 	export let visible: boolean;

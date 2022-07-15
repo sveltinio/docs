@@ -12,12 +12,10 @@
 	const externalLinks = sortBy(externalLinksData, 'weigth');
 </script>
 
-<div class="border-t bg-skin-base dark:border-skin-muted-dark dark:bg-skin-base-dark">
+<div class="border-t bg-skin-muted dark:border-skin-muted-dark dark:bg-skin-base-dark">
 	<div class="mx-auto max-w-7xl">
 		<div class="mx-auto grid max-w-none grid-cols-2">
-			<div
-				class="bg-skin-base px-4 py-8 dark:border-skin-base-dark dark:bg-skin-base-dark sm:px-6 lg:px-8"
-			>
+			<div class="px-4 py-8 dark:border-skin-base-dark sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 lg:grid-cols-2">
 					<ul class="mt-2 space-y-4 lg:mt-0">
 						{#each menuItems as item}
@@ -48,7 +46,7 @@
 				</div>
 			</div>
 			<div
-				class="bg-skin-base px-4 py-4 dark:border-skin-base-dark dark:bg-skin-base-dark sm:px-6 sm:py-8 md:mt-0 lg:px-8"
+				class="px-4 py-4 dark:border-skin-base-dark sm:px-6 sm:py-8 md:mt-0 lg:px-8"
 				id="contact"
 			>
 				<div class="mt-8 md:order-1 md:mt-0">

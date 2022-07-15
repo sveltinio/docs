@@ -1,5 +1,5 @@
 <script>
-	import SearchIcon from '@indaco/svelte-iconoir/icons/SearchIcon.svelte';
+	import { SearchIcon } from '@indaco/svelte-iconoir';
 </script>
 
 <div class="w-full max-w-lg lg:max-w-xs">

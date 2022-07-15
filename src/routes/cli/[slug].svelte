@@ -1,24 +1,24 @@
 <script lang="ts">
+	import type { Sveltin } from 'src/sveltin';
+	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { onMount } from 'svelte';
 	import { website } from '$config/website.js';
 	import { theme, updateTheme } from '$lib/shared/stores';
-	import type { ResourceContent } from '@sveltinio/widgets/types';
 	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
 	import { JsonLdWebPage, PageMetaTags, JsonLdBreadcrumbs } from '@sveltinio/seo';
-	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { getSlugPageUrl, getCoverImagePath } from '$lib/utils/strings.js';
 
-	export let current: ResourceContent;
-	export let previous: ResourceContent;
-	export let next: ResourceContent;
+	export let current: Sveltin.ContentEntry;
+	export let previous: Sveltin.ContentEntry;
+	export let next: Sveltin.ContentEntry;
 
 	const slugPageData: IWebPageMetadata = {
-		url: getSlugPageUrl(current, website),
+		url: getSlugPageUrl(current as Sveltin.ContentEntry, website),
 		title: 'sveltin command: ' + current.metadata.title,
 		description: current.metadata.headline,
 		author: current.metadata.author,
-		image: getCoverImagePath(current, website),
+		image: getCoverImagePath(current as Sveltin.ContentEntry, website),
 		opengraph: {
 			type: OpenGraphType.Article,
 			article: {

@@ -1,5 +1,4 @@
-import type { DynamicObject } from '$lib/interfaces';
-import { ContentMetadata, ResourceContent, ResourceContentMaker } from '@sveltinio/widgets/types';
+import type { Sveltin } from 'src/sveltin';
 
 export const list = async (withMarkup = false) => {
 	const contentFiles = import.meta.glob('/content/cli/**/*.{svelte.md,md,svx}');
@@ -7,19 +6,19 @@ export const list = async (withMarkup = false) => {
 	const contents = await Promise.all(
 		contentFilesArray.map(async ([path, resolver]) => {
 			const data = await resolver();
-			const result: DynamicObject = {
-				meta: data.metadata,
+			const result: Sveltin.DynamicObject = {
+				meta: data['metadata'],
 				path: path
 			};
 			if (withMarkup) {
-				result.markup = data.default.render();
+				result.markup = data['default'].render();
 			}
 			return result;
 		})
 	);
 	const publishedByDate = contents
-		.filter((elem) => !elem.meta.draft)
-		.sort((a, b) => (a.meta.created_at < b.meta.created_at ? 1 : -1));
+		.filter((elem) => !elem.meta['draft'])
+		.sort((a, b) => (a.meta['created_at'] < b.meta['created_at'] ? 1 : -1));
 
 	return publishedByDate;
 };
@@ -29,29 +28,29 @@ export const getSingle = async (slug: string) => {
 	const publishedByDate = await list(true);
 
 	const selected = publishedByDate.filter((item) => {
-		return item.meta.slug == slug;
+		return item.meta['slug'] == slug;
 	});
 
 	if (selected.length != 0) {
-		const selectedItemIndex = publishedByDate.findIndex((elem) => slug === elem.meta.slug);
+		const selectedItemIndex = publishedByDate.findIndex((elem) => slug === elem.meta['slug']);
 		const selectedItem = publishedByDate[selectedItemIndex];
-		const current = ResourceContentMaker.createWithValues(
-			resourceName,
-			selectedItem.meta,
-			selectedItem.markup.html
-		);
-		const previous: ResourceContent = {
+		const current: Sveltin.ContentEntry = {
 			resource: resourceName,
-			metadata: <ContentMetadata>{
-				title: publishedByDate[selectedItemIndex + 1]?.meta.title,
-				slug: publishedByDate[selectedItemIndex + 1]?.meta.slug
+			metadata: selectedItem.meta as Sveltin.YAMLFrontmatter,
+			html: selectedItem.markup['html']
+		};
+		const previous: Sveltin.ContentEntry = {
+			resource: resourceName,
+			metadata: <Sveltin.YAMLFrontmatter>{
+				title: publishedByDate[selectedItemIndex + 1]?.meta['title'],
+				slug: publishedByDate[selectedItemIndex + 1]?.meta['slug']
 			}
 		};
-		const next: ResourceContent = {
+		const next: Sveltin.ContentEntry = {
 			resource: resourceName,
-			metadata: <ContentMetadata>{
-				title: publishedByDate[selectedItemIndex - 1]?.meta.title,
-				slug: publishedByDate[selectedItemIndex - 1]?.meta.slug
+			metadata: <Sveltin.YAMLFrontmatter>{
+				title: publishedByDate[selectedItemIndex - 1]?.meta['title'],
+				slug: publishedByDate[selectedItemIndex - 1]?.meta['slug']
 			}
 		};
 

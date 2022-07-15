@@ -1,6 +1,5 @@
 <script>
-	import NavArrowDownIcon from '@indaco/svelte-iconoir/icons/NavArrowDownIcon.svelte';
-	import NavArrowUpIcon from '@indaco/svelte-iconoir/icons/NavArrowUpIcon.svelte';
+	import { NavArrowDownIcon, NavArrowUpIcon } from '@indaco/svelte-iconoir';
 
 	export let headerText;
 
