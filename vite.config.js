@@ -9,6 +9,7 @@ const pkg = JSON.parse(json);
 
 /** @type {import('vite').UserConfig} */
 const config = {
+	clearScreen: false,
 	define: {
 		'process.env.VITE_SVELTEKIT_VERSION': JSON.stringify(
 			String(pkg.devDependencies['@sveltejs/kit'])
@@ -30,9 +31,6 @@ const config = {
 			$lib: path.resolve('src/lib'),
 			$themes: path.resolve('themes')
 		}
-	},
-	optimizeDeps: {
-		include: ['@indaco/svelte-iconoir']
 	},
 	plugins: [sveltekit()]
 };
