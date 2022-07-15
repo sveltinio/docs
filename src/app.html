@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/icons/favicon.ico" sizes="any" />
-		<link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
-		<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-		<link rel="manifest" href="/icons/manifest.webmanifest" />
+		<link rel="icon" href="%sveltekit.assets%/icons/favicon.ico" sizes="any" />
+		<link rel="icon" href="%sveltekit.assets%/icons/icon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/icons/apple-touch-icon.png" />
+		<link rel="manifest" href="%sveltekit.assets%/icons/manifest.webmanifest" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- Robots-->
 		<meta
@@ -16,11 +16,15 @@
 			name="googlebot"
 			content="index,follow,max-snippet:-1,max-image-preview:large,noarchive,max-video-preview:-1"
 		/>
-		<link href="/prism/themes/prism-a11y-dark.css" rel="stylesheet" media="screen" />
+		<link
+			href="%sveltekit.assets%/prism/themes/prism-a11y-dark.css"
+			rel="stylesheet"
+			media="screen"
+		/>
 		%sveltekit.head%
 	</head>
 	<body class="mx-auto min-h-screen max-w-7xl bg-skin-light dark:bg-skin-dark">
 		<div>%sveltekit.body%</div>
-		<script src="/prism/prism.js" defer></script>
+		<script src="%sveltekit.assets%/prism/prism.js" defer></script>
 	</body>
 </html>
