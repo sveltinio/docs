@@ -26,9 +26,9 @@ const menu: Array<IMenuItem> = [
 		weight: 4
 	},
 	{
-		identifier: 'application-structure',
-		name: 'Application Structure',
-		url: '/application-structure',
+		identifier: 'project-structure',
+		name: 'Project Structure',
+		url: '/project-structure',
 		weight: 5
 	},
 	{
