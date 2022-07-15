@@ -1,4 +1,4 @@
-const applicationStructure = [
+const projectStructure = [
 	{
 		name: 'config',
 		purpose:
@@ -76,4 +76,4 @@ const applicationStructure = [
 	}
 ];
 
-export { applicationStructure };
+export { projectStructure };
