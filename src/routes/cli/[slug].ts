@@ -1,7 +1,7 @@
 import { getSingle } from '$lib/cli/apiCli';
 
 /** @type {import('./[slug]').RequestHandler} */
-export async function get({ params }) {
+export async function GET({ params }) {
 	const { status, current, previous, next } = await getSingle(params.slug);
 
 	if (status === 200) {

@@ -1,7 +1,7 @@
 import { list } from '$lib/cli/apiCli';
 import { ContentMetadata, ResourceContent, ResourceContentMaker } from '@sveltinio/widgets/types';
 
-export async function get() {
+export async function GET() {
 	const resourceName = 'cli';
 	const data = await list();
 
