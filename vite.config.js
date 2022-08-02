@@ -28,11 +28,11 @@ const config = {
 			$config: path.resolve('config'),
 			$content: path.resolve('content'),
 			$data: path.resolve('data'),
-			$lib: path.resolve('src/lib'),
 			$themes: path.resolve('themes')
 		}
 	},
-	plugins: [sveltekit()]
+	plugins: [sveltekit()],
+	ssr: { noExternal: ['@indaco/svelte-iconoir/**'] }
 };
 
 export default config;
