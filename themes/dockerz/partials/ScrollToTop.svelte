@@ -1,5 +1,5 @@
 <script>
-	import { ArrowUpCircledIcon } from '@indaco/svelte-iconoir';
+	import ArrowUpCircledIcon from '@indaco/svelte-iconoir/icons/ArrowUpCircledIcon.svelte';
 
 	export let showOnPx = 400;
 

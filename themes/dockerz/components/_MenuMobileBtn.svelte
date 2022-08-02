@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MenuIcon } from '@indaco/svelte-iconoir';
+	import MenuIcon from '@indaco/svelte-iconoir/icons/MenuIcon.svelte';
 	export let navIsOpen: boolean;
 	export let handleNavMenu;
 </script>
