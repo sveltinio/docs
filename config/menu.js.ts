@@ -62,88 +62,82 @@ const menu: Array<IMenuItem> = [
 				weight: 3
 			},
 			{
-				identifier: 'prepare',
-				name: 'prepare',
-				url: '/cli/prepare',
-				weight: 4
-			},
-			{
 				identifier: 'new-resource',
 				name: 'new resource',
 				url: '/cli/new-resource',
-				weight: 5
+				weight: 4
 			},
 			{
 				identifier: 'new-content',
 				name: 'new content',
 				url: '/cli/new-content',
-				weight: 6
+				weight: 5
 			},
 			{
 				identifier: 'new-metadata',
 				name: 'new metadata',
 				url: '/cli/new-metadata',
-				weight: 7
+				weight: 6
 			},
 			{
 				identifier: 'new-page',
 				name: 'new page',
 				url: '/cli/new-page',
-				weight: 8
+				weight: 7
 			},
 			{
 				identifier: 'generate',
 				name: 'generate',
 				url: '/cli/generate',
-				weight: 9
+				weight: 8
 			},
 			{
 				identifier: 'generate-menu',
 				name: 'generate menu',
 				url: '/cli/generate-menu',
-				weight: 10
+				weight: 9
 			},
 			{
 				identifier: 'generate-rss',
 				name: 'generate rss',
 				url: '/cli/generate-rss',
-				weight: 11
+				weight: 10
 			},
 			{
 				identifier: 'generate-sitemap',
 				name: 'generate sitemap',
 				url: '/cli/generate-sitemap',
-				weight: 12
+				weight: 11
 			},
 			{
 				identifier: 'server',
 				name: 'server',
 				url: '/cli/server',
-				weight: 13
+				weight: 12
 			},
 			{
 				identifier: 'update',
 				name: 'update',
 				url: '/cli/update',
-				weight: 14
+				weight: 13
 			},
 			{
 				identifier: 'build',
 				name: 'build',
 				url: '/cli/build',
-				weight: 15
+				weight: 14
 			},
 			{
 				identifier: 'preview',
 				name: 'preview',
 				url: '/cli/preview',
-				weight: 16
+				weight: 15
 			},
 			{
 				identifier: 'deploy',
 				name: 'deploy',
 				url: '/cli/deploy',
-				weight: 17
+				weight: 16
 			}
 		]
 	}
