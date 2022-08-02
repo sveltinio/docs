@@ -4,7 +4,7 @@ slug: sveltin
 headline: The main command
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 12-Jul-2022
+updated_at: 02-Aug-2022
 draft: false
 ---
 
@@ -27,7 +27,6 @@ sveltin [command]
   generate     Command to generate static files like sitemap, rss etc.
   help         Help about any command.
   new          Command to add new resources.
-  prepare      Get all the dependencies.
   preview      Preview the production version locally.
   server       Run the server.
 ```
@@ -43,7 +42,6 @@ sveltin [command]
 
 - [sveltin new](/cli/new) - Create a new sveltin based project.
 - [sveltin install](/cli/install) - Initialize the Sveltin project getting all depencencies.
-- [sveltin prepare](/cli/prepare) - Wrap svelte-kit sync command.
 - [sveltin new resource](/cli/new-resource) - Create new resources.
 - [sveltin new content](/cli/new-content) - Create a new content for already created resource.
 - [sveltin new metadata](/cli/new-metadata) - Add a new metadata from your content as a Sveltekit resource.
