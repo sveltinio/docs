@@ -1,6 +1,6 @@
 import type { Sveltin } from 'src/sveltin';
 
-export const list = async (withMarkup = false) => {
+export const list = async () => {
 	const contentFiles = import.meta.glob('/content/cli/**/*.{svelte.md,md,svx}');
 	const contentFilesArray = Object.entries(contentFiles);
 	const contents = await Promise.all(
@@ -10,9 +10,6 @@ export const list = async (withMarkup = false) => {
 				meta: data['metadata'],
 				path: path
 			};
-			if (withMarkup) {
-				result.markup = data['default'].render();
-			}
 			return result;
 		})
 	);
@@ -25,7 +22,7 @@ export const list = async (withMarkup = false) => {
 
 export const getSingle = async (slug: string) => {
 	const resourceName = 'cli';
-	const publishedByDate = await list(true);
+	const publishedByDate = await list();
 
 	const selected = publishedByDate.filter((item) => {
 		return item.meta['slug'] == slug;
@@ -36,8 +33,7 @@ export const getSingle = async (slug: string) => {
 		const selectedItem = publishedByDate[selectedItemIndex];
 		const current: Sveltin.ContentEntry = {
 			resource: resourceName,
-			metadata: selectedItem.meta as Sveltin.YAMLFrontmatter,
-			html: selectedItem.markup['html']
+			metadata: selectedItem.meta as Sveltin.YAMLFrontmatter
 		};
 		const previous: Sveltin.ContentEntry = {
 			resource: resourceName,
