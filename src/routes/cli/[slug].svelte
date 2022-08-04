@@ -1,3 +1,25 @@
+<script context="module">
+	/** @type {import('./[slug].json').Load} */
+	export async function load({ fetch, params }) {
+		const { slug } = params;
+
+		const res = await fetch(`/cli/${slug}.json`);
+		if (res.ok) {
+			return {
+				props: {
+					...(await res.json()),
+					mdsvexComponent: (await import(`../../../content/cli/${slug}/index.svx`))
+						.default
+				}
+			};
+		}
+
+		return {
+			status: 404
+		};
+	}
+</script>
+
 <script lang="ts">
 	import type { Sveltin } from 'src/sveltin';
 	import type { IWebPageMetadata } from '@sveltinio/seo/types';
@@ -12,6 +34,7 @@
 	export let current: Sveltin.ContentEntry;
 	export let previous: Sveltin.ContentEntry;
 	export let next: Sveltin.ContentEntry;
+	export let mdsvexComponent: any;
 
 	const slugPageData: IWebPageMetadata = {
 		url: getSlugPageUrl(current as Sveltin.ContentEntry, website),
@@ -67,7 +90,7 @@
 				<div class="mx-auto space-y-24 text-left text-lg">
 					<div class="space-y-8">
 						<div class="md-content" class:md-content-dark={isDark}>
-							{@html current.html}
+							<svelte:component this={mdsvexComponent} />
 						</div>
 					</div>
 					<div class="space-y-8">

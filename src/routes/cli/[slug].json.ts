@@ -4,26 +4,21 @@ import { getSingle } from '$lib/cli/apiCli';
 export async function GET({ params }) {
 	const { status, current, previous, next } = await getSingle(params.slug);
 
-	if (status === 200) {
+	if (status != 200) {
 		return {
-			status: 200,
-			headers: {
-				accept: 'application/json'
-			},
-			body: {
-				current,
-				previous,
-				next
-			}
+			status: 404
 		};
 	}
 
-	// return errors
-	const errors: Record<string, Error> = {};
 	return {
-		status: 404,
-		body: {
-			errors
-		}
+		status: 200,
+		headers: {
+			accept: 'application/json'
+		},
+		body: JSON.stringify({
+			current,
+			previous,
+			next
+		})
 	};
 }
