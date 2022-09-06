@@ -1,6 +1,6 @@
 import type { Sveltin } from 'src/sveltin';
 
-export const list = async () => {
+export async function list() {
 	const contentFiles = import.meta.glob('/content/cli/**/*.{svelte.md,md,svx}');
 	const contentFilesArray = Object.entries(contentFiles);
 	const contents = await Promise.all(
@@ -18,9 +18,9 @@ export const list = async () => {
 		.sort((a, b) => (a.meta['created_at'] < b.meta['created_at'] ? 1 : -1));
 
 	return publishedByDate;
-};
+}
 
-export const getSingle = async (slug: string) => {
+export async function getSingle(slug: string) {
 	const resourceName = 'cli';
 	const publishedByDate = await list();
 
@@ -60,4 +60,4 @@ export const getSingle = async (slug: string) => {
 	return {
 		status: 404
 	};
-};
+}

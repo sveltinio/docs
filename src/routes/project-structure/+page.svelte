@@ -88,7 +88,7 @@ my-project/
  ├ package.json
  ├ svelte.config.js
  ├ tsconfig.json
- └ vite.config.js
+ └ vite.config.ts
 						</code></pre>
 
 						<div class="flex flex-col">

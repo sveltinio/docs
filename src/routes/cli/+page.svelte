@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import type { PageData } from './$types';
 	import type { ResourceContent } from '@sveltinio/widgets/types';
 	import { website } from '$config/website.js';
 	import { onMount } from 'svelte';

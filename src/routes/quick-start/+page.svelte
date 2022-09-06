@@ -71,7 +71,7 @@
 
 							<Shell>
 								<div>
-									<p>sveltin new myBlog</p>
+									<p>sveltin init myBlog</p>
 								</div>
 							</Shell>
 
@@ -142,7 +142,7 @@
 
 							<Shell>
 								<div>
-									<p>sveltin new page contact --type svelte</p>
+									<p>sveltin new page contact --as svelte</p>
 								</div>
 							</Shell>
 
@@ -171,7 +171,7 @@
 
 							<Shell>
 								<div>
-									<p>sveltin new content posts/welcome</p>
+									<p>sveltin add content posts/welcome</p>
 								</div>
 							</Shell>
 
@@ -183,7 +183,7 @@
 
 							<Shell>
 								<div>
-									<p>sveltin new content posts/getting-started</p>
+									<p>sveltin add content posts/getting-started --sample</p>
 								</div>
 							</Shell>
 
@@ -197,9 +197,7 @@
 
 							<Shell>
 								<div>
-									<p>
-										sveltin new metadata category --resource posts --type single
-									</p>
+									<p>sveltin add metadata category --to posts --as single</p>
 								</div>
 							</Shell>
 
