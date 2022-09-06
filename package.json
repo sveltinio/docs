@@ -1,6 +1,6 @@
 {
 	"name": "docs.sveltin.io",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"packageManager": "pnpm@7.11.0",
 	"scripts": {
 		"dev": "svelte-kit sync && vite dev",
@@ -18,7 +18,7 @@
 		"@commitlint/config-conventional": "^17.1.0",
 		"@indaco/svelte-iconoir": "^2.5.1",
 		"@sveltejs/adapter-static": "1.0.0-next.42",
-		"@sveltejs/kit": "1.0.0-next.471",
+		"@sveltejs/kit": "1.0.0-next.472",
 		"@sveltinio/essentials": "^0.2.1",
 		"@sveltinio/seo": "^0.1.7",
 		"@sveltinio/services": "^0.3.1",
