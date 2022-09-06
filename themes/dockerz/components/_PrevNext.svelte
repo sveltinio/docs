@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="border-t-2 border-skin-accent bg-skin-base dark:border-skin-accent-dark dark:bg-skin-base-dark dark:hover:bg-skin-base-dark-hover"
+	class="border-t-2 border-skin-accent bg-skin-muted dark:bg-skin-base-dark dark:border-skin-muted-dark dark:hover:bg-skin-base-dark-hover"
 >
 	<div class="mx-auto max-w-7xl">
 		<div

@@ -5,7 +5,7 @@
 </script>
 
 <footer
-	class="border-t bg-skin-muted dark:border-skin-muted-dark dark:bg-skin-base-dark"
+	class="border-t bg-skin-muted dark:bg-skin-base-dark dark:border-skin-muted-dark"
 	aria-labelledby="footer-heading"
 >
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
