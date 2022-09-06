@@ -45,12 +45,11 @@
 <JsonLdSiteNavigationElements websiteData={website} menuData={sortedMenu} />
 
 <GoogleFonts fonts={googleFonts} />
-<!--
 <UmamiAnalytics
 	websiteID="1467a0c5-0b8d-4687-97ee-3dc97eb8becc"
 	srcURL="https://umami.sveltin.io/umami.js"
 />
--->
+
 <svelte:head>
 	<script>
 		//console.log(localStorage);
