@@ -1,24 +1,23 @@
 ---
 title: New Page
 slug: new-page
-headline: Create a new public page
+headline: Create a new page route.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 12-Jul-2022
+updated_at: 06-Sep-2022
 draft: false
 ---
 
 ## sveltin new page
 
-Create a new public page
+{headline}
 
 ### Synopsis
 
-Create a new "public" page.
+Command used to create a new public page route.
 
-Pages are Svelte components written in .svelte files. The filename determines the route.
-A file called either src/routes/about.svelte or src/routes/about/index.svelte
-would correspond to the /about route.
+Pages are Svelte components written in .svelte or .svx (for markdown) files. The filename determines the route,
+so creating a page named "about" will generate the followin route /about/+page.<svelte|svx>
 
 This command allows you to select between a svelte component page and a markdown page.
 
@@ -28,16 +27,15 @@ sveltin new page [name] [flags]
 
 ### Aliases
 
-`p`
-
+_p_
 
 ### Options
 
 ```bash
+  -a, --as string   Sveltekit page as Svelte component or markdown via mdsvex. Possible values: svelte, markdown
   -h, --help          help for page
-  -t, --type string   Sveltekit page as Svelte component or markdown via mdsvex. Possible values: svelte, markdown
 ```
 
 ### SEE ALSO
 
-- [sveltin new](/cli/new) - Command to create projects, resources, contents, pages, metadata, theme
+- [sveltin new](/cli/new) - Create new resources, pages and themes

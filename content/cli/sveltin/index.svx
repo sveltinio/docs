@@ -1,20 +1,28 @@
 ---
 title: Sveltin
 slug: sveltin
-headline: The main command
+headline: sveltin is the main command to work with SvelteKit powered static website projects.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 02-Aug-2022
+updated_at: 06-Sep-2022
 draft: false
 ---
 
 ## sveltin
 
-sveltin is the main command.
+{headline}
 
 ### Synopsis
 
-sveltin is the main command used to build your SvelteKit powered static websites.
+A powerful CLI for your SvelteKit powered static website!
+
+sveltin is the main command used to boost your productivity
+while creating a new production-ready SvelteKit project.
+
+Resources:
+
+- Documentation           -> https://docs.sveltin.io
+- A helpful quick-start   -> https://docs.sveltin.io/quick-start
 
 ```bash
 sveltin [command]
@@ -23,12 +31,19 @@ sveltin [command]
 ### Available commands
 
 ```bash
-  build        Builds a production version of your static website.
-  generate     Command to generate static files like sitemap, rss etc.
-  help         Help about any command.
-  new          Command to add new resources.
-  preview      Preview the production version locally.
-  server       Run the server.
+  add         Add content and metadata to a resource
+  build       Builds a production version of your static website
+  completion  Generate the autocompletion script for the specified shell
+  deploy      Deploy your website over FTP
+  generate    Generate static files (sitemap, rss, menu)
+  help        Help about any command
+  init        Initialize a new sveltin project
+  install     Install your project dependencies
+  new         Create new resources, pages and themes
+  preview     Preview the production version locally
+  server      Run the development server
+  update      Update your project dependencies
+  version     Print the version number of Sveltin
 ```
 
 ### Options
@@ -39,19 +54,20 @@ sveltin [command]
 ```
 
 ### SEE ALSO
-
-- [sveltin new](/cli/new) - Create a new sveltin based project.
-- [sveltin install](/cli/install) - Initialize the Sveltin project getting all depencencies.
-- [sveltin new resource](/cli/new-resource) - Create new resources.
-- [sveltin new content](/cli/new-content) - Create a new content for already created resource.
-- [sveltin new metadata](/cli/new-metadata) - Add a new metadata from your content as a Sveltekit resource.
-- [sveltin new page](/cli/new-page) - Create a new public page.
-- [sveltin generate menu](/cli/generate-menu) - Generate the menu config file for your Sveltin project.
-- [sveltin generate rss](/cli/generate-rss) - Generate a rss.xml file for your Sveltin project.
-- [sveltin generate sitemap](/cli/generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
-- [sveltin generate menu](/cli/generate-menu) - Generate the menu config file for your Sveltin project.
-- [sveltin generate rss](/cli/generate-rss) - Generate a rss.xml file for your Sveltin project.
-- [sveltin generate sitemap](/cli/generate-sitemap) - Generate a sitemap.xml file for your Sveltin project.
-- [sveltin server](/cli/server) - Wrap svelte-kit defined commands to run the Vite server.
+- [sveltin init](/cli/init) - Initialize a new Sveltin project.
+- [sveltin new](/cli/new) - Create new resources (routes), pages and themes.
+- [sveltin new page](/cli/new-page) - Create new page route.
+- [sveltin new resource](/cli/new-resource) - Create new resource (route).
+- [sveltin add](/cli/add) - Add content and metadata to an existing resource.
+- [sveltin add content](/cli/add-content) - Add content to an existing resource.
+- [sveltin add metadata](/cli/add-metadata) - Add metadata to an existing resource.
+- [sveltin generate](/cli/generate) - Generate static files (sitemap, rss, menu).
+- [sveltin generate menu](/cli/generate-menu) - Generate the menu file for your Sveltin project.
+- [sveltin generate rss](/cli/generate-rss) - Generate the RSS feed for your Sveltin project.
+- [sveltin generate sitemap](/cli/generate-sitemap) - Generate the sitemap file for your Sveltin project.
+- [sveltin install](/cli/install) - Install your project dependencies.
+- [sveltin update](/cli/update) - Update your project dependencies.
+- [sveltin server](/cli/server) - Run the development server (vite).
 - [sveltin build](/cli/build) - Build a production version of your static website.
-- [sveltin preview](/cli/preview) - Wrap sveltekit-preview command.
+- [sveltin preview](/cli/preview) - Preview the production version locally.
+- [sveltin deploy](/cli/deploy) - Deploy your website over FTP.

@@ -56,15 +56,15 @@ const menu: Array<IMenuItem> = [
 				weight: 1
 			},
 			{
-				identifier: 'new',
-				name: 'new',
-				url: '/cli/new',
+				identifier: 'init',
+				name: 'init',
+				url: '/cli/init',
 				weight: 2
 			},
 			{
-				identifier: 'install',
-				name: 'install',
-				url: '/cli/install',
+				identifier: 'new',
+				name: 'new',
+				url: '/cli/new',
 				weight: 3
 			},
 			{
@@ -74,76 +74,88 @@ const menu: Array<IMenuItem> = [
 				weight: 4
 			},
 			{
-				identifier: 'new-content',
-				name: 'new content',
-				url: '/cli/new-content',
-				weight: 5
-			},
-			{
-				identifier: 'new-metadata',
-				name: 'new metadata',
-				url: '/cli/new-metadata',
-				weight: 6
-			},
-			{
 				identifier: 'new-page',
 				name: 'new page',
 				url: '/cli/new-page',
+				weight: 5
+			},
+			{
+				identifier: 'add',
+				name: 'add',
+				url: '/cli/add',
+				weight: 6
+			},
+			{
+				identifier: 'add-content',
+				name: 'add content',
+				url: '/cli/add-content',
 				weight: 7
+			},
+			{
+				identifier: 'add-metadata',
+				name: 'add metadata',
+				url: '/cli/add-metadata',
+				weight: 8
 			},
 			{
 				identifier: 'generate',
 				name: 'generate',
 				url: '/cli/generate',
-				weight: 8
+				weight: 9
 			},
 			{
 				identifier: 'generate-menu',
 				name: 'generate menu',
 				url: '/cli/generate-menu',
-				weight: 9
+				weight: 10
 			},
 			{
 				identifier: 'generate-rss',
 				name: 'generate rss',
 				url: '/cli/generate-rss',
-				weight: 10
+				weight: 11
 			},
 			{
 				identifier: 'generate-sitemap',
 				name: 'generate sitemap',
 				url: '/cli/generate-sitemap',
-				weight: 11
+				weight: 12
+			},
+			{
+				identifier: 'install',
+				name: 'install',
+				url: '/cli/install',
+				weight: 13
 			},
 			{
 				identifier: 'server',
 				name: 'server',
 				url: '/cli/server',
-				weight: 12
+				weight: 14
 			},
 			{
 				identifier: 'update',
 				name: 'update',
 				url: '/cli/update',
-				weight: 13
+				weight: 15
 			},
 			{
 				identifier: 'build',
 				name: 'build',
 				url: '/cli/build',
-				weight: 14
+				weight: 16
 			},
 			{
 				identifier: 'preview',
 				name: 'preview',
 				url: '/cli/preview',
-				weight: 15
+				weight: 17
 			},
 			{
 				identifier: 'deploy',
 				name: 'deploy',
 				url: '/cli/deploy',
-				weight: 16
+				weight: 18
 			}
 		]
 	}

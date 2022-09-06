@@ -1,22 +1,22 @@
 ---
 title: Generate Sitemap
 slug: generate-sitemap
-headline: Generate a sitemap.xml file for your Sveltin project
+headline: Generate the sitemap file for your Sveltin project.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 12-Jul-2022
+updated_at: 06-Sep-2022
 draft: false
 ---
 
 ## sveltin generate sitemap
 
-Generate a sitemap.xml file for your Sveltin project
+{headline}
 
 ### Synopsis
 
-It creates a sitemap file for your website.
+Command used to generate the sitemap (sitemap.xml) file for your website.
 
-It makes use of the `.env.production` file to reflect the base url for your website.
+It makes use of the .env.production file to reflect the base url for your website.
 
 ```bash
 sveltin generate sitemap
@@ -30,4 +30,4 @@ sveltin generate sitemap
 
 ### SEE ALSO
 
-- [sveltin generate](/cli/generate) - Command to generate static files (sitemap, rss, menu)
+- [sveltin generate](/cli/generate) - Generate static files (sitemap, rss, menu)

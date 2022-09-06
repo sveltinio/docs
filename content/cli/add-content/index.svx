@@ -1,0 +1,52 @@
+---
+title: Add Content
+slug: add-content
+headline: Add new content to an existing resource.
+author: sveltinio
+created_at: 06-Sep-2022
+updated_at: 06-Sep-2022
+draft: false
+---
+
+## sveltin add content
+
+{headline}
+
+### Synopsis
+
+Command used to create a new markdown file as content and a folder to store the statics used by the content itself.
+
+New file can contain just the frontmatter or a sample content.
+Use the --template flag to select the right one to you. Valid options: blank or sample
+
+**Note**: This command needs an existing resource created by running: sveltin new resource <resource_name>.
+
+Example:
+
+1. You have already created a "posts" resource
+2. run: sveltin new content posts/my-first-content --sample
+
+As result:
+
+- a new "my-first-post" folder within "content/posts" is created
+- an index.svx file is placed there
+- a new "posts/my-first-port" folder created within the "static" folder to store images relative to the content
+
+```bash
+sveltin add content [name] [flags]
+```
+
+### Aliases
+
+_c_
+
+### Options
+
+```bash
+  -h, --help     help for content
+  -s, --sample   Add sample content to the markdown file.
+```
+
+### SEE ALSO
+
+- [sveltin add](/cli/add) - Add content and metadata to a resource

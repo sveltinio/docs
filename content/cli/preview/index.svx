@@ -1,23 +1,24 @@
 ---
 title: Preview
 slug: preview
-headline: Preview the production version locally
-author: sveltin
+headline: Preview the production version locally.
+author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 12-Jul-2022
+updated_at: 06-Sep-2022
 draft: false
 ---
 
 ## sveltin preview
 
-Preview the production version locally
+{headline}
 
 ### Synopsis
 
-After you've built your app with sveltin build (or svelte-kit build),
-you can start the production version locally with sveltin preview.
+Command used to start the production version locally.
 
-It wraps sveltekit-preview command.
+Run after _sveltin build_ (or _vite build_), you can start the production version locally with sveltin preview.
+
+It wraps the _vite preview_ command.
 
 ```bash
 sveltin preview [flags]

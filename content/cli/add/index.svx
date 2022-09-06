@@ -1,0 +1,39 @@
+---
+title: Add
+slug: add
+headline: Add content and metadata to an exiting resource.
+author: sveltinio
+created_at: 06-Sep-2022
+updated_at: 06-Sep-2022
+draft: false
+---
+
+## sveltin add
+
+{headline}
+
+### Synopsis
+
+Command used to add content and metadata to an existing resources through its own subcommands.
+
+Run 'sveltin add -h' for further details.
+
+```
+sveltin add [flags]
+```
+
+### Aliases:
+
+_a_
+
+### Options
+
+```
+  -h, --help   help for add
+```
+
+### SEE ALSO
+
+- [sveltin](/cli/sveltin)	                 - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin add content](/cli/add-content)	 - Command to add new content to an existing resource
+- [sveltin add metadata](/cli/add-metadata)	 - Command to add a new metadata for your content to an existing Sveltekit resource

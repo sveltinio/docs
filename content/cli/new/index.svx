@@ -1,27 +1,25 @@
 ---
 title: New
 slug: new
-headline: Command to create projects, resources, contents, pages, metadata, theme
+headline: Create new resources (routes), pages and themes.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 12-Jul-2022
+updated_at: 06-Sep-2022
 draft: false
 ---
 
 ## sveltin new
 
-Command to create projects, resources, contents, pages, metadata, theme
+{headline}
 
 ### Synopsis
 
-This command creates customized resources like blog posts, a new theme for your website, new page etc. depending on the subcommand used with it.
+This command is used to creates SvelteKit routes in your project. A routes in Sveltin is both a public page or a resource.
 
 Examples:
 
 ```bash
-sveltin new blog
-sveltin new blog --css tailwindcss
-sveltin new blog --css vanillacss -t myTheme
+sveltin new page about
 sveltin new resource posts
 ```
 
@@ -29,25 +27,18 @@ sveltin new resource posts
 sveltin new <project> [flags]
 ```
 
-### Aliases
+### Aliases:
 
-`create`
-
+_n_
 
 ### Options
 
 ```bash
   -h, --help                  help for new
-  -n, --npmClient    string   The name of the your preferred npm client
-  -t, --theme        string   The name of the theme you are going to create
-  -c, --css          string   The name of the CSS framework to use. Possible values: vanillacss, tailwindcss, bulma, bootstrap
-  -p, --port         string   The port to start the server on
 ```
 
 ### SEE ALSO
 
-- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites
-- [sveltin new content](/cli/new-content) - Create a new content for existing resource
-- [sveltin new metadata](/cli/new-metadata) - Command to add new metadata as a Sveltekit resource
-- [sveltin new page](/cli/new-page) - Create a new public page
-- [sveltin new resource](/cli/new-resource) - Command to create new resources
+- [sveltin](/cli/sveltin)	 - sveltin is the main command to work with SvelteKit powered static websites.
+- [sveltin new page](/cli/new-page)	 - Create a new page route
+- [sveltin new resource](/cli/new-resource)	 - Create a new resource (route)

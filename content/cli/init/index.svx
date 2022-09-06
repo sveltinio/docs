@@ -1,0 +1,49 @@
+---
+title: Init
+slug: init
+headline: Initialize a new sveltin project.
+author: sveltinio
+created_at: 06-Sep-2022
+updated_at: 06-Sep-2022
+draft: false
+---
+
+## sveltin init
+
+{headline}
+
+### Synopsis
+
+Command used to initialize/scaffold a new sveltin project.
+
+Examples:
+
+```bash
+sveltin init blog
+sveltin init blog --css tailwindcss
+sveltin init blog --css vanillacss -t myTheme
+sveltin init portfolio -c tailwindcss -t paper -n pnpm -p 3030 --git
+```
+
+```bash
+sveltin init <project> [flags]
+```
+
+### Aliases
+
+_create_
+
+### Options
+
+```bash
+  -c, --css string         The CSS lib to use. Valid: vanillacss, tailwindcss, bulma, bootstrap, scss
+  -g, --git                Initialize an empty Git repository
+  -h, --help               help for init
+  -n, --npmClient string   The name of your preferred npm client
+  -p, --port string        The port to start the server on (default "5173")
+  -t, --theme string       The theme you are going to create or reuse
+```
+
+### SEE ALSO
+
+* [sveltin](/cli/sveltin)	 - sveltin is the main command to work with SvelteKit powered static websites.

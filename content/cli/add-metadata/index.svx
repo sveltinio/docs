@@ -1,0 +1,49 @@
+---
+title: Add Metadata
+slug: add-metadata
+headline: Add metadata to an existing resource.
+author: sveltinio
+created_at: 06-Sep-2022
+updated_at: 06-Sep-2022
+draft: false
+---
+
+## sveltin add metadata
+
+{headline}
+
+### Synopsis
+
+Command used to add new metadata for your content to an existing resource.
+
+**Note**: This command needs an existing resource created by running: sveltin new resource <resource_name>.
+
+What is a "metadata" for Sveltin?
+Whatever you enter in the front-matter of your markdown content for which you want content grouped by it.
+
+Metadata Types:
+
+- single: 1:1 relationship (e.g. category)
+- list: 1:many relationship (e.g. tags)
+
+
+```bash
+sveltin new metadata [name] --to [resource] --as [single|list] [flags]
+```
+
+### Aliases:
+
+_m_
+
+
+### Options
+
+```bash
+  -a, --as string   Type of the new metadata. (possible values: single or list)
+  -h, --help        help for metadata
+  -t, --to string   Name of the resource the new metadata is belongs to.
+```
+
+### SEE ALSO
+
+- [sveltin add](/cli/add) - Add content and metadata to a resource

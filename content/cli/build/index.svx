@@ -1,22 +1,22 @@
 ---
 title: Build
 slug: build
-headline: Builds a production version of your static website
+headline: Builds a production version of your static website.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 12-Jul-2022
+updated_at: 06-Sep-2022
 draft: false
 ---
 
 ## sveltin build
 
-Builds a production version of your static website
+{headline}
 
 ### Synopsis
 
-Builds a production version of your static website.
+Command used to build a production version of your static website.
 
-It wraps sveltekit-build command.
+It wraps the _vite build_ command.
 
 Ensure to edit env.production and .sveltin.toml files to reflect
 your production environment
@@ -27,7 +27,7 @@ sveltin build [flags]
 
 ### Aliases
 
-`b`
+_b_
 
 ### Options
 
