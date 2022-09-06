@@ -1,19 +1,16 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import type { PageData } from './$types';
-	import type { ResourceContent } from '@sveltinio/widgets/types';
 	import { website } from '$config/website.js';
 	import { onMount } from 'svelte';
 	import { theme, updateTheme } from '$lib/shared/stores';
-	import type { IWebPageMetadata } from '@sveltinio/seo/types';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
 
-	export let resourceName: string;
-	export let items: Array<ResourceContent>;
+	export let data: PageData;
+	$: ({ resourceName, items } = data);
 
-	const cliIndexPage: IWebPageMetadata = {
+	$: cliIndexPage = {
 		url: getPageUrl(resourceName, website),
 		title: 'All Sveltin commands',
 		description:
@@ -68,7 +65,7 @@
 									<a
 										class:cli-text={!isDark}
 										class:cli-text-dark={isDark}
-										sveltekit:prefetch
+										data-sveltekit-prefetch
 										href={`/${item.resource}/${item.metadata.slug}`}
 										>{item.metadata.title.toLowerCase()}</a
 									>
