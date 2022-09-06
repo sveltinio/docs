@@ -26,12 +26,57 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://docs.sveltin.io/theming/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/release-notes/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://docs.sveltin.io/cli/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://docs.sveltin.io/cli/build/</loc>
+		<loc>https://docs.sveltin.io/cli/sveltin/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/init/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/new/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/new-page/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/new-resource/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/add/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/add-content/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/add-metadata/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -56,42 +101,22 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://docs.sveltin.io/cli/sveltin/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://docs.sveltin.io/cli/new/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://docs.sveltin.io/cli/install/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://docs.sveltin.io/cli/new-content/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://docs.sveltin.io/cli/new-metadata/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://docs.sveltin.io/cli/new-page/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://docs.sveltin.io/cli/new-resource/</loc>
+		<loc>https://docs.sveltin.io/cli/server/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://docs.sveltin.io/cli/update/</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://docs.sveltin.io/cli/build/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -102,11 +127,6 @@
 	</url>
 	<url>
 		<loc>https://docs.sveltin.io/cli/deploy/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://docs.sveltin.io/cli/server/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
