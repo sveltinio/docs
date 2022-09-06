@@ -31,11 +31,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://docs.sveltin.io/release-notes/</loc>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://docs.sveltin.io/cli/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>

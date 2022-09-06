@@ -38,16 +38,10 @@ const menu: Array<IMenuItem> = [
 		weight: 6
 	},
 	{
-		identifier: 'release-notes',
-		name: 'Release Notes',
-		url: '/release-notes',
-		weight: 7
-	},
-	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
-		weight: 8,
+		weight: 7,
 		children: [
 			{
 				identifier: 'sveltin',
