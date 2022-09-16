@@ -4,7 +4,7 @@ slug: new-resource
 headline: Command to create new resource (route).
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 16-Sep-2022
 draft: false
 ---
 
@@ -42,7 +42,9 @@ _r_
 ### Options
 
 ```bash
-  -h, --help   help for resource
+  -g, --group string   Group name for resource routes (https://kit.svelte.dev/docs/advanced-routing#advanced-layouts)
+  -h, --help           help for resource
+      --slug           Use a different layout for the slug pages (https://kit.svelte.dev/docs/advanced-routing#advanced-layouts-layout)
 ```
 
 ### SEE ALSO
