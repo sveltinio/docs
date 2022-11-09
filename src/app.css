@@ -46,7 +46,7 @@
 		--color-input-muted: #a0a1b2 /* santa */;
 
 		--color-fill-base: #f9fafe /* ghost */;
-		--color-fill-base-hover: #c5c7d3 /* metal */;
+		--color-fill-base-hover: #f7f9ff /*#c5c7d3  metal */;
 		--color-fill-base-dark: #1c2128 /* cinder */;
 		--color-fill-base-dark-hover: #2d333b /* gun */;
 
@@ -71,8 +71,8 @@
 		--dark: #22272e /* tuna */;
 		--pure-dark: #2d333b /* gun */;
 
-		--color-text-base: #5c617a /* comet */;
-		--color-text-base-hover: #1e2028 /* pearl */;
+		--color-text-base: #5c617a; /* comet */
+		--color-text-base-hover: #1e2028 /* pearl * /;
 		--color-text-base-dark: #9596a9 /* manatee */;
 		--color-text-base-dark-hover: #8098fb /* periblue */;
 
