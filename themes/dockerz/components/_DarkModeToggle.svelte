@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SunLightIcon from '@indaco/svelte-iconoir/icons/SunLightIcon.svelte';
-	import HalfMoonIcon from '@indaco/svelte-iconoir/icons/HalfMoonIcon.svelte';
+	import { SunLightIcon } from '@indaco/svelte-iconoir/icons/SunLightIcon';
+	import { HalfMoonIcon } from '@indaco/svelte-iconoir/icons/HalfMoonIcon';
 	import ThemeSwitch from './_ThemeSwitch.svelte';
 	import { clickOutside } from '$lib/shared/events';
 

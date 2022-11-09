@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ExternalLinkItem } from '$lib/interfaces';
-	import CancelIcon from '@indaco/svelte-iconoir/icons/CancelIcon.svelte';
+	import { CancelIcon } from '@indaco/svelte-iconoir/icons/CancelIcon';
 	import MenuMobileBtn from '../components/_MenuMobileBtn.svelte';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 
