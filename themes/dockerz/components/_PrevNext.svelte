@@ -16,15 +16,15 @@
 				{#if previous.metadata.title}
 					<a href={`/${previous.resource}/${previous.metadata.slug}`} class="group">
 						<div
-							class="bg-skin-base px-4 pt-8 pb-16 hover:bg-skin-base-hover dark:bg-skin-base-dark dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
+							class="px-4 pt-8 pb-16 hover:bg-skin-base-hover dark:bg-skin-base-dark dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
 						>
 							<span
-								class=" text-comet dark:text-manatee text-sm font-normal dark:hover:text-oyster"
+								class="text-comet dark:text-manatee text-sm font-normal dark:hover:text-oyster"
 							>
 								Previous
 							</span>
 							<p
-								class=" text-comet dark:text-manatee dark:group-hover:text-periblue group-hover:text-pearl text-xs font-light sm:text-xl lg:text-base"
+								class="text-comet dark:text-manatee dark:group-hover:text-periblue group-hover:text-pearl text-xs font-light sm:text-xl lg:text-base"
 							>
 								{previous.metadata.title}
 							</p>
@@ -37,7 +37,7 @@
 				{#if next.metadata.title}
 					<a href={`/${previous.resource}/${next.metadata.slug}`} class="group ">
 						<div
-							class="bg-skin-base px-4 pt-8 pb-16 hover:bg-skin-base-hover dark:bg-skin-base-dark dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
+							class="px-4 pt-8 pb-16 hover:bg-skin-base-hover dark:bg-skin-base-dark dark:hover:bg-skin-dark sm:px-6 md:mt-0 lg:px-8 "
 						>
 							<span
 								class="text-sm font-normal text-skin-base dark:text-skin-base-dark"

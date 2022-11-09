@@ -9,19 +9,13 @@
 	</p>
 </div>
 <div class="mt-3">
-	<p
-		class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark dark:hover:bg-skin-dark dark:hover:text-skin-base-dark-hover"
-	>
+	<p class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark">
 		Sveltin v{sveltinVersion}
 	</p>
-	<p
-		class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark dark:hover:bg-skin-dark dark:hover:text-skin-base-dark-hover"
-	>
+	<p class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark">
 		SvelteKit v{sveltekitVersion}
 	</p>
-	<p
-		class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark dark:hover:bg-skin-dark dark:hover:text-skin-base-dark-hover"
-	>
+	<p class="group p-2 pl-6 text-sm font-light text-skin-base dark:text-skin-base-dark">
 		Build Time: {formatDate(new Date(buildTime))}
 	</p>
 </div>
