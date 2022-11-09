@@ -32,16 +32,10 @@ const menu: Array<IMenuItem> = [
 		weight: 5
 	},
 	{
-		identifier: 'theming',
-		name: 'Theming',
-		url: '/theming',
-		weight: 6
-	},
-	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
-		weight: 7,
+		weight: 6,
 		children: [
 			{
 				identifier: 'sveltin',
@@ -150,6 +144,12 @@ const menu: Array<IMenuItem> = [
 				name: 'deploy',
 				url: '/cli/deploy',
 				weight: 18
+			},
+			{
+				identifier: 'upgrade',
+				name: 'upgrade',
+				url: '/cli/upgrade',
+				weight: 19
 			}
 		]
 	}

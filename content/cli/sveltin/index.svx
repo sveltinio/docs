@@ -4,7 +4,7 @@ slug: sveltin
 headline: sveltin is the main command to work with SvelteKit powered static website projects.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 08-Nov-2022
 draft: false
 ---
 
@@ -43,6 +43,7 @@ sveltin [command]
   preview     Preview the production version locally
   server      Run the development server
   update      Update your project dependencies
+  upgrade     Upgrade your project to the latest Sveltin version
   version     Print the version number of Sveltin
 ```
 
@@ -67,6 +68,7 @@ sveltin [command]
 - [sveltin generate sitemap](/cli/generate-sitemap) - Generate the sitemap file for your Sveltin project.
 - [sveltin install](/cli/install) - Install your project dependencies.
 - [sveltin update](/cli/update) - Update your project dependencies.
+- [sveltin upgrade](/cli/upgrade) - Upgrade your project to the latest Sveltin version
 - [sveltin server](/cli/server) - Run the development server (vite).
 - [sveltin build](/cli/build) - Build a production version of your static website.
 - [sveltin preview](/cli/preview) - Preview the production version locally.

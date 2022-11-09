@@ -1,0 +1,27 @@
+---
+title: Upgrade
+slug: upgrade
+headline: Upgrade your project to the latest Sveltin version.
+author: sveltinio
+created_at: 08-Nov-2022
+updated_at: 08-Nov-2022
+draft: false
+---
+
+## sveltin upgrade
+
+{headline}
+
+### Synopsis
+
+Command used to upgrade your existing project to be compliant with the latest Sveltin version.
+
+### Options
+
+```bash
+  -h, --help     help for prepare
+```
+
+### SEE ALSO
+
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites.
