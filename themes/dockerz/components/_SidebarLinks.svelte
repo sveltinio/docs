@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import type { ExternalLinkItem } from '$lib/interfaces';
+	import { removeTrailingSlash } from '$lib/utils/strings.js';
 
 	import CollapsableList from './_CollapsableList.svelte';
 	import SidebarExternals from './_SidebarExternals.svelte';
@@ -25,8 +26,8 @@
 					href={item.url}
 					data-sveltekit-prefetch
 					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--{item.identifier}"
-					class:active={!dark && $page.url.pathname === item.url}
-					class:active-dark={dark && $page.url.pathname === item.url}
+					class:active={!dark && removeTrailingSlash($page.url.pathname) == item.url}
+					class:active-dark={dark && removeTrailingSlash($page.url.pathname) == item.url}
 					on:click={handleNavMenu}
 				>
 					{item.name}
@@ -40,8 +41,10 @@
 									href={child.url}
 									data-sveltekit-prefetch
 									class="group flex items-center p-2 pl-3 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover focus:border-skin-muted dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--{child.identifier}"
-									class:active={!dark && $page.url.pathname === child.url}
-									class:active-dark={dark && $page.url.pathname === child.url}
+									class:active={!dark &&
+										removeTrailingSlash($page.url.pathname) === child.url}
+									class:active-dark={dark &&
+										removeTrailingSlash($page.url.pathname) === child.url}
 									on:click={handleNavMenu}
 								>
 									{child.name}

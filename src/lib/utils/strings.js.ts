@@ -30,6 +30,10 @@ export const isNotEmpty = (text: string): boolean => {
 	return Boolean(text);
 };
 
+export const removeTrailingSlash = (text: string): string => {
+	return text.replace(/\/+$/, '');
+};
+
 export const getPageUrl = (name: string, websiteData: IWebSite): string => {
 	return websiteData.baseURL.concat('/', name);
 };
