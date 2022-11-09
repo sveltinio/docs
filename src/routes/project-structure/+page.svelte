@@ -87,6 +87,7 @@ my-project/
  │ │ └ [your components and partials]
  ├ package.json
  ├ svelte.config.js
+ ├ sveltin.config.json
  ├ tsconfig.json
  └ vite.config.ts
 						</code></pre>
