@@ -1,7 +1,5 @@
 <script lang="ts">
 	import DarkModeToggle from '../components/_DarkModeToggle.svelte';
-
-	export let dark: boolean;
 </script>
 
 <nav
@@ -12,7 +10,7 @@
 			<div
 				class="relative flex flex-1 items-center justify-center space-x-8 px-2 lg:ml-6 lg:justify-end"
 			>
-				<DarkModeToggle bind:dark />
+				<DarkModeToggle />
 			</div>
 		</div>
 	</div>

@@ -1,12 +1,11 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { onMount } from 'svelte';
+	import { theme } from '$lib/shared/stores';
 	import { website } from '$config/website.js';
-	import { theme, updateTheme } from '$lib/shared/stores';
-	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
 	import { JsonLdWebPage, PageMetaTags, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { getSlugPageUrl, getCoverImagePath } from '$lib/utils/strings.js';
+	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
 
 	export let data: PageData;
 	$: ({ actual, before, after, mdsvexComponent } = data);
@@ -32,14 +31,8 @@
 			type: TwitterCardType.Summary
 		}
 	};
-	$: isDark = $theme === 'dark' ? true : false;
 
-	onMount(() => {
-		const timeout = setTimeout(updateTheme, 1000);
-		return () => {
-			clearTimeout(timeout);
-		};
-	});
+	$: isDark = $theme;
 </script>
 
 <PageMetaTags data={slugPageData} />
@@ -85,3 +78,5 @@
 	</div>
 </section>
 <PrevNext {previous} {next} />
+
+<style></style>

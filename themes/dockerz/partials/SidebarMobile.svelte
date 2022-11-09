@@ -10,7 +10,6 @@
 	import LogoLink from '../components/_LogoLink.svelte';
 	import type { IMenuItem } from '@sveltinio/seo/types';
 
-	export let dark: boolean;
 	export let navIsOpen: boolean;
 	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
@@ -65,7 +64,6 @@
 					</div>
 					<nav class="mt-5 space-y-1 px-2">
 						<SidebarLinks
-							bind:dark
 							{menuData}
 							{externalLinksData}
 							handleNavMenu={() => handleNavMenu()}

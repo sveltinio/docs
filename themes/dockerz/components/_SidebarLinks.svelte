@@ -9,7 +9,6 @@
 	import type { IMenuItem } from '@sveltinio/seo/types';
 	import BuildInfo from './_BuildInfo.svelte';
 
-	export let dark: boolean;
 	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 	export let handleNavMenu = () => {};
@@ -26,8 +25,7 @@
 					href={item.url}
 					data-sveltekit-prefetch
 					class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--{item.identifier}"
-					class:active={!dark && removeTrailingSlash($page.url.pathname) == item.url}
-					class:active-dark={dark && removeTrailingSlash($page.url.pathname) == item.url}
+					class:active={removeTrailingSlash($page.url.pathname) == item.url}
 					on:click={handleNavMenu}
 				>
 					{item.name}
@@ -41,10 +39,8 @@
 									href={child.url}
 									data-sveltekit-prefetch
 									class="group flex items-center p-2 pl-3 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover focus:border-skin-muted dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--{child.identifier}"
-									class:active={!dark &&
-										removeTrailingSlash($page.url.pathname) === child.url}
-									class:active-dark={dark &&
-										removeTrailingSlash($page.url.pathname) === child.url}
+									class:active={removeTrailingSlash($page.url.pathname) ===
+										child.url}
 									on:click={handleNavMenu}
 								>
 									{child.name}
@@ -67,7 +63,7 @@
 		border-color: var(--color-border-muted);
 	}
 
-	.active-dark {
+	:global(.dark) .active {
 		background-color: var(--dark);
 		border-left-width: 2px;
 		border-color: var(--color-border-muted-dark);

@@ -4,7 +4,6 @@
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 	import SveltinLogo from '../components/_SveltinLogo.svelte';
 
-	export let dark: boolean;
 	export let menuData: Array<IMenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
@@ -21,7 +20,7 @@
 				</a>
 			</div>
 			<nav class="mt-12 flex-1">
-				<SidebarLinks bind:dark {menuData} {externalLinksData} />
+				<SidebarLinks {menuData} {externalLinksData} />
 			</nav>
 		</div>
 	</div>

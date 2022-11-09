@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { website } from '$config/website.js';
-	import { onMount } from 'svelte';
-	import { theme, updateTheme } from '$lib/shared/stores';
+	import { theme } from '$lib/shared/stores';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
@@ -25,13 +24,7 @@
 		}
 	};
 
-	onMount(() => {
-		const timeout = setTimeout(updateTheme, 1000);
-		return () => {
-			clearTimeout(timeout);
-		};
-	});
-	$: isDark = $theme === 'dark' ? true : false;
+	$: isDark = $theme;
 </script>
 
 <PageMetaTags data={cliIndexPage} />

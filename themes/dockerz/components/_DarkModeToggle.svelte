@@ -1,33 +1,32 @@
 <script lang="ts">
 	import { SunLightIcon } from '@indaco/svelte-iconoir/icons/SunLightIcon';
 	import { HalfMoonIcon } from '@indaco/svelte-iconoir/icons/HalfMoonIcon';
-	import ThemeSwitch from './_ThemeSwitch.svelte';
-	import { clickOutside } from '$lib/shared/events';
+	import { theme } from '$lib/shared/stores';
+	import { browser } from '$app/environment';
 
-	export let dark: boolean;
+	$: isDarkMode = browser ? Boolean(document.documentElement.classList.contains('dark')) : true;
 
-	let isThemeSwitchVisible = false;
-	const toggleThemeSwithVisibility = () => (isThemeSwitchVisible = !isThemeSwitchVisible);
-
-	function handleEscape({ key }) {
-		if (key === 'Escape') {
-			isThemeSwitchVisible = false;
-		}
+	function handleLightDark() {
+		isDarkMode = !isDarkMode;
+		$theme = isDarkMode;
+		isDarkMode
+			? document.querySelector('html').classList.add('dark')
+			: document.querySelector('html').classList.remove('dark');
 	}
 </script>
 
-<svelte:window on:keyup={handleEscape} />
-
 <button
-	on:click={toggleThemeSwithVisibility}
-	use:clickOutside={{ enabled: isThemeSwitchVisible, cb: () => (isThemeSwitchVisible = false) }}
+	type="button"
+	role="switch"
+	aria-label="Toggle Dark Mode"
+	aria-checked={isDarkMode}
+	class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"
+	on:click|preventDefault={handleLightDark}
+	on:keyup|preventDefault={handleLightDark}
+	on:keydown|preventDefault={handleLightDark}
+	on:keypress={handleLightDark}
 >
-	{#if dark}
-		<HalfMoonIcon class="h-7 w-7 rounded-full p-1 text-skin-white" />
-	{:else}
-		<SunLightIcon class="h-7 w-7 rounded-full p-1 text-skin-pure-dark" />
-	{/if}
+	<HalfMoonIcon class="hidden h-7 w-7 rounded-full p-1 text-skin-white  dark:block" />
+	<SunLightIcon class="block h-7 w-7 rounded-full p-1 text-skin-pure-dark dark:hidden" />
 	<span class="sr-only">Light/Dark mode button</span>
 </button>
-
-<ThemeSwitch bind:dark bind:visible={isThemeSwitchVisible} />

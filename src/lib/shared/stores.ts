@@ -1,17 +1,14 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
-const defaultValue = 'light';
-const initialValue = browser ? window.localStorage.getItem('theme') ?? defaultValue : defaultValue;
+const defaultValue = false;
 
-export const theme = writable<string>(initialValue);
-
+export const theme = writable(defaultValue);
 theme.subscribe((value) => {
 	if (browser) {
-		window.localStorage.setItem('theme', value);
+		window.localStorage.setItem('isDark', value.toString());
 	}
 });
-
-export const updateTheme = () => {
-	theme.set(initialValue);
+export const resetTheme = () => {
+	theme.set(defaultValue);
 };
