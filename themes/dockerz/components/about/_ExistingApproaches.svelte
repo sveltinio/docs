@@ -1,13 +1,8 @@
-<div class="space-y-12">
+<div class="space-y-8" id="existing_approaches">
 	<h2
-		class="group text-lg font-normal text-skin-heading hover:text-skin-heading-hover dark:text-skin-heading-dark lg:text-2xl"
+		class="text-lg font-normal text-skin-heading hover:text-skin-heading-hover dark:text-skin-heading-dark dark:hover:text-skin-heading-dark-hover lg:text-2xl"
 	>
-		<a
-			href="#existing_approaches"
-			class="inline-flex items-center gap-4 text-skin-heading dark:text-skin-heading-dark dark:hover:text-skin-heading-dark-hover"
-		>
-			Existing approaches
-		</a>
+		Existing approaches
 	</h2>
 	<div class="space-y-6">
 		<p class="text-base font-light text-skin-body dark:text-skin-body-dark sm:text-lg">
