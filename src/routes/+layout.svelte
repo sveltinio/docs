@@ -13,7 +13,7 @@
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
 	import BottomPageLinks from '$themes/dockerz/partials/BottomPageLinks.svelte';
 	import Footer from '$themes/dockerz/partials/Footer.svelte';
-	import ScrollToTop from '$themes/dockerz/partials/ScrollToTop.svelte';
+	import ScrollToTopButton from '@sveltinio/widgets/components/ScrollToTopButton.svelte';
 
 	let dark = false;
 	let navIsOpen = false;
@@ -45,10 +45,10 @@
 <JsonLdSiteNavigationElements websiteData={website} menuData={sortedMenu} />
 
 <GoogleFonts fonts={googleFonts} />
-<UmamiAnalytics
+<!--<UmamiAnalytics
 	websiteID="1467a0c5-0b8d-4687-97ee-3dc97eb8becc"
 	srcURL="https://umami.sveltin.io/umami.js"
-/>
+/>-->
 
 <svelte:head>
 	<script>
@@ -93,5 +93,5 @@
 			</div>
 		</div>
 	</div>
-	<ScrollToTop />
+	<ScrollToTopButton />
 </div>
