@@ -73,6 +73,11 @@ const projectStructure = [
 		name: 'static',
 		purpose:
 			'Contains static files and compiled assets with stable URLs.<br/>When Sveltin builds your site, all assets are copied over as-is.'
+	},
+	{
+		name: 'sveltin.config.json',
+		purpose:
+			'Contains static files and compiled assets with stable URLs.<br/>When Sveltin builds your site, all assets are copied over as-is.'
 	}
 ];
 
