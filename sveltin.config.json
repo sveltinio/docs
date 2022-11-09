@@ -1,0 +1,10 @@
+{
+	"sveltin": {
+		"version": "0.11.0-rc1"
+	},
+	"theme": {
+		"style": "blank",
+		"name": "dockerz",
+		"cssLib": "tailwindcss"
+	}
+}

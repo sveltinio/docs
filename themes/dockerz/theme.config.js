@@ -1,6 +1,8 @@
 // theme.config.js file for your sveltin theme
-const config = {
-	name: 'dockerz',
+import { theme } from '../../sveltin.config.json';
+
+const themeConfig = {
+	name: theme.name,
 	version: '0.1',
 	license: 'MIT',
 	licenselink: 'https://github.com/yourname/yourtheme/blob/master/LICENSE',
@@ -14,4 +16,4 @@ const config = {
 	}
 };
 
-export default config;
+export { themeConfig };
