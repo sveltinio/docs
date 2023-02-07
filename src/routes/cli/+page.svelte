@@ -1,20 +1,26 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import type { SEOWebPageMetadata } from '@sveltinio/seo/types';
+	import { page } from '$app/stores';
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
-	import { getFavicon, getPageUrl } from '$lib/utils/strings.js';
+	import { canonicalPageUrl, definePageKeywords, getFavicon } from '$lib/utils/strings.js';
 
 	export let data: PageData;
-	$: ({ resourceName, items } = data);
 
-	$: cliIndexPage = {
-		url: getPageUrl(resourceName, website),
+	const pageDescription =
+		'Here you can find the list of all available Sveltin commands and subcommands.';
+	// page keywords as comma separeted values
+	const pageKeywords: Array<string> = [];
+
+	$: ({ resourceName, items } = data);
+	$: cliIndexPage = <SEOWebPageMetadata>{
+		url: canonicalPageUrl($page.url.pathname, website.baseURL),
 		title: 'All Sveltin commands',
-		description:
-			'Here you can find the list of all available Sveltin commands and subcommands.',
-		keywords: website.keywords ? website.keywords : '',
+		description: pageDescription,
+		keywords: definePageKeywords(pageKeywords, website.keywords),
 		image: getFavicon(website),
 		opengraph: {
 			type: OpenGraphType.Website
@@ -29,11 +35,7 @@
 
 <PageMetaTags data={cliIndexPage} />
 <JsonLdWebPage data={cliIndexPage} />
-<JsonLdBreadcrumbs
-	baseURL={website.baseURL}
-	parent={resourceName}
-	currentTitle={cliIndexPage.title}
-/>
+<JsonLdBreadcrumbs baseURL={website.baseURL} parent={resourceName} current={cliIndexPage.title} />
 <section
 	class="mx-auto max-w-7xl border-b border-skin-muted bg-skin-light dark:border-skin-muted-dark dark:bg-skin-dark"
 >
@@ -58,7 +60,7 @@
 									<a
 										class:cli-text={!isDark}
 										class:cli-text-dark={isDark}
-										data-sveltekit-prefetch
+										data-sveltekit-preload-data="hover"
 										href={`/${item.resource}/${item.metadata.slug}`}
 										>{item.metadata.title.toLowerCase()}</a
 									>

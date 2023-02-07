@@ -1,23 +1,26 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import type { SEOWebPageMetadata } from '@sveltinio/seo/types';
+	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 	import { theme } from '$lib/shared/stores';
 	import { website } from '$config/website.js';
 	import { JsonLdWebPage, PageMetaTags, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { getSlugPageUrl, getCoverImagePath } from '$lib/utils/strings.js';
-	import PrevNext from '$themes/dockerz/components/_PrevNext.svelte';
+	import { canonicalPageUrl, definePageKeywords, getCoverImagePath } from '$lib/utils/strings.js';
+	import { PagesNavigator } from '@sveltinio/widgets';
 
 	export let data: PageData;
 	$: ({ actual, before, after, mdsvexComponent } = data);
-
 	$: current = actual;
 	$: previous = before;
 	$: next = after;
-	$: slugPageData = {
-		url: getSlugPageUrl(current, website),
+
+	$: slugPageData = <SEOWebPageMetadata>{
+		url: canonicalPageUrl($page.url.pathname, website.baseURL),
 		title: 'sveltin command: ' + current.metadata.title,
 		description: current.metadata.headline,
-		keywords: website.keywords ? website.keywords : '',
+		keywords: definePageKeywords(current.metadata.keywords, website.keywords),
 		author: current.metadata.author,
 		image: getCoverImagePath(current, website),
 		opengraph: {
@@ -40,7 +43,7 @@
 <JsonLdBreadcrumbs
 	baseURL={website.baseURL}
 	parent={current.resource}
-	currentTitle={slugPageData.title}
+	current={slugPageData.title}
 />
 
 <section
@@ -61,7 +64,7 @@
 			<div class="max-w-3xl">
 				<div class="mx-auto space-y-24 text-left text-lg">
 					<div class="space-y-8">
-						<div class="md-content" class:md-content-dark={isDark}>
+						<div class="markdown-body" class:markdown-body-dark={isDark}>
 							<svelte:component this={mdsvexComponent} />
 						</div>
 					</div>
@@ -77,6 +80,17 @@
 		</section>
 	</div>
 </section>
-<PrevNext {previous} {next} />
+<PagesNavigator
+	prev={{
+		label: previous.metadata.title,
+		href: `${base}/${previous.resource}/${previous.metadata.slug}`,
+		alt: `link to ${previous.metadata.title}`
+	}}
+	next={{
+		label: next.metadata.title,
+		href: `${base}/${next.resource}/${next.metadata.slug}`,
+		alt: `link to ${next.metadata.title}`
+	}}
+/>
 
 <style></style>
