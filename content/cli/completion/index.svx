@@ -1,0 +1,85 @@
+---
+title: Completion
+slug: completion
+headline: Generate the autocompletion script for the specified shell.
+author: sveltinio
+created_at: 24-Dec-2021
+updated_at: 07-Feb-2023
+draft: false
+---
+
+## sveltin completion
+
+{headline}
+
+### Synopsis
+
+Command used to deploy the project on your hosting platform over FTP.
+
+Usage:
+  sveltin deploy
+
+Aliases:
+  deploy, publish
+
+Flags:
+  -b, --backup                   create a tar archive for the existing content on the remote FTP server (default true)
+  -d, --dryRun                   dry run
+  -e, --exclude stringArray      list of files to not be deleted from the FTP server. Default: .htaccess (default [.htaccess])
+  -h, --help                     help for deploy
+      --withExcludeFile string   path to the file containing the list of files to not be deleted from the FTP server.
+ ~/Code/GitHub/sveltinio/sveltin   0.11.0 ±  sveltin completion --help
+To load completions:
+
+Bash:
+
+  $ source (sveltin completion bash)
+
+  # To load completions for each session, execute once:
+  # Linux:
+  $ sveltin completion bash > /etc/bash_completion.d/sveltin
+  # macOS:
+  $ sveltin completion bash > $(brew --prefix)/etc/bash_completion.d/sveltin
+
+Zsh:
+
+  # If shell completion is not already enabled in your environment,
+  # you will need to enable it.  You can execute the following once:
+
+  $ echo "autoload -U compinit; compinit" >> ~/.zshrc
+
+  # To load completions for each session, execute once:
+  $ sveltin completion zsh > "${fpath[1]}/_sveltin"
+
+  # You will need to start a new shell for this setup to take effect.
+
+fish:
+
+  $ sveltin completion fish | source
+
+  # To load completions for each session, execute once:
+  $ sveltin completion fish > ~/.config/fish/completions/sveltin.fish
+
+PowerShell:
+
+  PS> sveltin completion powershell | Out-String | Invoke-Expression
+
+  # To load completions for every new session, run:
+  PS> sveltin completion powershell > sveltin.ps1
+  # and source this file from your PowerShell profile.
+
+### Usage
+
+```bash
+sveltin completion [bash|zsh|fish|powershell]
+```
+
+### Flags
+
+```bash
+  -h, --help   help for preview
+```
+
+### SEE ALSO
+
+- [sveltin](/cli/sveltin) - sveltin is the main command to work with SvelteKit powered static websites.

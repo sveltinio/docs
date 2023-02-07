@@ -4,7 +4,7 @@ slug: new-resource
 headline: Command to create new resource (route).
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 16-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -31,15 +31,17 @@ This command:
 - Scaffold +page.svelte component and +page.serve.ts endpoint to list all the content belongs to a resource
 - Scaffold [slug]/+page.svelte component and [slug]/+page.ts endpoint to get access to a specific content page
 
+### Usage
+
 ```bash
 sveltin new resource [name] [flags]
 ```
 
 ### Aliases
 
-_r_
+_resource_, _r_
 
-### Options
+### Flags
 
 ```bash
   -g, --group string   Group name for resource routes (https://kit.svelte.dev/docs/advanced-routing#advanced-layouts)

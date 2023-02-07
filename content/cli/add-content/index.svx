@@ -4,7 +4,7 @@ slug: add-content
 headline: Add new content to an existing resource.
 author: sveltinio
 created_at: 06-Sep-2022
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -23,14 +23,22 @@ Use the --template flag to select the right one to you. Valid options: blank or 
 
 Example:
 
-1. You have already created a "posts" resource
-2. run: sveltin new content posts/my-first-content --sample
+1. You have already created some resource by running
+  ```bash
+  $ sveltin new resource
+  ```
+2. run:
+  ```bash
+  $ sveltin add content welcome --to posts
+  ```
 
 As result:
 
-- a new "my-first-post" folder within "content/posts" is created
+- a new "welcome" folder within "content/posts" is created
 - an index.svx file is placed there
-- a new "posts/my-first-port" folder created within the "static" folder to store images relative to the content
+- a new "posts/welcome" folder created within the "static" folder to store images relative to the content
+
+### Usage
 
 ```bash
 sveltin add content [name] [flags]
@@ -38,13 +46,14 @@ sveltin add content [name] [flags]
 
 ### Aliases
 
-_c_
+_content_, _c_
 
-### Options
+### Flags
 
 ```bash
-  -h, --help     help for content
-  -s, --sample   Add sample content to the markdown file.
+  -h, --help        help for content
+  -s, --sample      Add sample content to the markdown file
+  -t, --to string   Name of the resource the new content is belongs to
 ```
 
 ### SEE ALSO

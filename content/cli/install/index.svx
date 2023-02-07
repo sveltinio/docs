@@ -4,7 +4,7 @@ slug: install
 headline: Install your project dependencies.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -18,15 +18,17 @@ Command used to install all dependencies from the 'package.json' file.
 
 It wraps _(npm|pnpm|yarn) install_.
 
+### Usage
+
 ```bash
 sveltin install [flags]
 ```
 
 ### Aliases
 
-_i_
+_install_, _i_
 
-### Options
+### Flags
 
 ```bash
   -h, --help     help for prepare

@@ -4,7 +4,7 @@ slug: new-page
 headline: Create a new page route.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -14,12 +14,12 @@ draft: false
 
 ### Synopsis
 
-Command used to create a new public page route.
+Command used to create a new public page route selecting between a svelte component-based page and a markdown page.
 
-Pages are Svelte components written in .svelte or .svx (for markdown) files. The filename determines the route,
-so creating a page named "about" will generate the following route _/about/+page.(svelte|svx)_
+Pages are Svelte components written in .svelte or .svx (for markdown) files.
+The filename determines the route so, creating a page named "about" will generate the following route /about/+page.(svelte|svx).
 
-This command allows you to select between a svelte component page and a markdown page.
+### Usage
 
 ```bash
 sveltin new page [name] [flags]
@@ -27,12 +27,12 @@ sveltin new page [name] [flags]
 
 ### Aliases
 
-_p_
+_page_, _p_
 
-### Options
+### Flags
 
 ```bash
-  -a, --as string   Sveltekit page as Svelte component or markdown via mdsvex. Possible values: svelte, markdown
+  -l, --language string   Language to be used for the page. Possible values: svelte, markdown
   -h, --help          help for page
 ```
 

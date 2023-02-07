@@ -4,7 +4,7 @@ slug: server
 headline: Run the development server (vite).
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -16,15 +16,17 @@ draft: false
 
 It wraps the _vite dev_ to start a development server
 
+### Usage
+
 ```bash
 sveltin server [flags]
 ```
 
 ### Aliases
 
-_s_, _serve_, _run_, _dev_
+_server_, _s_, _serve_, _run_, _dev_
 
-### Options
+### Flags
 
 ```bash
   -h, --help   help for preview

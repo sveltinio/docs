@@ -24,6 +24,8 @@ Resources:
 - Documentation           -> https://docs.sveltin.io
 - A helpful quick-start   -> https://docs.sveltin.io/quick-start
 
+### Usage
+
 ```bash
 sveltin [command]
 ```
@@ -39,15 +41,15 @@ sveltin [command]
   help        Help about any command
   init        Initialize a new sveltin project
   install     Install your project dependencies
+  migrate     Migrate your project to the latest Sveltin version
   new         Create new resources, pages and themes
   preview     Preview the production version locally
   server      Run the development server
   update      Update your project dependencies
-  upgrade     Upgrade your project to the latest Sveltin version
   version     Print the version number of Sveltin
 ```
 
-### Options
+### Flags
 
 ```bash
   -h, --help      help for sveltin
@@ -68,8 +70,9 @@ sveltin [command]
 - [sveltin generate sitemap](/cli/generate-sitemap) - Generate the sitemap file for your Sveltin project.
 - [sveltin install](/cli/install) - Install your project dependencies.
 - [sveltin update](/cli/update) - Update your project dependencies.
-- [sveltin upgrade](/cli/upgrade) - Upgrade your project to the latest Sveltin version
+- [sveltin migrate](/cli/migrate) - Migrate your project to the latest Sveltin version.
 - [sveltin server](/cli/server) - Run the development server (vite).
 - [sveltin build](/cli/build) - Build a production version of your static website.
 - [sveltin preview](/cli/preview) - Preview the production version locally.
 - [sveltin deploy](/cli/deploy) - Deploy your website over FTP.
+- [sveltin completion](/cli/completion) - Generate the autocompletion script for the specified shell.

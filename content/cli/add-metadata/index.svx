@@ -21,11 +21,17 @@ Command used to add new metadata for your content to an existing resource.
 What is a "metadata" for Sveltin?
 Whatever you enter in the front-matter of your markdown content for which you want content grouped by it.
 
+Example:
+
+1. You have already created some resource by running "sveltin new resource"
+2. run: sveltin add metadata category
+
 Metadata Types:
 
 - single: 1:1 relationship (e.g. category)
 - list: 1:many relationship (e.g. tags)
 
+### Usage
 
 ```bash
 sveltin new metadata [name] --to [resource] --as [single|list] [flags]
@@ -33,15 +39,14 @@ sveltin new metadata [name] --to [resource] --as [single|list] [flags]
 
 ### Aliases:
 
-_m_
+_metadata_, _m_
 
-
-### Options
+### Flags
 
 ```bash
   -a, --as string   Type of the new metadata. (possible values: single or list)
   -h, --help        help for metadata
-  -t, --to string   Name of the resource the new metadata is belongs to.
+  -t, --to string   Name of the resource the new metadata is belongs to
 ```
 
 ### SEE ALSO

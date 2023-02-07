@@ -1,10 +1,10 @@
 ---
 title: New
 slug: new
-headline: Create new resources (routes), pages and themes.
+headline: Create new resources and pages.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -14,7 +14,7 @@ draft: false
 
 ### Synopsis
 
-This command is used to creates SvelteKit routes in your project. A routes in Sveltin is both a public page or a resource.
+Command used to creates SvelteKit routes in your project. A route in Sveltin is both a public page and a resource.
 
 Examples:
 
@@ -23,15 +23,24 @@ sveltin new page about
 sveltin new resource posts
 ```
 
+### Usage
+
 ```bash
 sveltin new <project> [flags]
 ```
 
 ### Aliases:
 
-_n_
+_new_, _n_
 
-### Options
+### Available Commands
+
+```bash
+  page        Create a new page route
+  resource    Create a new resource (route)
+```
+
+### Flags
 
 ```bash
   -h, --help                  help for new

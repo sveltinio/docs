@@ -4,7 +4,7 @@ slug: generate
 headline: Generate static files (sitemap, rss, menu).
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -18,15 +18,25 @@ Command used to generate static files through its own subcommands.
 
 Run 'sveltin generate -h' for further details.
 
+### Usage
+
 ```bash
 sveltin generate [flags]
 ```
 
 ### Aliases
 
-_g_
+_generate_, _g_
 
-### Options
+### Available Commands
+
+```bash
+  menu        Generate the menu file for your Sveltin project
+  rss         Generate the RSS feed for your Sveltin project
+  sitemap     Generate the sitemap file for your Sveltin project
+```
+
+### Flags
 
 ```bash
   -h, --help   help for generate

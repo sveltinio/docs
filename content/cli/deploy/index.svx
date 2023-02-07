@@ -4,7 +4,7 @@ slug: deploy
 headline: Deploy your website over FTP.
 author: sveltinio
 created_at: 19-Feb-2022
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -16,9 +16,7 @@ draft: false
 
 Command used to deploy the project on your hosting platform over FTP.
 
-It makes use of the `.env.production` file to reflect the base url for your website.
-
-Run `sveltin build` first.
+### Usage
 
 ```bash
 sveltin deploy [flags]
@@ -26,16 +24,16 @@ sveltin deploy [flags]
 
 ### Aliases
 
-_publish_
+_deploy_, _publish_
 
-### Options
+### Flags
 
 ```bash
   -b, --backup                   create a tar archive for the existing content on the remote FTP server (default true)
   -d, --dryRun                   dry run
   -e, --exclude stringArray      list of files to not be deleted from the FTP server. Default: .htaccess (default [.htaccess])
   -h, --help                     help for deploy
-      --withExcludeFile string   path to the file containing the list of files to not be deleted from the FTP server.
+      --withExcludeFile string   path to the file containing the list of files to not be deleted from the FTP server
 ```
 
 ### SEE ALSO

@@ -4,7 +4,7 @@ slug: add
 headline: Add content and metadata to an exiting resource.
 author: sveltinio
 created_at: 06-Sep-2022
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -18,15 +18,24 @@ Command used to add content and metadata to an existing resources through its ow
 
 Run 'sveltin add -h' for further details.
 
+### Usage
+
 ```
 sveltin add [flags]
 ```
 
 ### Aliases:
 
-_a_
+_add_, _a_
 
-### Options
+### Available Commands
+
+```bash
+  content     Add new content to an existing resource
+  metadata    Add metadata to an existing resource
+```
+
+### Flags
 
 ```
   -h, --help   help for add

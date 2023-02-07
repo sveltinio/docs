@@ -1,6 +1,6 @@
-import type { IMenuItem } from '@sveltinio/seo/types';
+import type { Sveltin } from '../src/sveltin';
 
-const menu: Array<IMenuItem> = [
+const menu: Array<Sveltin.MenuItem> = [
 	{
 		identifier: 'home',
 		name: 'Home',
@@ -14,28 +14,34 @@ const menu: Array<IMenuItem> = [
 		weight: 2
 	},
 	{
+		identifier: 'release-notes',
+		name: 'Release Notes',
+		url: '/release-notes',
+		weight: 3
+	},
+	{
 		identifier: 'install',
 		name: 'Installation',
 		url: '/install',
-		weight: 3
+		weight: 5
 	},
 	{
 		identifier: 'quick',
 		name: 'Quick Start',
 		url: '/quick-start',
-		weight: 4
+		weight: 5
 	},
 	{
 		identifier: 'project-structure',
 		name: 'Project Structure',
 		url: '/project-structure',
-		weight: 5
+		weight: 6
 	},
 	{
 		identifier: 'cli',
 		name: 'CLI',
 		url: '/cli',
-		weight: 6,
+		weight: 7,
 		children: [
 			{
 				identifier: 'sveltin',
@@ -146,9 +152,15 @@ const menu: Array<IMenuItem> = [
 				weight: 18
 			},
 			{
-				identifier: 'upgrade',
-				name: 'upgrade',
-				url: '/cli/upgrade',
+				identifier: 'migrate',
+				name: 'migrate',
+				url: '/cli/migrate',
+				weight: 19
+			},
+			{
+				identifier: 'completion',
+				name: 'completion',
+				url: '/cli/completion',
 				weight: 19
 			}
 		]

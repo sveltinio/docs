@@ -4,7 +4,7 @@ slug: init
 headline: Initialize a new sveltin project.
 author: sveltinio
 created_at: 06-Sep-2022
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -25,15 +25,17 @@ sveltin init blog --css vanillacss -t myTheme
 sveltin init portfolio -c tailwindcss -t paper -n pnpm -p 3030 --git
 ```
 
+### Usage
+
 ```bash
 sveltin init <project> [flags]
 ```
 
 ### Aliases
 
-_create_
+_init_, _create_
 
-### Options
+### Flags
 
 ```bash
   -c, --css string         The CSS lib to use. Valid: vanillacss, tailwindcss, bulma, bootstrap, scss

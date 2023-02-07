@@ -4,7 +4,7 @@ slug: preview
 headline: Preview the production version locally.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -18,13 +18,15 @@ Command used to start the production version locally.
 
 Run after _sveltin build_ (or _vite build_), you can start the production version locally with sveltin preview.
 
-It wraps the _vite preview_ command.
+It wraps _vite preview_ command.
+
+### Usage
 
 ```bash
 sveltin preview [flags]
 ```
 
-### Options
+### Flags
 
 ```bash
   -h, --help   help for preview

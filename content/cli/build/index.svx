@@ -4,7 +4,7 @@ slug: build
 headline: Builds a production version of your static website.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -16,10 +16,12 @@ draft: false
 
 Command used to build a production version of your static website.
 
-It wraps the _vite build_ command.
+It wraps vite build command.
 
 Ensure to edit env.production and .sveltin.toml files to reflect
-your production environment
+your production environment.
+
+### Usage
 
 ```bash
 sveltin build [flags]
@@ -27,9 +29,9 @@ sveltin build [flags]
 
 ### Aliases
 
-_b_
+_build_, _b_
 
-### Options
+### Flags
 
 ```bash
   -h, --help   help for preview

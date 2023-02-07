@@ -4,7 +4,7 @@ slug: generate-rss
 headline: Generate the RSS feed for your Sveltin project.
 author: sveltinio
 created_at: 24-Dec-2021
-updated_at: 06-Sep-2022
+updated_at: 07-Feb-2023
 draft: false
 ---
 
@@ -16,13 +16,13 @@ draft: false
 
 Command used to generate the RSS feed (rss.xml) file for your website.
 
-It makes use of the .env.production file to reflect the base url for your website.
+### Usage
 
 ```bash
 sveltin generate rss
 ```
 
-### Options
+### Flags
 
 ```bash
   -h, --help   help for rss
