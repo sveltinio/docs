@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { IMenuItem } from '@sveltinio/seo/types';
+	import type { Sveltin } from '$sveltin';
 	import type { ExternalLinkItem } from '$lib/interfaces';
 	import SidebarLinks from '../components/_SidebarLinks.svelte';
 	import SveltinLogo from '../components/_SveltinLogo.svelte';
 
-	export let menuData: Array<IMenuItem>;
+	export let menuData: Array<Sveltin.MenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
 

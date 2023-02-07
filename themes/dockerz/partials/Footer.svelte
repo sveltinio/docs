@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ExternalLink } from '@sveltinio/essentials';
+	import { Link } from '@sveltinio/essentials';
 
 	import SveltinLogo from '../components/_SveltinLogo.svelte';
 </script>
@@ -20,18 +20,18 @@
 						<p
 							class="mx-auto mt-2 ml-0 text-sm font-medium text-skin-body dark:text-skin-body-dark lg:ml-12"
 						>
-							This site uses the <span class="italic">Dockerz</span>&nbsp;theme by <ExternalLink
+							This site uses the <span class="italic">Dockerz</span>&nbsp;theme by <Link
 								name="michael andreuzza"
-								url="https://www.michaelandreuzza.com/"
-								class="underline">Michael Andreuzza</ExternalLink
-							>.&nbsp; <br class="block lg:hidden" /> Icons by <ExternalLink
+								href="https://www.michaelandreuzza.com/"
+								class="underline">Michael Andreuzza</Link
+							>.&nbsp; <br class="block lg:hidden" /> Icons by <Link
 								name="Iconoir"
-								url="https://iconoir.com"
-								class="underline">Iconoir</ExternalLink
-							> via <ExternalLink
+								href="https://iconoir.com"
+								class="underline">Iconoir</Link
+							> via <Link
 								name="svelte-iconoir"
-								url="https://www.npmjs.com/package/@indaco/svelte-iconoir"
-								class="italic">svelte-iconoir</ExternalLink
+								href="https://www.npmjs.com/package/@indaco/svelte-iconoir"
+								class="italic">svelte-iconoir</Link
 							>.
 						</p>
 					</div>

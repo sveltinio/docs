@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { IMenuItem, IWebSite } from '@sveltinio/seo/types';
+	import type { Sveltin } from '$sveltin';
 	import type { ExternalLinkItem } from '$lib/interfaces';
 	import sortBy from 'lodash-es/sortBy.js';
-	import { ExternalLink } from '@sveltinio/essentials';
+	import { Link } from '@sveltinio/essentials';
 
-	export let websiteData: IWebSite;
-	export let menuData: Array<IMenuItem>;
+	export let websiteData: Sveltin.WebSite;
+	export let menuData: Array<Sveltin.MenuItem>;
 	export let externalLinksData: Array<ExternalLinkItem>;
 
 	const menuItems = sortBy(menuData, 'weigth');
@@ -32,14 +32,16 @@
 					<ul class="mt-4 space-y-4 lg:mt-0">
 						{#each externalLinks as item}
 							<li>
-								<ExternalLink
+								<Link
 									id={`ext-${item.name}`}
 									name={item.name}
-									url={item.url}
+									href={item.url}
+									external
+									icon={false}
 									class="text-xs font-light text-skin-muted hover:text-skin-muted-hover dark:text-skin-muted-dark dark:hover:text-skin-muted-dark-hover sm:text-base"
 								>
 									{item.name}
-								</ExternalLink>
+								</Link>
 							</li>
 						{/each}
 					</ul>
@@ -53,13 +55,13 @@
 					<p
 						class="text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base"
 					>
-						{websiteData.copyright} Sveltin.io and <ExternalLink
+						{websiteData.copyright} Sveltin.io and <Link
 							name="sveltin contributors"
-							url="https://github.com/orgs/sveltinio/people"
+							href="https://github.com/orgs/sveltinio/people"
 							class="hover:text-skin-muted-hover dark:hover:text-skin-muted-dark-hover"
 						>
 							contributors
-						</ExternalLink>.
+						</Link>.
 					</p>
 					<p
 						class="mt-2 text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base lg:mt-0"

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ExternalLinkItem } from '$lib/interfaces';
 
-	import { ExternalLink } from '@sveltinio/essentials';
+	import { Link } from '@sveltinio/essentials';
 	export let externalLinksData: Array<ExternalLinkItem>;
 </script>
 
@@ -11,14 +11,14 @@
 	</p>
 </div>
 {#each externalLinksData as item}
-	<div class="mt-3">
-		<ExternalLink
-			id={`link-${item.name}`}
-			name={item.name}
-			url={item.url}
-			class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--external-{item.identifier}"
-		>
-			{item.name}
-		</ExternalLink>
-	</div>
+	<Link
+		id={`link-${item.name}`}
+		name={item.name}
+		href={item.url}
+		external
+		icon={false}
+		class="group flex items-center p-2 pl-6 text-base font-light text-skin-link hover:bg-skin-light hover:text-skin-link-hover dark:text-skin-link-dark dark:hover:bg-skin-dark dark:hover:text-skin-link-dark-hover umami--click--external-{item.identifier}"
+	>
+		{item.name}
+	</Link>
 {/each}
