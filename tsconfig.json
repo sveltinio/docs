@@ -1,18 +1,27 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": false,
 		"outDir": "./build",
 		"paths": {
-			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"],
-			"$data": ["data"],
-			"$data/*": ["data/*"],
-			"$config": ["config"],
-			"$config/*": ["config/*"],
-			"$content": ["content"],
-			"$content/*": ["content/*"],
-			"$themes": ["themes"],
-			"$themes/*": ["themes/*"]
+			"$sveltin": ["./src/sveltin"],
+			"$lib": ["./src/lib"],
+			"$lib/*": ["./src/lib/*"],
+			"$data": ["./data"],
+			"$data/*": ["./data/*"],
+			"$config": ["./config"],
+			"$config/*": ["./config/*"],
+			"$content": ["./content"],
+			"$content/*": ["./content/*"],
+			"$themes": ["./themes"],
+			"$themes/*": ["./themes/*"]
 		}
 	},
 	"include": [

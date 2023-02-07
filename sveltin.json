@@ -1,0 +1,22 @@
+{
+	"name": "docs.sveltin.io",
+	"baseurl": "https://docs.sveltin.io",
+	"theme": {
+		"style": "blank",
+		"name": "dockerz",
+		"cssLib": "tailwindcss"
+	},
+	"sitemap": {
+		"changeFreq": "monthly",
+		"priority": 0.5
+	},
+	"sveltekit": {
+		"adapter": {
+			"pages": "build",
+			"assets": "build"
+		}
+	},
+	"sveltin": {
+		"version": "0.11.0"
+	}
+}

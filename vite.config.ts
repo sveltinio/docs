@@ -25,10 +25,11 @@ const config = {
 	},
 	resolve: {
 		alias: {
-			$config: path.resolve('config'),
-			$content: path.resolve('content'),
-			$data: path.resolve('data'),
-			$themes: path.resolve('themes')
+			$sveltin: path.resolve('./src/sveltin'),
+			$config: path.resolve('./config'),
+			$content: path.resolve('./content'),
+			$data: path.resolve('./data'),
+			$themes: path.resolve('./themes')
 		}
 	},
 	plugins: [sveltekit()],

@@ -1,6 +1,6 @@
-import type { IWebSite } from '@sveltinio/seo/types';
+import type { Sveltin } from '../src/sveltin';
 
-const website: IWebSite = {
+const website: Sveltin.WebSite = {
 	name: 'docs.sveltin.io',
 	baseURL: 'https://docs.sveltin.io',
 	language: 'en-GB',
@@ -16,10 +16,6 @@ const website: IWebSite = {
 	keywords:
 		'sveltekit, sveltin, documentation, endpoints, slug, cli, svelte, static site generator, tailwind',
 	contactEmail: '',
-	sitemap: {
-		changefreq: 'monthly',
-		priority: 0.5
-	},
 	socials: {
 		linkedin: '',
 		twitter: '',

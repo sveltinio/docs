@@ -1,28 +1,32 @@
-import { defineMDSveXConfig as defineConfig } from 'mdsvex';
-import relativeImages from 'mdsvex-relative-images';
+import { resolve, join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
+import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+
+import relativeImages from 'mdsvex-relative-images';
 import emoji from 'remark-emoji';
-import remarkSlug from 'remark-slug';
 import readingTime from 'remark-reading-time';
 import rehypeAutoLinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeSlug from 'rehype-slug';
-import headings from './src/lib/utils/headings.js';
+import headings from '@sveltinio/remark-headings';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const mdsvexConfig = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 	smartypants: {
 		dashes: 'oldschool'
 	},
-	remarkPlugins: [remarkSlug, headings, emoji, readingTime(), relativeImages],
+	layout: {
+		page: resolve(join(__dirname, `./themes/dockerz/components/md-layout.svelte`))
+	},
+	remarkPlugins: [headings, emoji, readingTime(), relativeImages],
 	rehypePlugins: [
+		rehypeSlug,
 		[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
-		rehypeSlug[
-			(rehypeAutoLinkHeadings,
-			{
-				behavior: 'wrap'
-			})
-		]
+		[rehypeAutoLinkHeadings, { behavior: 'wrap' }]
 	]
 });
 
