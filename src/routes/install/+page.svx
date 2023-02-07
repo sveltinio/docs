@@ -1,0 +1,60 @@
+---
+layout: page
+title: Installation
+author: sveltinio
+headline: Install Sveltin on macOS, Linux, Windows and on any machine can run the Go compiler tool chain.
+keywords: []
+created_at: 06-Feb-2023
+updated_at: 06-Feb-2023
+---
+
+<script>
+   import TerminalWindow from '$themes/dockerz/components/_TerminalWindow.svelte';
+</script>
+
+{headline}
+
+### Prerequisites
+
+- Git
+- Node (v16.9.0 or higher is required)
+
+### OSX and Linux via Homebrew
+
+Homebrew will also install Git and Node.
+
+<TerminalWindow>
+	<span># Tap a new formula</span>
+	<p>$brew tap sveltinio/sveltin</p>
+	<br/>
+	<span># Install</span>
+	<p>$ brew install sveltin</p>
+</TerminalWindow>
+
+### Windows via Scoop
+
+<TerminalWindow>
+	<span># Tap a new bucket</span>
+	<p>$ scoop bucket add sveltinio https://github.com/sveltinio/scoop-sveltin.git</p>
+	<br/>
+	<span># Install</span>
+	<p>$ scoop install sveltinio/sveltin</p>
+</TerminalWindow>
+
+### Go Install
+
+Installation is done by using the go install command. In this case, ensure to have **Go (v1.17 or higher)** installed on your machine.
+
+<TerminalWindow>
+	<p>$ go install github.com/sveltinio/sveltin@latest</p>
+</TerminalWindow>
+
+### Manually
+
+You can download the pre-compiled binary for you specific OS from the [releases page](https://github.com/sveltinio/sveltin/releases). You will need to extract the binary, then move it to your local bin folder. Please, refer to the example below:
+
+<TerminalWindow>
+	<p>$ wget https://github.com/sveltinio/sveltin/releases/download/$VERSION/$PACKAGE_NAME -O $PACKAGE_NAME</p>
+	<p>$ sudo tar -xvf $PACKAGE_NAME -C /usr/local/bin/</p>
+	<p>$ sudo chmod +x /usr/local/bin/sveltin</p>
+</TerminalWindow>

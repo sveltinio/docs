@@ -9,7 +9,7 @@
 	}
 
 	:root {
-		--pure-white: #ffffff;
+		--pure-white: #fff;
 		--dark: #22272e /* tuna */;
 		--pure-dark: #2d333b /* gun */;
 
@@ -128,10 +128,14 @@
 	}
 }
 
-.md-content {
-	@apply prose prose-sveltin;
+.markdown-body {
+	@apply font-light prose prose-sveltin lg:prose-lg;
 }
 
-.md-content-dark {
+.markdown-body a {
+	@apply no-underline;
+}
+
+.markdown-body-dark {
 	@apply prose-invert;
 }

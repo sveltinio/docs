@@ -1,0 +1,103 @@
+---
+layout: page
+title: Quick-Start
+author: sveltinio
+headline: Learn to create a Sveltin base project in minutes.
+keywords: []
+created_at: 06-Feb-2023
+updated_at: 06-Feb-2023
+---
+
+<script>
+   import TerminalWindow from '$themes/dockerz/components/_TerminalWindow.svelte';
+</script>
+
+## With few commands Sveltin flex the muscles 💪
+
+Sveltin is preatty easy. Here you will learn how to get started with Sveltin creating a sample project. What you will get is a production ready website. Ok, no more words. Let's get started!
+
+Create a project:
+
+<TerminalWindow>
+    <p>$ sveltin init myBlog</p>
+</TerminalWindow>
+
+The CLI will ask you to select the package manager/npmClient (npm, yarn or pnpm) you want to use based on what is installed on your system.
+
+Then, you select the CSS lib for your project. It can be vanilla CSS, Sass / SCSS, Tailwind CSS, Bulma or Bootstrap. You can use the shortcut <code>--css</code> flag. Check the [new command](/cli/new) documentation.
+
+Move to the project folder:
+
+<TerminalWindow>
+    <p>$ cd myBlog</p>
+</TerminalWindow>
+
+Install all the dependencies:
+
+<TerminalWindow>
+    <p>$ sveltin install</p>
+</TerminalWindow>
+
+Open the <span class="italic">config/website.js.ts</span> file and edit the info.
+
+Let's see if everything is ok. Run the server:
+
+<TerminalWindow>
+    <p>$ sveltin server</p>
+</TerminalWindow>
+
+Let move on! Create a public page as Svelte component to be served at <span class="italic">/contact</span>
+
+<TerminalWindow>
+    <p>$ sveltin new page contact --as svelte</p>
+</TerminalWindow>
+
+So far so good! Nothing special there, let flex the muscle again!
+
+No blog without posts so, start creating a <span class="italic">posts</span> resource:
+
+<TerminalWindow>
+    <p>sveltin new resource posts</p>
+</TerminalWindow>
+
+Add new post to the posts resource to be served at <span class="italic">/posts/welcome</span>
+
+<TerminalWindow>
+    <p>$ sveltin add content posts/welcome</p>
+</TerminalWindow>
+
+One more, please:
+
+<TerminalWindow>
+    <p>$ sveltin add content posts/getting-started --sample</p>
+</TerminalWindow>
+
+A common use case is to have the content grouped by metadata, e.g.
+category. Add a 'category' metadata to have a list of grouped
+content at <span class="italic">/posts/category</span>
+
+<TerminalWindow>
+    <p>$ sveltin add metadata category --to posts --as single</p>
+</TerminalWindow>
+
+Let's generate the sitemap and the RSS feed files. Open the
+`env.production` file and edit `VITE_PUBLIC_BASE_PATH` to reflect
+your domain name. Now, run the following sveltin's commands:
+
+<TerminalWindow>
+    <p>$ sveltin generate sitemap</p>
+    <p>$ sveltin generate rss</p>
+</TerminalWindow>
+
+Sveltin will generate `sitemap.xml` and `rss.xml` files within the <span class="italic">static</span> folder so that they will be copied as they are during the build process.
+
+Run the server:
+
+<TerminalWindow>
+    <p>$ sveltin server</p>
+</TerminalWindow>
+
+Alright! Your project is up and running. Please, refer to the cli
+docs to learn more on adding more metadata types, generate the
+sitemap, rss, the menu structure etc.
+

@@ -1,0 +1,49 @@
+---
+layout: page
+title: Why Sveltin?
+author: sveltinio
+headline: Read about the motivations behind Sveltin.
+keywords: []
+created_at: 06-Feb-2023
+updated_at: 06-Feb-2023
+---
+
+Well, Sveltin started as a personal side project that I now want to make public available.
+
+I'm a huge fan of Hugo as static site generator. I used Hugo a lot for both internal (documentation) and public facing websites. It helped me setting up all I needed to be focused on the contents and the design. I love how the project is structured and how things are managed.
+
+Taking notes in markdown on almost everything or meeting I attend is my habit, as well as have those notes available to me in a good way. That is one of the reasons I run several internal websites.
+
+I am quite sure teams out there building the _next_ static site generator are doing super stuff, using all the skills and batteries they have to be stunned.
+
+Part of my DNA is to constantly look for new things to learn in different areas, I cannot live without it. Some time ago have started reading and documenting on Svelte even if I never approached it for a real use case. Infact, latest website I built for a friend of mine was powered by Hugo.
+
+I see Svelte growing in popularity and adaptions, simply because it does things in a cool way compared to others (I am referring to the way the DOM is managed, the build first approach, ...just to mention a couple). The near to come stable v.1.0 of SvelteKit will help the Svelte adoption more, I am almost sure.
+
+## Existing approaches
+
+Before embarking on this little journey, I did my job on Google and GitHub. It is super simple finding good "starter kits" for your blog using Svelte, SvelteKit, markdown etc. but they do not satisfy my expectations:
+
+- The way project and content are structured (yeah, that is mainly due to Hugo in my case)
+- Not all the batteries I am looking for are included
+
+## What I was looking for?
+
+Although my daily work is neither in programming or in websites building, I took the decision to start a side project to get my hands dirty enough and be ready for the next internal/external website I will do.
+
+I was looking for something helping me dealing with the next website:
+
+- iteratively
+- incrementally
+- with a clear and clean structure
+- be ready to use and clear code to achieve certain use cases
+
+## Goals
+
+Create something for helping me and others start using Svelte and Sveltekit for static websites generation, porting some ideas and concepts I loved from Hugo.
+
+Sveltin consists of three main things:
+
+- The CLI: built in Go, uses Cobra, Viper, Bubbletea, Lipgloss and others
+- The Template App: based on the stardard SvelteKit starter (npm init svelte@next).
+- Components: ready-to-use Svelte components

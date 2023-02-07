@@ -1,0 +1,22 @@
+
+---
+layout: page
+title: Welcome to Sveltin
+author: sveltinio
+headline: Read what Sveltin is and what it can do for you.
+keywords: []
+created_at: 06-Feb-2023
+updated_at: 07-Feb-2023
+---
+
+## What is Sveltin?
+
+Sveltin is a CLI (Command Line Interface) created to boost the developers productivity working on SvelteKit powered static websites.
+
+A small set of commands, subcommands and flags will help you generating typical stuff and let you focused on the content (and design).
+
+Sveltin gives you a complete toolbox to be quickly up & running, without locking your creativity. There is nothing new to learn that cannot be done in 5 minutes to get started with Sveltin.
+
+Inspired by Hugo and its approach, Sveltin brings some of the conventions of Hugo combining them to the power and beauty of Svelte and SvelteKit.
+
+A Sveltin-based project stands on the shoulder of the standard **SvelteKit** starter by adding a convention over configuration approach, auto generated code for common use patterns, ready to use components and much more.
