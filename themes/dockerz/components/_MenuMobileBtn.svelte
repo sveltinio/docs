@@ -10,7 +10,7 @@
 >
 	<button
 		type="button"
-		class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md  text-gray-300 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700"
+		class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md  text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700 dark:text-gray-300 dark:hover:text-gray-50"
 		on:click={handleNavMenu}
 	>
 		<span class="sr-only">Open sidebar</span>
