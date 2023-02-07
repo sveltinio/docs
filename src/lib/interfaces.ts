@@ -4,7 +4,3 @@ export interface ExternalLinkItem {
 	url: string;
 	weight: number;
 }
-
-export interface DynamicObject {
-	[key: string]: any;
-}

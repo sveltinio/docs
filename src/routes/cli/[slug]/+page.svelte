@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { SEOWebPageMetadata } from '@sveltinio/seo/types';
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { theme } from '$lib/shared/stores';
@@ -16,7 +15,7 @@
 	$: previous = before;
 	$: next = after;
 
-	$: slugPageData = <SEOWebPageMetadata>{
+	$: slugPageData = {
 		url: canonicalPageUrl($page.url.pathname, website.baseURL),
 		title: 'sveltin command: ' + current.metadata.title,
 		description: current.metadata.headline,

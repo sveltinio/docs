@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { SEOWebPageMetadata } from '@sveltinio/seo/types';
 	import { page } from '$app/stores';
 	import { website } from '$config/website.js';
 	import { theme } from '$lib/shared/stores';
@@ -16,7 +15,7 @@
 	const pageKeywords: Array<string> = [];
 
 	$: ({ resourceName, items } = data);
-	$: cliIndexPage = <SEOWebPageMetadata>{
+	$: cliIndexPage = {
 		url: canonicalPageUrl($page.url.pathname, website.baseURL),
 		title: 'All Sveltin commands',
 		description: pageDescription,

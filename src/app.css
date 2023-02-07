@@ -129,7 +129,7 @@
 }
 
 .markdown-body {
-	@apply font-light prose prose-sveltin lg:prose-lg;
+	@apply prose prose-sveltin font-light lg:prose-lg;
 }
 
 .markdown-body a {

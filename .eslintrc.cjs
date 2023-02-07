@@ -1,7 +1,11 @@
 module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
-	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:tailwindcss/recommended'
+	],
 	rules: {
 		'@typescript-eslint/no-empty-function': 'off'
 	},

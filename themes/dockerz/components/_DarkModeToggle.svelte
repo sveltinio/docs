@@ -20,7 +20,7 @@
 	role="switch"
 	aria-label="Toggle Dark Mode"
 	aria-checked={isDarkMode}
-	class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"
+	class="h-5 w-5 sm:h-8 sm:w-8 sm:p-1"
 	on:click|preventDefault={handleLightDark}
 	on:keyup|preventDefault={handleLightDark}
 	on:keydown|preventDefault={handleLightDark}
