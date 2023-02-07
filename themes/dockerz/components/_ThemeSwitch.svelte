@@ -8,20 +8,20 @@
 	export let visible: boolean;
 
 	function handleLightMode(): void {
-		theme.set('light');
+		theme.set(false);
 		dark = false;
 		visible = !visible;
 	}
 
 	function handleDarkMode(): void {
-		theme.set('dark');
+		theme.set(true);
 		dark = true;
 		visible = !visible;
 	}
 
 	function handleSystemMode(): void {
 		const isAutoSettings = window.matchMedia('(prefers-color-scheme: dark)').matches;
-		let themeName = isAutoSettings ? 'dark' : 'light';
+		let themeName = isAutoSettings ? true : false;
 		theme.set(themeName);
 		dark = isAutoSettings;
 		visible = !visible;
