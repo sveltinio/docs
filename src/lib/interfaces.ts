@@ -4,3 +4,9 @@ export interface ExternalLinkItem {
 	url: string;
 	weight: number;
 }
+
+declare global {
+	interface Window {
+		dataLayer: object[];
+	}
+}
