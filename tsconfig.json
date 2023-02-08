@@ -34,5 +34,5 @@
 		"themes/**/*.ts",
 		"themes/**/*.svelte"
 	],
-	"exclude": ["src/lib/utils/collections.js", "src/lib/utils/headings.js"]
+	"exclude": ["src/lib/utils/collections.js"]
 }
