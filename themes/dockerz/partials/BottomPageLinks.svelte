@@ -37,8 +37,7 @@
 									name={item.name}
 									href={item.url}
 									external
-									icon={false}
-									class="text-xs font-light text-skin-muted hover:text-skin-muted-hover dark:text-skin-muted-dark dark:hover:text-skin-muted-dark-hover sm:text-base"
+									class="inline-flex items-center gap-1 text-xs font-light text-skin-muted hover:text-skin-muted-hover dark:text-skin-muted-dark dark:hover:text-skin-muted-dark-hover sm:text-base"
 								>
 									{item.name}
 								</Link>
@@ -66,7 +65,7 @@
 					<p
 						class="mt-2 text-xs font-light text-skin-muted dark:text-skin-muted-dark sm:text-base lg:mt-0"
 					>
-						The Sveltin logos are copyright © Mirco Veltri 2021.
+						The Sveltin logos are copyright © Mirco Veltri.
 					</p>
 				</div>
 			</div>
