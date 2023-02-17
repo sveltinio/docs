@@ -46,10 +46,16 @@ Let's see if everything is ok. Run the server:
     <p>$ sveltin server</p>
 </TerminalWindow>
 
-Let move on! Create a public page as Svelte component to be served at <span class="italic">/contact</span>
+Let move on! Create the _contact_ page and use Svelte for the content:
 
 <TerminalWindow>
-    <p>$ sveltin new page contact --as svelte</p>
+    <p>$ sveltin new page contact --svelte</p>
+</TerminalWindow>
+
+Create the _about_page and use Markdown (mdsvex) to write the content:
+
+<TerminalWindow>
+    <p>$ sveltin new page about --markdown</p>
 </TerminalWindow>
 
 So far so good! Nothing special there, let flex the muscle again!
@@ -63,13 +69,13 @@ No blog without posts so, start creating a <span class="italic">posts</span> res
 Add new post to the posts resource to be served at <span class="italic">/posts/welcome</span>
 
 <TerminalWindow>
-    <p>$ sveltin add content posts/welcome</p>
+    <p>$ sveltin add content welcome --to posts</p>
 </TerminalWindow>
 
 One more, please:
 
 <TerminalWindow>
-    <p>$ sveltin add content posts/getting-started --sample</p>
+    <p>$ sveltin add content getting-started --to posts --sample</p>
 </TerminalWindow>
 
 A common use case is to have the content grouped by metadata, e.g.
