@@ -4,7 +4,7 @@ title: Release Notes
 headline: Release notes page for the Sveltin CLI.
 author: sveltinio
 created_at: 07-Feb-2023
-updated_at: 07-Feb-2023
+updated_at: 17-Feb-2023
 ---
 
 <script>
@@ -15,37 +15,51 @@ updated_at: 07-Feb-2023
 
 ## v0.11.0 ({updated_at})
 
-`@sveltejs/kit` updated to `v1.5.0` and `@sveltejs/adapter-static` upgrated to `v2.0.0`
+It is time to go! The first version on Sveltin was out about one year ago (Dec 30, 2021). Until [v0.10.1](https://github.com/sveltinio/sveltin/releases/tag/v0.10.1) release I used to run a monthly release cycle except for urgent fixes. Starting working on the v0.11.0 I realized the backlog for fixes, refactorings and features I had in mind increased a lot. Meanwhile, SvelteKit v1.0.0 was out (congrats and a big thank to the Svelte team 👏)! Althought Sveltin v0.10.1 was tested against one of the latest SvelteKit "_next_" version and easily adoptable for the SvelteKit first major version with few tunings, the desire to release a new Sveltin version _just_ to be compliant with SvelteKit major release was impressive. But...
 
-Congrats and a big thank to the Svelte team 👏.
+I was really unsatisfied for lot of stuff I did with previous version as well as I learned something more. Then I took the decision to stop there and enjoyining the fact to have a side project like Sveltin I wanted to continue working on it. I looked at the backlog and started working on it focusing on fixings and completings as much as I can. It was really the right time to do so!
 
-### Fixed Bugs
+<u>Sveltin v0.11.0 is SvelteKit v1.7.x ready</u>! and it comes after several reworking, refactoring, fixes and a bunch of new feature that should allow me to continue working on it with less stress. That is why this release took definetely more than I expected. Today, I am fine with that and do not want to procrastinate more, there will be time to make more adjustments.
 
-- _mdsvex.config.js_: missed comma after _rehypeSlug_ usage
-- pages created as "markdown" were buggies
-- the execution of the commands after the project creation takes into account the theme choice. So, if you choose a "blank" theme when creating the project, by running commands to create pages, resources etc. consider that choice and scaffold the right artifacts without the need to cleanup code coming from the "sveltin" theme
-- logo on _Footer.svelte_ when _sveltin_ theme not properly loaded
-- import string for _ScrollToTopButton_ component on _+layout.svelte_ when _sveltin_ theme
+As per today, I personally run 7 customer websites based on Sveltin. All the changes introduced by v0.11.0 were not affordable in a manual way. That is why a spent some time working on the newly introduced [sveltin migrate](#migrate) command. It is not perfect and it does not cover everything but helped me to update the customer websites plus the one you are reading now and the [landing page web site](https://sveltin.io) in very short time.
 
-### Breakings
+Let's stop here and see what is in with this release.
 
-- **add content** command: uniforming how cmd works compared to others, introducing the **--to** flag. The new way it works is:
+### :no_entry_sign: Bug Fixes
+
+- _mdsvex.config.js_: missed comma after _rehypeSlug_ usage;
+- pages created as "markdown" were not well formatted;
+- logo on _Footer.svelte_ when _sveltin_ theme not properly loaded;
+- wrong import string for _ScrollToTopButton_ component on _+layout.svelte_ when _sveltin_ theme.
+
+### :scissors: Breakings
+
+- **add content** command: uniforming how cmd works compared to others, introducing the **--to** flag. The new way it works is, e.g.:
 
 	```
 	$ sveltin add content <title> --to <resource>
 	```
 
-- **new page** command: page type flag renamed as **language** (in short **-l**) . The new way it works is:
+- **new page** command: set the language used to compose the page: `--svelte` or `--markdown`. The new way it works is, e.g.:
 
 	```
-	$ sveltin new page about -l markdown
+	$ sveltin new page about --markdown
 	```
+
+### :triangular_ruler: Improvements
+
+- the whole [@sveltinio](https://github.com/sveltinio/components-library) packages set has been re-designed and fixed;
+- a new [@sveltinio/remark-headings](https://github.com/sveltinio/remark-headings) replaces a local function to extract the headings tree from the markdown content to be used by the [TOC](https://github.com/sveltinio/components-library/tree/main/packages/widgets/src/lib/components/toc) component;
+- markdown pages missed a [layout component](https://mdsvex.pngwn.io/docs#layouts) to speed up the styling for those pages as well as mdsvex was not configured to handle it;
+- the execution of the commands after the project creation takes into account the theme choice. So, if you choose a "blank" theme when creating the project, by running commands to create pages, resources etc. consider that choice and scaffold the right artifacts without the need to cleanup code coming from the "sveltin" theme;
+- Improved SEO per page: set the keywords as string array on the YAML frontmatter for your markdown content or by using the _pageKeywords_ on the svelte pages. If not present, the ones defined at website level in the _sveltin.json_ file are considered the default ones;
+- Consistent TUI across commands replacing the progress bar when [deploy](#deploy) with a new one from [prompti](https://github.com/sveltinio/prompti).
 
 ### 🚀  New Features
 
 #### sveltin.json
 
-When scaffolding a new project, a new _sveltin.json_ file is added. It simplify settings across parts of the project. The overall idea is to use it as unique config file.
+Scaffolding a new project will add a new _sveltin.json_ file. It is supposed to simplify the settings across parts of the project. The overall idea is to use it as unique config file.
 
 <p class="text-sm"><span class="font-semibold">Note:</span> Although importing JSON module is feasible today with some warnings informing about the experimental feature, we prefer to park its usage for now. When nodejs importing JSON module will not be an experimental feature anymore, we could think to use <span class="italic">sveltin.json</span> as unique config file for settings to be passed to <span class="italic">svelte.config.js</span>, <span class="italic">mdsvex.config.js</span> or <span class="italic">vite.config.[js|ts]</span>.</p>
 
@@ -63,23 +77,27 @@ active helps added to the supported commands. By using TAB after the command nam
 
 #### Migrate
 
-A new **migrate** command has been added. Its goal is to easily upgrade/migrate existing sveltin project to the latest sveltin release. From now on, each new sveltin release will make use of it.
+A new **migrate** command has been added. Its goal is to easily upgrade/migrate existing Sveltin based projects to the latest Sveltin release. From now on, upcoming Sveltin releases will make use of it in case some changes are needed.
 
-<p class="text-sm"><span class="font-semibold">Note:</span> <span class="italic">sveltin migrate</span> command <span class="underline">has nothing to do</span> with the <span class="italic">svelte-migrate</span> <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/svelte-migrate">package</a>. <span class="italic">sveltin migrate</span> command takes care of sveltin related files. You do not need to use <span class="italic">svelte-migrate</span> because your routes etc. generated by sveltin commands are already compliants with the latest changes introduced to SvelteKit.</p>
+<p class="text-sm"><span class="font-semibold">→ Note 1:</span> <span class="italic">The command takes care of Sveltin based projects starting for the v0.10.1 version.</span></p>
 
-sveltin release _0.11.0_ introduces several changes. Below are just some samples:
+<p class="text-sm"><span class="font-semibold">→ Note 2:</span> <span class="italic">sveltin migrate</span> command <span class="underline">has nothing to do</span> with the <span class="italic">svelte-migrate</span> <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/svelte-migrate">package</a>. <span class="italic">sveltin migrate</span> command takes care of Sveltin related files. You do not need to use <span class="italic">svelte-migrate</span> because your routes etc. generated by Sveltin commands are already compliants with the latest changes introduced to SvelteKit.</p>
 
-- the content for some autogenerated files (e.g. _defaults.ts_, _theme.config.js_ etc.) has been updated to leverage the new _sveltin.json_ file.
-- _remark-external-links_ has been replaced by _rehype-external-links_
-- _remark-slug_ has been removed
-- _mdast-util-to-string_  has been removed
-- _unist-util-visit_  has been removed
+Sveltin release _0.11.0_ introduces several changes. Below are just some samples:
+
+- the content for some autogenerated files (e.g. _defaults.ts_, _theme.config.js_ etc.) has been updated to leverage the new _sveltin.json_ file;
+- an alias on _vite.config.ts_ has been added;
+- a new path entry and include in _tsconfig.json_ have been added;
+- _remark-external-links_ has been replaced by _rehype-external-links_;
+- _remark-slug_ has been removed;
+- _mdast-util-to-string_  has been removed;
+- _unist-util-visit_  has been removed;
+- ...
 
 By running **sveltin migrate** your project will make use of the latest introduced by version **0.11.0**.
 
-The **migrate** command works with migrations. For _0.11.0_ release it applies migrations to the following:
+The **migrate** command works with a concept similar to migrations. For _0.11.0_ release it applies the following migrations in the order:
 
 <MigrationsTable />
 
-
-[Full Changelog](https://github.com/sveltinio/sveltin/compare/v0.10.1...v0.11.0)
+Read the [Full Changelog](https://github.com/sveltinio/sveltin/compare/v0.10.1...v0.11.0).
