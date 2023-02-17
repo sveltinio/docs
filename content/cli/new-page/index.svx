@@ -32,8 +32,9 @@ _page_, _p_
 ### Flags
 
 ```bash
-  -l, --language string   Language to be used for the page. Possible values: svelte, markdown
-  -h, --help          help for page
+  -h, --help       help for page
+  -m, --markdown   Use Markdown in Svelte (mdsvex) to write & compose the page content
+  -s, --svelte     Use Svelte to compose the page content
 ```
 
 ### SEE ALSO
