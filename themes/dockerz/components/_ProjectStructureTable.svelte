@@ -9,7 +9,7 @@
 				File/Folder
 			</th>
 			<th scope="col" class="text-left text-sm font-medium uppercase tracking-wider">
-				Purpose
+				Info
 			</th>
 		</tr>
 	</thead>
@@ -20,7 +20,7 @@
 					{f.name}
 				</td>
 				<td class="text-sm lg:text-base">
-					{@html f.purpose}
+					{@html f.info}
 				</td>
 			</tr>
 		{/each}
