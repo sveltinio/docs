@@ -11,7 +11,7 @@ export namespace Sveltin {
 
 	export type ContentMetadata = {
 		name: string;
-		items: Array<YAMLFrontmatter>;
+		items?: Array<YAMLFrontmatter> | null;
 	};
 
 	export type TocEntry = {
@@ -31,8 +31,9 @@ export namespace Sveltin {
 		headline?: string;
 		created_at?: string;
 		updated_at?: string;
+		readingTime?: Record<string, string>;
 		cover?: string;
-		[key: string]: string | undefined | Array<TocEntry> | boolean;
+		misc?: DynamicObject;
 	};
 
 	export type DynamicObject = {
@@ -48,6 +49,26 @@ export namespace Sveltin {
 		children?: Array<MenuItem>;
 	};
 
+	export type Address = {
+		city?: string;
+		state?: string;
+		postalCode?: string;
+		streetAddress?: string;
+	};
+
+	export type Contact = {
+		name?: string;
+		jobTitle?: string;
+		email?: string;
+		telephone?: string;
+		url?: string;
+		address?: Address | string;
+	};
+
+	export type Person = Contact;
+
+	export type Organization = Contact;
+
 	export type WebSite = {
 		name: string;
 		baseURL: string;
@@ -55,23 +76,17 @@ export namespace Sveltin {
 		title: string;
 		slogan?: string;
 		description: string;
-		seoDescription: string;
-		favicon: string;
-		logo: string;
-		copyright: string;
-		keywords: string;
-		contactEmail: string;
+		seoDescription?: string;
+		favicon?: string;
+		logo?: string;
+		copyright?: string;
+		keywords?: Array<string>;
+		contactEmail?: string;
 		socials?: Socials;
-		webmaster?: WebMaster;
+		creator?: Person | Organization;
 	};
 
 	export type Socials = {
 		[key: string]: string;
-	};
-
-	export type WebMaster = {
-		name: string;
-		address: string;
-		contactEmail: string;
 	};
 }

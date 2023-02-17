@@ -13,7 +13,7 @@
 	import SidebarMobile from '$themes/dockerz/partials/SidebarMobile.svelte';
 	import BottomPageLinks from '$themes/dockerz/partials/BottomPageLinks.svelte';
 	import Footer from '$themes/dockerz/partials/Footer.svelte';
-	import ScrollToTopButton from '@sveltinio/widgets/components/ScrollToTopButton.svelte';
+	import { ScrollToTopButton } from '@sveltinio/widgets';
 
 	let navIsOpen = false;
 
@@ -28,14 +28,14 @@
 
 <svelte:window on:keyup={handleEscape} />
 
-<JsonLdWebSite websiteData={website} />
-<JsonLdSiteNavigationElements websiteData={website} menuData={sortedMenu} />
+<JsonLdWebSite data={website} />
+<JsonLdSiteNavigationElements baseURL={website.baseURL} data={sortedMenu} />
 
 <GoogleFonts fonts={googleFonts} />
 <!--<UmamiAnalytics
 	websiteID="1467a0c5-0b8d-4687-97ee-3dc97eb8becc"
 	srcURL="https://umami.sveltin.io/umami.js"
-/>-->
+/> -->
 
 <div class="min-h-[640px] bg-skin-light dark:bg-skin-dark">
 	<div>
@@ -56,5 +56,5 @@
 			</div>
 		</div>
 	</div>
-	<ScrollToTopButton />
+	<ScrollToTopButton bounce />
 </div>

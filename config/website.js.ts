@@ -13,8 +13,17 @@ const website: Sveltin.WebSite = {
 		'Sveltin CLI Documentation site. Here you can learn more on how to use Sveltin CLI to boost you productivity working on SvelteKit powered static websites.',
 	favicon: 'favicon.png',
 	copyright: 'Apache 2.0 License @ 2021-present',
-	keywords:
-		'sveltekit, sveltin, documentation, endpoints, slug, cli, svelte, static site generator, tailwind',
+	keywords: [
+		'sveltekit',
+		'sveltin',
+		'documentation',
+		'endpoints',
+		'slug',
+		'cli',
+		'svelte',
+		'static site generator',
+		'tailwind'
+	],
 	contactEmail: '',
 	socials: {
 		linkedin: '',
@@ -24,10 +33,10 @@ const website: Sveltin.WebSite = {
 		instagram: '',
 		youtube: ''
 	},
-	webmaster: {
+	creator: {
 		name: 'indaco',
 		address: 'Somewhere, World (Milky Way)',
-		contactEmail: 'github@mircoveltri.me'
+		email: 'github@mircoveltri.me'
 	}
 };
 

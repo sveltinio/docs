@@ -1,5 +1,5 @@
 // theme.config.js file for your sveltin theme
-import { theme } from '../../sveltin.config.json';
+import { theme } from '../../sveltin.json';
 
 const themeConfig = {
 	name: theme.name,
