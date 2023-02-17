@@ -6,7 +6,7 @@
 	import { website } from '$config/website.js';
 	import { JsonLdWebPage, PageMetaTags, JsonLdBreadcrumbs } from '@sveltinio/seo';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
-	import { canonicalPageUrl, definePageKeywords, getCoverImagePath } from '$lib/utils/strings.js';
+	import { canonicalPageUrl, getCoverImagePath } from '$lib/utils/strings.js';
 	import { PagesNavigator } from '@sveltinio/widgets';
 
 	export let data: PageData;
@@ -19,14 +19,14 @@
 		url: canonicalPageUrl($page.url.pathname, website.baseURL),
 		title: 'sveltin command: ' + current.metadata.title,
 		description: current.metadata.headline,
-		keywords: definePageKeywords(current.metadata.keywords, website.keywords),
+		keywords: current.metadata.keywords || website.keywords,
 		author: current.metadata.author,
 		image: getCoverImagePath(current, website),
 		opengraph: {
 			type: OpenGraphType.Article,
 			article: {
-				published_at: current.metadata.created_at,
-				modified_at: current.metadata.updated_at
+				published_at: new Date(current.metadata.created_at),
+				modified_at: new Date(current.metadata.updated_at)
 			}
 		},
 		twitter: {
@@ -39,11 +39,7 @@
 
 <PageMetaTags data={slugPageData} />
 <JsonLdWebPage data={slugPageData} />
-<JsonLdBreadcrumbs
-	baseURL={website.baseURL}
-	parent={current.resource}
-	current={slugPageData.title}
-/>
+<JsonLdBreadcrumbs url={$page.url.href} />
 
 <section
 	class="mx-auto max-w-7xl border-b border-skin-muted bg-skin-light dark:border-skin-muted-dark dark:bg-skin-dark"
@@ -83,12 +79,12 @@
 	prev={{
 		label: previous.metadata.title,
 		href: `${base}/${previous.resource}/${previous.metadata.slug}`,
-		alt: `link to ${previous.metadata.title}`
+		title: `link to ${previous.metadata.title}`
 	}}
 	next={{
 		label: next.metadata.title,
 		href: `${base}/${next.resource}/${next.metadata.slug}`,
-		alt: `link to ${next.metadata.title}`
+		title: `link to ${next.metadata.title}`
 	}}
 />
 

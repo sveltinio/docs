@@ -5,7 +5,7 @@
 	import { theme } from '$lib/shared/stores';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
-	import { canonicalPageUrl, definePageKeywords, getFavicon } from '$lib/utils/strings.js';
+	import { canonicalPageUrl, getFavicon } from '$lib/utils/strings.js';
 
 	export let data: PageData;
 
@@ -19,7 +19,7 @@
 		url: canonicalPageUrl($page.url.pathname, website.baseURL),
 		title: 'All Sveltin commands',
 		description: pageDescription,
-		keywords: definePageKeywords(pageKeywords, website.keywords),
+		keywords: pageKeywords || website.keywords,
 		image: getFavicon(website),
 		opengraph: {
 			type: OpenGraphType.Website
@@ -34,7 +34,8 @@
 
 <PageMetaTags data={cliIndexPage} />
 <JsonLdWebPage data={cliIndexPage} />
-<JsonLdBreadcrumbs baseURL={website.baseURL} parent={resourceName} current={cliIndexPage.title} />
+<JsonLdBreadcrumbs url={$page.url.href} />
+
 <section
 	class="mx-auto max-w-7xl border-b border-skin-muted bg-skin-light dark:border-skin-muted-dark dark:bg-skin-dark"
 >
