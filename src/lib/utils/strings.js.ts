@@ -62,14 +62,3 @@ export const getCoverImagePath = (
 };
 
 export const canonicalPageUrl = (name: string, baseURL: string): string => baseURL.concat(name);
-
-export const definePageKeywords = (keywords: Array<string>, others: string): string => {
-	let result = '';
-	if (keywords && keywords.length != 0) {
-		result = keywords.join(', ');
-	} else if (isNotEmpty(others)) {
-		result = others;
-	}
-
-	return result;
-};
