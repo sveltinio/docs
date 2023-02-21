@@ -4,7 +4,7 @@ title: Release Notes
 headline: Release notes page for the Sveltin CLI.
 author: sveltinio
 created_at: 07-Feb-2023
-updated_at: 17-Feb-2023
+updated_at: 21-Feb-2023
 ---
 
 <script>
@@ -17,11 +17,11 @@ updated_at: 17-Feb-2023
 
 It is time to go! The first version on Sveltin was out about one year ago (Dec 30, 2021). Until [v0.10.1](https://github.com/sveltinio/sveltin/releases/tag/v0.10.1) release I used to run a monthly release cycle except for urgent fixes. Starting working on the v0.11.0 I realized the backlog for fixes, refactorings and features I had in mind increased a lot. Meanwhile, SvelteKit v1.0.0 was out (congrats and a big thank to the Svelte team 👏)! Althought Sveltin v0.10.1 was tested against one of the latest SvelteKit "_next_" version and easily adoptable for the SvelteKit first major version with few tunings, the desire to release a new Sveltin version _just_ to be compliant with SvelteKit major release was impressive. But...
 
-I was really unsatisfied for lot of stuff I did with previous version as well as I learned something more. Then I took the decision to stop there and enjoyining the fact to have a side project like Sveltin I wanted to continue working on it. I looked at the backlog and started working on it focusing on fixings and completings as much as I can. It was really the right time to do so!
+I was unsatisfied about several things I did with previous version as well as I learned something more. Then I took the decision to stop there and enjoyining the fact to have a side project like Sveltin I wanted to continue working on it. I looked at the backlog and started working on it focusing on fixings and completings as much as I can. It was really the right time to do so!
 
-<u>Sveltin v0.11.0 is SvelteKit v1.7.x ready</u>! and it comes after several reworking, refactoring, fixes and a bunch of new feature that should allow me to continue working on it with less stress. That is why this release took definetely more than I expected. Today, I am fine with that and do not want to procrastinate more, there will be time to make more adjustments.
+<u>Sveltin v0.11.0 is SvelteKit v1.8.x ready</u>! and it comes after several reworking, refactoring, fixes and a bunch of new feature that should allow me to continue working on it with less stress. That is why this release took definetely more than I expected. Today, I am fine with that and do not want to procrastinate more, there will be time to make more adjustments.
 
-As per today, I personally run 7 customer websites based on Sveltin. All the changes introduced by v0.11.0 were not affordable in a manual way. That is why a spent some time working on the newly introduced [sveltin migrate](#migrate) command. It is not perfect and it does not cover everything but helped me to update the customer websites plus the one you are reading now and the [landing page web site](https://sveltin.io) in very short time.
+As per today, I personally run 7 customer websites based on Sveltin. All the changes introduced by v0.11.0 were not affordable in a manual way. That is why a spent some time working on the newly introduced [sveltin migrate](#migrate) command. It does not cover everything but it helped a lot updating the customer websites plus the one you are reading here and the [landing page](https://sveltin.io) in very short time.
 
 Let's stop here and see what is in with this release.
 
