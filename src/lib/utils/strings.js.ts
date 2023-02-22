@@ -1,8 +1,6 @@
 import type { Sveltin } from '$sveltin';
 
-export const toTitle = (text: string): string => {
-	return capitalizeAll(text.replace(/-/g, ' '));
-};
+export const toTitle = (text: string): string => capitalizeAll(text.replace(/-/g, ' '));
 
 export const capitalizeAll = (text: string): string => {
 	const splitted = text.toLowerCase().split(' ');
@@ -14,39 +12,29 @@ export const capitalizeAll = (text: string): string => {
 	return capitalized.join(' ');
 };
 
-export const capitalizeFirstLetter = (text: string): string => {
-	return text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
-};
+export const capitalizeFirstLetter = (text: string): string =>
+	text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
 
-export const toSlug = (text: string): string => {
-	return text
+export const toSlug = (text: string): string =>
+	text
 		.toLowerCase()
 		.replace(/[^\w ]+/g, '')
 		.replace(/ +/g, '-');
-};
 
-export const isNotEmpty = (text: string): boolean => {
-	return Boolean(text);
-};
+export const isNotEmpty = (text: string): boolean => Boolean(text);
 
-export const removeTrailingSlash = (text: string): string => {
-	return text.replace(/\/+$/, '');
-};
+export const removeTrailingSlash = (text: string): string => text.replace(/\/+$/, '');
 
-export const getPageUrl = (name: string, websiteData: Sveltin.WebSite): string => {
-	return websiteData.baseURL.concat('/', name);
-};
+export const getPageUrl = (name: string, websiteData: Sveltin.WebSite): string =>
+	websiteData.baseURL.concat('/', name);
 
 export const getSlugPageUrl = (
 	item: Sveltin.ResourceContent,
 	websiteData: Sveltin.WebSite
-): string => {
-	return websiteData.baseURL.concat('/', item.resource, '/', item.metadata.slug);
-};
+): string => websiteData.baseURL.concat('/', item.resource, '/', item.metadata.slug);
 
-export const getFavicon = (websiteData: Sveltin.WebSite): string => {
-	return websiteData.baseURL.concat('/', websiteData.favicon);
-};
+export const getFavicon = (websiteData: Sveltin.WebSite): string =>
+	websiteData.baseURL.concat('/', 'images', '/', 'icons', '/', websiteData.favicon);
 
 export const getCoverImagePath = (
 	item: Sveltin.ResourceContent,
