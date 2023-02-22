@@ -4,7 +4,7 @@ title: Release Notes
 headline: Release notes page for the Sveltin CLI.
 author: sveltinio
 created_at: 07-Feb-2023
-updated_at: 21-Feb-2023
+updated_at: 22-Feb-2023
 ---
 
 <script>
