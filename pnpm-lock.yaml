@@ -41,7 +41,7 @@ specifiers:
   rehype-autolink-headings: ^6.1.1
   rehype-external-links: ^2.0.1
   rehype-slug: ^5.1.0
-  remark-emoji: ^3.1.0
+  remark-emoji: ^3.1.1
   remark-reading-time: 1.0.1
   rimraf: ^4.1.2
   svelte: ^3.55.1
@@ -50,14 +50,14 @@ specifiers:
   tailwindcss: ^3.2.7
   tslib: ^2.5.0
   typescript: ^4.9.5
-  vite: ^4.1.3
+  vite: ^4.1.4
 
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
   '@indaco/svelte-iconoir': 3.3.1
   '@sveltejs/adapter-static': 2.0.1_@sveltejs+kit@1.8.3
-  '@sveltejs/kit': 1.8.3_svelte@3.55.1+vite@4.1.3
+  '@sveltejs/kit': 1.8.3_svelte@3.55.1+vite@4.1.4
   '@sveltinio/essentials': 0.6.1
   '@sveltinio/remark-headings': 1.0.1
   '@sveltinio/seo': 0.3.2_typescript@4.9.5
@@ -93,7 +93,7 @@ devDependencies:
   rehype-autolink-headings: 6.1.1
   rehype-external-links: 2.0.1
   rehype-slug: 5.1.0
-  remark-emoji: 3.1.0
+  remark-emoji: 3.1.1
   remark-reading-time: 1.0.1
   rimraf: 4.1.2
   svelte: 3.55.1
@@ -102,7 +102,7 @@ devDependencies:
   tailwindcss: 3.2.7_postcss@8.4.21
   tslib: 2.5.0
   typescript: 4.9.5
-  vite: 4.1.3_@types+node@18.14.0
+  vite: 4.1.4_@types+node@18.14.0
 
 packages:
 
@@ -141,7 +141,7 @@ packages:
       lodash.isfunction: 3.0.9
       resolve-from: 5.0.0
       resolve-global: 1.0.0
-      yargs: 17.7.0
+      yargs: 17.7.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -596,10 +596,10 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
     dependencies:
-      '@sveltejs/kit': 1.8.3_svelte@3.55.1+vite@4.1.3
+      '@sveltejs/kit': 1.8.3_svelte@3.55.1+vite@4.1.4
     dev: true
 
-  /@sveltejs/kit/1.8.3_svelte@3.55.1+vite@4.1.3:
+  /@sveltejs/kit/1.8.3_svelte@3.55.1+vite@4.1.4:
     resolution: {integrity: sha512-32tiLy5PPpt2lquK2p53/5wR+ghAXw0HymIBEezmwmwtzx7Xf36xw3RG3fDYQ9gyzon89T+JRweXgAv/qhhvSQ==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
@@ -608,7 +608,7 @@ packages:
       svelte: ^3.54.0
       vite: ^4.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.1.3
+      '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.1.4
       '@types/cookie': 0.5.1
       cookie: 0.5.0
       devalue: 4.3.0
@@ -622,12 +622,12 @@ packages:
       svelte: 3.55.1
       tiny-glob: 0.2.9
       undici: 5.20.0
-      vite: 4.1.3_@types+node@18.14.0
+      vite: 4.1.4_@types+node@18.14.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/2.0.2_svelte@3.55.1+vite@4.1.3:
+  /@sveltejs/vite-plugin-svelte/2.0.2_svelte@3.55.1+vite@4.1.4:
     resolution: {integrity: sha512-xCEan0/NNpQuL0l5aS42FjwQ6wwskdxC3pW1OeFtEKNZwRg7Evro9lac9HesGP6TdFsTv2xMes5ASQVKbCacxg==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
@@ -640,8 +640,8 @@ packages:
       magic-string: 0.27.0
       svelte: 3.55.1
       svelte-hmr: 0.15.1_svelte@3.55.1
-      vite: 4.1.3_@types+node@18.14.0
-      vitefu: 0.2.4_vite@4.1.3
+      vite: 4.1.4_@types+node@18.14.0
+      vitefu: 0.2.4_vite@4.1.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1119,7 +1119,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001457
-      electron-to-chromium: 1.4.304
+      electron-to-chromium: 1.4.305
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -1554,8 +1554,8 @@ packages:
       is-obj: 2.0.0
     dev: true
 
-  /electron-to-chromium/1.4.304:
-    resolution: {integrity: sha512-6c8M+ojPgDIXN2NyfGn8oHASXYnayj+gSEnGeLMKb9zjsySeVB/j7KkNAAG9yDcv8gNlhvFg5REa1N/kQU6pgA==}
+  /electron-to-chromium/1.4.305:
+    resolution: {integrity: sha512-WETy6tG0CT5gm1O+xCbyapWNsCcmIvrn4NHViIGYo2AT8FV2qUCXdaB+WqYxSv/vS5mFqhBYnfZAAkVArjBmUg==}
     dev: true
 
   /emoji-regex/8.0.0:
@@ -3250,8 +3250,8 @@ packages:
       unist-util-visit: 4.1.2
     dev: true
 
-  /remark-emoji/3.1.0:
-    resolution: {integrity: sha512-KmjkU04niXFMn/H+SsPAGnXhsuq0gT/neIg1KRw8vUKZ/PNxpLDGmwVzx4a14OOd5GJ8rnCdh6DKXqHySkUHAQ==}
+  /remark-emoji/3.1.1:
+    resolution: {integrity: sha512-kVCTaHzX+/ls67mE8JsGd3ZX511p2FlAPmKhdGpRCb5z6GSwp+3sAIB5oTySIetPh7CtqfGf7JBUt5fyMjgOHw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       emoticon: 4.0.1
@@ -3945,8 +3945,8 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite/4.1.3_@types+node@18.14.0:
-    resolution: {integrity: sha512-0Zqo4/Fr/swSOBmbl+HAAhOjrqNwju+yTtoe4hQX9UsARdcuc9njyOdr6xU0DDnV7YP0RT6mgTTOiRtZgxfCxA==}
+  /vite/4.1.4_@types+node@18.14.0:
+    resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3979,7 +3979,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitefu/0.2.4_vite@4.1.3:
+  /vitefu/0.2.4_vite@4.1.4:
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -3987,7 +3987,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.1.3_@types+node@18.14.0
+      vite: 4.1.4_@types+node@18.14.0
     dev: true
 
   /which/2.0.2:
@@ -4050,8 +4050,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /yargs/17.7.0:
-    resolution: {integrity: sha512-dwqOPg5trmrre9+v8SUo2q/hAwyKoVfu8OC1xPHKJGNdxAvPl4sKxL4vBnh3bQz/ZvvGAFeA5H3ou2kcOY8sQQ==}
+  /yargs/17.7.1:
+    resolution: {integrity: sha512-cwiTb08Xuv5fqF4AovYacTFNxk62th7LKJ6BL9IGUpTJrWoU7/7WdQGTP2SjKf1dUNBGzDd28p/Yfs/GI6JrLw==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1
