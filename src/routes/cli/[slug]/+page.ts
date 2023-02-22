@@ -1,7 +1,8 @@
-import { getSingle } from '$lib/cli/loadCli';
+import type { PageLoad } from './$types';
 import { error } from '@sveltejs/kit';
+import { getSingle } from '$lib/cli/loadCli';
 
-export async function load({ params }) {
+export const load = (async ({ params }) => {
 	const { slug } = params;
 	const { status, current, previous, next } = await getSingle(slug);
 
@@ -15,4 +16,4 @@ export async function load({ params }) {
 	}
 
 	throw error(404, 'Not found');
-}
+}) satisfies PageLoad;

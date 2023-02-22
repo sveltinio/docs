@@ -61,7 +61,7 @@
 										class:cli-text={!isDark}
 										class:cli-text-dark={isDark}
 										data-sveltekit-preload-data="hover"
-										href={`/${item.resource}/${item.metadata.slug}`}
+										href="/{item.resource}/{item.metadata.slug}"
 										>{item.metadata.title.toLowerCase()}</a
 									>
 								</li>
