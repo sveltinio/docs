@@ -8,7 +8,7 @@ specifiers:
   '@sveltejs/kit': 1.8.3
   '@sveltinio/essentials': ^0.6.1
   '@sveltinio/remark-headings': ^1.0.1
-  '@sveltinio/seo': ^0.3.2
+  '@sveltinio/seo': ^0.3.3
   '@sveltinio/services': ^0.3.4
   '@sveltinio/widgets': ^0.6.1
   '@tailwindcss/aspect-ratio': ^0.4.2
@@ -60,7 +60,7 @@ devDependencies:
   '@sveltejs/kit': 1.8.3_svelte@3.55.1+vite@4.1.4
   '@sveltinio/essentials': 0.6.1
   '@sveltinio/remark-headings': 1.0.1
-  '@sveltinio/seo': 0.3.2_typescript@4.9.5
+  '@sveltinio/seo': 0.3.3_typescript@4.9.5
   '@sveltinio/services': 0.3.4
   '@sveltinio/widgets': 0.6.1
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
@@ -661,8 +661,8 @@ packages:
       unist-util-visit: 4.1.2
     dev: true
 
-  /@sveltinio/seo/0.3.2_typescript@4.9.5:
-    resolution: {integrity: sha512-/vDptKVjJEGmTD0paCw9bQuR1UoB1rPL4w9PJe/xO5vhFePOG/GcwixvJwIuq7WhkzggQtODNlpqlUuFXGzRxA==}
+  /@sveltinio/seo/0.3.3_typescript@4.9.5:
+    resolution: {integrity: sha512-smkRuPyMqklSmnq7Dc8mB5uruA0wN11kdm9u4eaclCeTXB2/+J57JWLn6xn3f6w1LGbB102YvP0rZaK8/wChAA==}
     dependencies:
       schema-dts: 1.1.0_typescript@4.9.5
       svelte: 3.55.1

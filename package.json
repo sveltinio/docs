@@ -11,7 +11,7 @@
 		"@sveltejs/kit": "1.8.3",
 		"@sveltinio/essentials": "^0.6.1",
 		"@sveltinio/remark-headings": "^1.0.1",
-		"@sveltinio/seo": "^0.3.2",
+		"@sveltinio/seo": "^0.3.3",
 		"@sveltinio/services": "^0.3.4",
 		"@sveltinio/widgets": "^0.6.1",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
