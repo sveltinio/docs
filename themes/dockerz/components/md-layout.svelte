@@ -1,9 +1,10 @@
 <script>
+	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
 	import { website } from '$config/website.js';
 	import { OpenGraphType, TwitterCardType } from '@sveltinio/seo/types';
 	import { PageMetaTags, JsonLdWebPage, JsonLdBreadcrumbs } from '@sveltinio/seo';
-	import { canonicalPageUrl, getFavicon } from '$lib/utils/strings.js';
+	import { canonicalPageUrl, getSocialImage } from '$lib/utils/strings.js';
 
 	import { theme } from '$lib/shared/stores';
 
@@ -17,7 +18,7 @@
 		title: title,
 		description: headline,
 		keywords: keywords || website.keywords,
-		image: getFavicon(website),
+		image: getSocialImage(website.baseURL, `${assets}/images/sveltin`, website.logo),
 		opengraph: {
 			type: OpenGraphType.Article
 		},

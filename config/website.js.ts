@@ -4,7 +4,7 @@ const website: Sveltin.WebSite = {
 	name: 'docs.sveltin.io',
 	baseURL: 'https://docs.sveltin.io',
 	language: 'en-GB',
-	logo: 'logo.png',
+	logo: 'logo_social.png',
 	title: 'Sveltin CLI Documentation site',
 	slogan: 'Documentation site for Sveltin CLI',
 	description:

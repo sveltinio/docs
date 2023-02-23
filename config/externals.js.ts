@@ -1,4 +1,5 @@
 import type { IGoogleFont } from '@sveltinio/services/types';
+
 const googleFonts: Array<IGoogleFont> = [
 	{
 		name: 'IBM+Plex+Sans',
